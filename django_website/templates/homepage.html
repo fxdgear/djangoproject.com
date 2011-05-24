@@ -1,10 +1,8 @@
-{% extends "base_3col.html" %}
+{% extends "base_2col.html" %}
 
 {% block cssid %}homepage{% endblock %}
 
 {% block sectionid %}homepage{% endblock %}
-
-{% block billboard %}<h2>The Web framework for perfectionists (with deadlines). Django makes it easier to build better Web apps more quickly and with less code.</h2>{% endblock %}
 
 {% block content %}
 <h1>Meet Django</h1>
@@ -14,6 +12,7 @@
 <p>Dive in by <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/intro/overview/">reading the overview &rarr;</a></p>
 <p>When you're ready to code, read the <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/intro/install/">installation guide</a> and <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/intro/tutorial01/">tutorial</a>.</p>
 <div id="content-secondary">
+    <div>
 	<h2>The Django framework</h2>
 	<h3>Object-relational mapper</h3>
 	<p>Define your <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/db/models/">data models</a> entirely in Python. You get a rich, <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/db/queries/">dynamic database-access API</a> for free &mdash; but you can still write SQL if needed.</p>
@@ -25,14 +24,14 @@
 	<p>Use Django's powerful, extensible and designer-friendly <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/templates/">template language</a> to separate design, content and Python code.</p>
 	<h3>Cache system</h3>
 	<p>Hook into memcached or other cache frameworks for <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/cache/">super performance</a> &mdash; caching is as granular as you need.</p>
-        <h3>Internationalization</h3>
-        <p>Django has full support for <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/i18n/">multi-language applications</a>, letting you specify translation strings and providing hooks for language-specific functionality.</p>
+	<h3>Internationalization</h3>
+	<p>Django has full support for <a href="https://docs.djangoproject.com/en/{{ RECENT_RELEASE }}/topics/i18n/">multi-language applications</a>, letting you specify translation strings and providing hooks for language-specific functionality.</p>
+	</div>
 </div>
 <!-- END #content-secondary -->
 {% endblock %}
 
 {% block content-related %}
-
 <h2>Download</h2>
 <ul class="linklist">
     <li class="button-download"><a href="/download/">Latest release: <strong>1.3</strong></a></li>
@@ -60,9 +59,4 @@
 	<dd>Toronto's city magazine.</dd>
 </dl>
 <p><a href="https://code.djangoproject.com/wiki/DjangoPoweredSites">See more sites...</a></p>
-{% endblock %}
-
-{% block content-extra %}
-<h2>Weblog</h2>
-{% load weblog %}{% render_latest_blog_entries 4 %}
 {% endblock %}
