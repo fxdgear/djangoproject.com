@@ -109,7 +109,6 @@ a:hover {
     color:white;
     font-size:150%;
     font-weight:bold;
-    /*background:#092e20 url(../img/site/nav_bg.gif) bottom repeat-x;*/
     background-color: #234f32;
     border-top-left-radius: 6px;
     -webkit-border-top-left-radius: 6px;
@@ -178,8 +177,8 @@ a:hover {
     clear:both;
     background-color:#E1ECE2;
     border-top: 1px solid #487858;
-    margin: 15px -24px -0.8em;
-    padding:10px 24px;
+    margin: 25px -24px -0.8em;
+    padding: 5px 24px;
     border-bottom-left-radius: 6px;
     -webkit-border-bottom-left-radius: 6px;
     -moz-border-bottom-left-radius: 6px;
@@ -551,16 +550,54 @@ div.versionchanged span.title {
 #footer {
     clear:both;
     color:white;
-    padding:10px 20px;
-    font-size:90%;
+    padding:15px 0 10px 0;
     background-color:#092E20;
-    margin-top:20px;
+    margin-top:4em;
     border-top:solid 6px #AB5603;
+    border-bottom:solid 6px #AB5603;
 }
-
 #footer .wrapper {
     margin:0 auto;
     max-width: 100em;
+}
+ul#footer-sitemap {
+    overflow: hidden;
+}
+ul#footer-sitemap li {
+    list-style-type: none;
+}
+ul#footer-sitemap li {
+    list-style-type: none;
+}
+ul#footer-sitemap li.section {
+    float:left;
+    margin-right:3em;
+}
+ul#footer-sitemap li.section ul {
+    padding-left: 0;
+}
+ul#footer-sitemap a.title {
+    font-family: "Trebuchet MS",sans-serif;
+    font-size: 150%;
+    color: white;
+}
+#footer a.title:hover {
+    color: #ffe761;
+}
+#copyright-notice {
+    font-size:90%;
+    margin-top:2em;
+}
+#copyright-notice .wrapper {
+    margin:0 auto;
+    max-width: 100em;
+}
+#copyright-notice a {
+    color:#AB5603;
+}
+#copyright-notice a:hover {
+    background-color:#E0FFB8;
+    color:#234f32;
 }
 
 /* COMMENTS */
@@ -675,4 +712,4 @@ h3 .small {
 #subwrap {
     display: block;
 }
-/* End hide from IE-mac */om IE-mac */
+/* End hide from IE-mac */
