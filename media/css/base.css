@@ -267,10 +267,13 @@ p.more {
     padding: 0 14px 3px 14px;
     color:white;
     border-bottom: 1px solid #999;
-    font-size:175%;
+    font-size:150%;
     margin-right:-14px;
     margin-left:-14px;
     margin-top:1.3em;
+}
+.sidebar h3 {
+    color:#9aef3f;
 }
 #content-secondary h2:first-child {
     margin-top:.8em;
@@ -290,6 +293,17 @@ ins {
 }
 ins a {
     text-decoration: none;
+}
+
+/* BLOG */
+
+body#weblog .entry {
+    border-top: 1px solid #487858;
+    margin-top: 2em;
+}
+body#weblog .entry:first-of-type {
+    border-top: none;
+    margin-top: 0;
 }
 
 /* COMMUNITY */
