@@ -105,6 +105,7 @@ a:hover {
 #weblog #nav-weblog a,
 #community #nav-community a,
 #blogroll #nav-blogroll a,
+#foundation #nav-foundation a,
 #code #nav-code a {
     color:white;
     font-size:150%;
