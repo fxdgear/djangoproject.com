@@ -4,8 +4,9 @@
 <h1>Community</h1>
 <h2 class="deck">This page, updated regularly, aggregates what's going on in the community.</h2>
 
+<div class="module-container">
 {% for feedtype in feedtype_list %}
-<div id="{{ feedtype.slug }}" class="module {% cycle "first" "last" %}">
+<div id="{{ feedtype.slug }}" class="module {% cycle 'first' 'last' %}">
   <h3 class="header">
     {{ feedtype.name }}
     <a class="rss" href="{% url aggregator-feed slug=feedtype.slug %}">RSS</a>
@@ -26,4 +27,5 @@
     {% endif %}</p>
 </div>
 {% endfor %}
+</div>
 {% endblock %}
