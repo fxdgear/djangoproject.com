@@ -1,0 +1,6 @@
+{% for book in books %}
+<li class="book">
+    <div class="cover-image"><a href="{{ book.url }}"><img width="80" height="106" src="{{ book.cover_image.url }}"/></a></div>
+    <div class="title"><a href="{{ book.url }}">{{ book.title }}</a></div>
+</li>
+{% endfor %}

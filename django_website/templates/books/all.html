@@ -1,0 +1,29 @@
+{% extends "base_2col.html" %}
+
+{% block sectionid %}books{% endblock %}
+
+{% block title %}Django Books{% endblock %}
+
+
+{% block content %}
+<h1>Books about Django</h1>
+
+<ul class="books">
+    {% for book in books %}
+    <li class="book">
+        <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
+        <div class="cover-image"><a href="{{ book.url }}"><img width="80" height="106" src="{{ book.cover_image.url }}"/></a></div>
+        <p class="authors">by <strong>{{ book.authors }}</strong></p>
+        {% if book.sub_title %}<h3>{{ book.sub_title }}</h3>{% endif %}
+        <p class="description">{{ book.description }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+{% block content-related %}
+<h2>More reading</h2>
+    
+<p>Search on <a href="http://www.amazon.com/s/?url=search-alias%3Dstripbooks&field-keywords=django+web+framework">Amazon</a>.</p>
+{% endblock %}

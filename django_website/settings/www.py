@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django_website.blog',
     'django_website.aggregator',
     'django_website.docs',
+    'django_website.books',
     'registration',
     'south',
 ]

@@ -343,7 +343,17 @@ body#homepage .sidebar .entry {
 body#homepage .sidebar .entry p.date {
     margin-top: 0;
 }
-
+body#homepage ul.books {
+    overflow: hidden;
+    padding-left: 0;
+    font-size: 80%;
+}
+body#homepage ul.books li.book {
+    float: left;
+    list-style: none;
+    width: 30%;
+    margin-right: 3%;
+}
 
 /* BLOG */
 
@@ -356,6 +366,22 @@ body#weblog .entry:first-of-type {
     margin-top: 0;
 }
 
+/* BOOKS */
+body#books ul.books {
+    padding-left: 0;
+}
+body#books ul.books li.book {
+    list-style-type: none;
+    overflow:  hidden;
+}
+body#books ul.books li.book h2 {
+    margin-bottom: .5em;
+}
+body#books ul.books li.book .cover-image {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
 /* COMMUNITY */
 
 body#community h5 {
