@@ -1,0 +1,6 @@
+{% for feature in features %}
+<li class="django-feature">
+    <div class="name"><a href="{{ feature.url }}">{{ feature.name }}</a></div>
+    <p>{{ feature.description }}</p>
+</li>
+{% endfor %}

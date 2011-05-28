@@ -343,16 +343,52 @@ body#homepage .sidebar .entry {
 body#homepage .sidebar .entry p.date {
     margin-top: 0;
 }
+
+/* Books */
+
 body#homepage ul.books {
     overflow: hidden;
     padding-left: 0;
-    font-size: 80%;
 }
 body#homepage ul.books li.book {
     float: left;
     list-style: none;
     width: 30%;
     margin-right: 3%;
+}
+
+/* Django features */
+
+body#homepage ul.django-features {
+    overflow: hidden;
+    padding-left: 0;
+}
+body#homepage ul.django-features li.django-feature {
+    float: left;
+    list-style: none;
+    width: 20%;
+    margin-right: 5%;
+    height:200px;
+}
+
+/* Websites */
+
+body#homepage ul.websites {
+    overflow: hidden;
+    padding-left: 0;
+}
+body#homepage ul.websites li.website {
+    float: left;
+    list-style: none;
+    width: 20%;
+    margin-right: 5%;
+    height:200px;
+}
+body#homepage ul.websites li.website .image img {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
 }
 
 /* BLOG */

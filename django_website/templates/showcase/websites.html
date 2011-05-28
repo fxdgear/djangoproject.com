@@ -1,0 +1,7 @@
+{% for website in websites %}
+<li class="website">
+    <div class="image"><a href="{{ website.url }}"><img width="180" height="72" src="{{ website.image.url }}"/></a></div>
+    <div class="name"><a href="{{ website.url }}">{{ website.name }}</a></div>
+    <p class="tagline">{{ website.tagline }}</p>
+</li>
+{% endfor %}

@@ -14,13 +14,17 @@
 
 <div class="module">
     <h3>What does Django have to offer?</h3>
-    <div style="width:100%; height:200px; background-color:#dedede; border-radius: 6px;"></div>
+    <ul class="django-features">
+        {% load showcase_tags %}{% render_django_features 8 %}
+    </ul>
     <p><a class="more" href="#">Learn more &rarr;</a></p>
 </div>
 
 <div class="module">
     <h3>Who uses Django?</h3>
-    <div style="width:100%; height:200px; background-color:#dedede; border-radius: 6px;"></div>
+    <ul class="websites">
+        {% render_websites 8 %}
+    </ul>
     <p><a class="more" href="#">Find more &rarr;</a></p>
 </div>
 
