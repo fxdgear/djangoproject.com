@@ -17,7 +17,7 @@
     <ul class="django-features">
         {% load showcase_tags %}{% render_django_features 8 %}
     </ul>
-    <p><a class="more" href="#">Learn more &rarr;</a></p>
+    <p class="more"><a href="#">Learn more &rarr;</a></p>
 </div>
 
 <div class="module">
@@ -25,7 +25,7 @@
     <ul class="websites">
         {% render_websites 8 %}
     </ul>
-    <p><a class="more" href="#">Find more &rarr;</a></p>
+    <p class="more"><a href="#">Find more &rarr;</a></p>
 </div>
 
 <div class="two-col">
@@ -34,18 +34,18 @@
         <ul class="books">
         {% load books_tags %}{% render_featured_books 3 %}
         </ul>
-        <p><a class="more" href="{% url books %}">Read more &rarr;</a></p>
+        <p class="more"><a href="{% url books %}">Read more &rarr;</a></p>
     </div>
     
     <div class="module">
-        <h3>The Django community</h3>
-        <ul>
+        <h3>Django community</h3>
+        <ul class="community-sites">
             <li>Find Django enthusiasts on <a href="http://djangopeople.com">djangopeople.com</a></li>
             <li>Find and post job ads on <a href="http://djangogigs.com">djangogigs.com</a></li>
             <li>Find the apps you need on <a href="http://djangopackages.com">djangopackages.com</a></li>
-            <li>... more?</li>
+            <li>Find more Django sites on <a href="http://djangosites.com">djangosites.com</a></li>
         </ul>
-        <p><a class="more" href="/community/">Discover more from the community&rarr;</a></p>
+        <p class="more"><a href="/community/">Discover more &rarr;</a></p>
     </div>
 </div>
 

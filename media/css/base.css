@@ -297,7 +297,10 @@ ins a {
 }
 
 /* HOMEPAGE */
-
+body#homepage p.more {
+    clear:both;
+    margin-top:2em;
+}
 body#homepage .tagline {
     margin-bottom: 4em;
 }
@@ -325,7 +328,8 @@ body#homepage #content-main .module {
 body#homepage #content-main .module h3 {
     font-size: 150%;
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
+    clear:both;
 }
 body#homepage #content-main .description {
     background-color: #E1ECE2;
@@ -343,6 +347,17 @@ body#homepage .sidebar .entry {
 body#homepage .sidebar .entry p.date {
     margin-top: 0;
 }
+body#homepage h4.item-title {
+    margin-top: 0;
+}
+body#homepage h4.item-title a {
+    color: #487858;
+    text-decoration: none;
+}
+body#homepage h4.item-title a:hover {
+    color: #AB5603;
+    background: none;
+}
 
 /* Books */
 
@@ -356,11 +371,13 @@ body#homepage ul.books li.book {
     width: 30%;
     margin-right: 3%;
 }
+body#homepage ul.books li.book .cover-image {
+    margin-bottom: .3em;
+}
 
 /* Django features */
 
 body#homepage ul.django-features {
-    overflow: hidden;
     padding-left: 0;
 }
 body#homepage ul.django-features li.django-feature {
@@ -368,13 +385,13 @@ body#homepage ul.django-features li.django-feature {
     list-style: none;
     width: 20%;
     margin-right: 5%;
-    height:200px;
+    height:150px;
+    margin-bottom: 1.5em;
 }
 
 /* Websites */
 
 body#homepage ul.websites {
-    overflow: hidden;
     padding-left: 0;
 }
 body#homepage ul.websites li.website {
@@ -383,13 +400,24 @@ body#homepage ul.websites li.website {
     width: 20%;
     margin-right: 5%;
     height:200px;
+    margin-bottom: 1.5em;
 }
 body#homepage ul.websites li.website .image img {
     border: 1px solid #ccc;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
+    margin-bottom: .3em;
 }
+
+/* community */
+body#homepage ul.community-sites {
+    padding-left: 0;
+}
+body#homepage ul.community-sites li {
+    list-style-type: none;
+}
+
 
 /* BLOG */
 
