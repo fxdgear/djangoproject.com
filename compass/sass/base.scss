@@ -6,7 +6,18 @@
 $blueprint-grid-columns : 24;
 $blueprint-grid-width   : 30px;
 $blueprint-grid-margin  : 10px;
-$font-color             : #333;
+
+$page-background-color: #efefef;
+$dark-orange: #AB5603;
+$light-orange: #FFC757;
+$yellow: #ffe761;
+$light-green: #487858;
+$lighter-green: #94da3a;
+$dark-green: #234F32;
+$darker-green: #092E20;
+$flashy-green: #E0FFB8;
+$highlight-green: #E1ECE2;
+$quiet-green: #90ba9e;
 
 @import "compass/reset";
 @import "compass/utilities";
@@ -14,7 +25,11 @@ $font-color             : #333;
 
 
 /*
-djangoproject.com by Wilson Miner (wilson@lawrence.com)
+djangoproject.com
+
+Original design by Wilson Miner (wilson@lawrence.com)
+Redesign by Julien Phalip. 2011.
+
 Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 */
 
@@ -24,7 +39,7 @@ Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 body {
     margin:0;
     padding:0;
-    background-color: #efefef;
+    background-color: $page-background-color;
 }
 body, th, td {
     font:12px/1.4em Verdana,sans-serif;
@@ -44,18 +59,18 @@ a img {
     border: none;
 }
 a:link, a:visited {
-    color:#ffc757;
+    color:$light-orange;
 }
 #content-main a:link, #content-main a:visited {
-    color:#ab5603;
+    color:$dark-orange;
     text-decoration:underline;
 }
 a:hover {
-    color:#ffe761;
+    color:$yellow;
 }
 #content-main a:hover {
-    background-color:#E0FFB8;
-    color:#234f32;
+    background-color:$flashy-green;
+    color:$dark-green;
     text-decoration:none;
 }
 #content-secondary a:hover {
@@ -101,11 +116,11 @@ a:hover {
     display:block;
     float:left;
     padding:14px 16px 8px 16px;
-    color: #092e20;
+    color: $darker-green;
 }
 #nav-global a:hover {
     color: white;
-    background-color: #AB5603;
+    background-color: $dark-orange;
     border-top-left-radius: 6px;
     -webkit-border-top-left-radius: 6px;
     -moz-border-top-left-radius: 6px;
@@ -125,7 +140,7 @@ a:hover {
     color:white;
     font-size:150%;
     font-weight:bold;
-    background-color: #234f32;
+    background-color: $dark-green;
     border-top-left-radius: 6px;
     -webkit-border-top-left-radius: 6px;
     -moz-border-top-left-radius: 6px;
@@ -177,7 +192,7 @@ a:hover {
     clear:right;
     color:white;
     width:30%;
-    background-color: #487858;
+    background-color: $light-green;
     border-bottom: 10px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -191,8 +206,8 @@ a:hover {
 }
 #content-secondary {
     clear:both;
-    background-color:#E1ECE2;
-    border-top: 1px solid #487858;
+    background-color:$highlight-green;
+    border-top: 1px solid $light-green;
     margin: 25px -24px -0.8em;
     padding: 5px 24px;
     border-bottom-left-radius: 6px;
@@ -225,7 +240,7 @@ h1 {
     font-size:218%;
     margin-top:.6em;
     margin-bottom:.6em;
-    color:#092e20;
+    color:$darker-green;
     line-height:1.1em;
 }
 h2 {
@@ -233,20 +248,20 @@ h2 {
     margin-top:1em;
     margin-bottom:.2em;
     line-height:1.2em;
-    color:#487858;
+    color:$light-green;
 }
 h3 {
     font-size:125%;
     font-weight:bold;
     margin-bottom:.2em;
-    color:#092e20;
+    color:$darker-green;
 }
 h4 {
     font-size:110%;
     font-weight:bold;
     margin-bottom:-2px;
     margin-top:1.2em;
-    color:#234D32;
+    color:$darker-green;
 }
 
 h4 pre, h4 tt, h4 .literal {
@@ -270,14 +285,14 @@ hr {
     border:0;
 }
 p.date {
-    color:#487858;
+    color:$light-green;
     margin-top:-.2em;
 }
 p.more {
     margin-top:-.4em;
 }
 .sidebar p.date {
-    color:#90ba9e;
+    color:$quiet-green;
 }
 .sidebar h2 {
     padding: 0 14px 3px 14px;
@@ -289,7 +304,7 @@ p.more {
     margin-top:1.3em;
 }
 .sidebar h3 {
-    color:#9aef3f;
+    color:$lighter-green;
 }
 #content-secondary h2:first-child {
     margin-top:.8em;
@@ -302,7 +317,7 @@ p.more {
 }
 h2.deck {
     margin-bottom:.6em;
-    color:#487858;
+    color:$light-green;
 }
 ins {
     text-decoration: none;
@@ -347,9 +362,9 @@ body#homepage #content-main .module h3 {
     clear:both;
 }
 body#homepage #content-main .description {
-    background-color: #E1ECE2;
-    border: 1px solid #487858;
-    color: #487858;
+    background-color: $highlight-green;
+    border: 1px solid $light-green;
+    color: $light-green;
     padding: 1em;
     font-size: 120%;
     border-radius: 6px;
@@ -366,11 +381,11 @@ body#homepage h4.item-title {
     margin-top: 0;
 }
 body#homepage h4.item-title a {
-    color: #487858;
+    color: $light-green;
     text-decoration: none;
 }
 body#homepage h4.item-title a:hover {
-    color: #AB5603;
+    color: $dark-orange;
     background: none;
 }
 
@@ -437,7 +452,7 @@ body#homepage ul.community-sites li {
 /* BLOG */
 
 body#weblog .entry {
-    border-top: 1px solid #487858;
+    border-top: 1px solid $light-green;
     margin-top: 2em;
 }
 body#weblog .entry:first-of-type {
@@ -564,8 +579,8 @@ a.rss:hover, a.rss:link, a.rss:visited {
     padding-left:0.8em;
     padding-right:1em;
     font:125%/1.2em "Trebuchet MS", sans-serif;
-    color:#234f32;
-    border-left:2px solid #94da3a;
+    color:$dark-green;
+    border-left:2px solid $lighter-green;
 }
 .sidebar blockquote {
     margin-top:1.5em;
@@ -573,14 +588,14 @@ a.rss:hover, a.rss:link, a.rss:visited {
 }
 .sidebar blockquote p {
     font:italic 175%/1.2em "Trebuchet MS",sans-serif;
-    color:#94da3a;
+    color:$lighter-green;
 }
 .sidebar blockquote cite {
     display:block;
     font-style:normal;
     line-height:1.2em;
     margin-top:-.8em;
-    color:#94da3a;
+    color:$lighter-green;
 }
 .sidebar cite strong {
     font-weight:normal;
@@ -593,7 +608,7 @@ a.rss:hover, a.rss:link, a.rss:visited {
     white-space:nowrap;
 }
 .literal, .literal-block {
-    color:#234f32;
+    color:$dark-green;
 }
 .sidebar .literal {
     color:white;
@@ -602,8 +617,8 @@ a.rss:hover, a.rss:link, a.rss:visited {
 }
 pre, .literal-block {
     font-size:medium;
-    background:#E0FFB8;
-    border:1px solid #94da3a;
+    background:$flashy-green;
+    border:1px solid $lighter-green;
     border-width:1px 0;
     margin: 1em 0;
     padding: .3em .4em;
@@ -614,10 +629,10 @@ dt .literal, table .literal {
 }
 textarea.codedump {
     font-size:10px;
-    color:#234f32;
+    color:$dark-green;
     width:100%;
-    background:#E0FFB8;
-    border:1px solid #94da3a;
+    background:$flashy-green;
+    border:1px solid $lighter-green;
     border-width:1px 0;
     padding: .3em .4em;
 }
@@ -627,13 +642,13 @@ textarea.codedump {
 .note, .admonition, .caution {
     padding:.8em 1em .8em;
     margin: 1em 0;
-    border:1px solid #94da3a;
+    border:1px solid $lighter-green;
 }
 .admonition-title {
     font-weight:bold;
     margin-top:0 !important;
     margin-bottom:0 !important;
-	color:#487858;
+	color:$light-green;
 }
 .admonition .last {
     margin-bottom:0 !important;
@@ -712,7 +727,7 @@ div.versionchanged span.title {
     text-decoration: none;
 }
 #documentation a.reference tt.literal {
-    border-bottom: 1px #234f32 dotted;
+    border-bottom: 1px $dark-green dotted;
 }
 #documentation a.reference em {
     font-style: normal;
@@ -724,10 +739,10 @@ div.versionchanged span.title {
     clear:both;
     color:white;
     padding:15px 0 10px 0;
-    background-color:#092E20;
+    background-color:$darker-green;
     margin-top:4em;
-    border-top:solid 6px #AB5603;
-    border-bottom:solid 6px #AB5603;
+    border-top:solid 6px $dark-orange;
+    border-bottom:solid 6px $dark-orange;
 }
 #footer .wrapper {
     margin:0 auto;
@@ -755,7 +770,7 @@ ul#footer-sitemap a.title {
     color: white;
 }
 #footer a.title:hover {
-    color: #ffe761;
+    color: $yellow;
 }
 #copyright-notice {
     font-size:90%;
@@ -766,11 +781,11 @@ ul#footer-sitemap a.title {
     max-width: 100em;
 }
 #copyright-notice a {
-    color:#AB5603;
+    color:$dark-orange;
 }
 #copyright-notice a:hover {
-    background-color:#E0FFB8;
-    color:#234f32;
+    background-color:$flashy-green;
+    color:$dark-green;
 }
 
 /* COMMENTS */
@@ -783,7 +798,7 @@ div.comment p {
 }
 #weblog div.comment p.date {
     margin-bottom:.2em;
-    color:#94da3a;
+    color:$lighter-green;
 }
 
 /* FORMS */
@@ -837,10 +852,10 @@ h3 .small {
     clear:both;
 }
 #content-main .quiet {
-    color:#487858;
+    color:$light-green;
 }
 #content-secondary .quiet {
-    color:#90ba9e;
+    color:$quiet-green;
 }
 
 /*  CLEARFIX KLUDGE */
@@ -860,7 +875,7 @@ h3 .small {
 #columnwrap {
     display: block;
     padding: 6px;
-    background-color: #234F32;
+    background-color: $dark-green;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
