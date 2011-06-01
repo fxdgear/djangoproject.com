@@ -1,119 +1,353 @@
+/* line 1, ../../compass/sass/admin.scss */
 .tabs {
- border: 1px solid black;
- border-color: gray black black gray;
- margin: 2em 0;
- padding: .5em 0 0;
- float: left;
- width: 12em;
+  border: 1px solid black;
+  border-color: gray black black gray;
+  margin: 2em 0;
+  padding: .5em 0 0;
+  float: left;
+  width: 12em;
 }
-.tabs ul { list-style-type: none; list-style: none; margin: 0 0 .5em; padding: 0 }
-.tabs ul li { list-style-type: none; margin: 0; padding: 0.1em .5em }
-.tabs li li { margin: 0 -0.5em; padding-left: 1.5em }
-.tabs li li.active { background: #ccb; }
-.tabs :link, .tabs :visited { border: none; display: block }
-.tabs :link:hover, .tabs :visited:hover { background: transparent }
 
+/* line 9, ../../compass/sass/admin.scss */
+.tabs ul {
+  list-style-type: none;
+  list-style: none;
+  margin: 0 0 .5em;
+  padding: 0;
+}
+
+/* line 10, ../../compass/sass/admin.scss */
+.tabs ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.1em .5em;
+}
+
+/* line 11, ../../compass/sass/admin.scss */
+.tabs li li {
+  margin: 0 -0.5em;
+  padding-left: 1.5em;
+}
+
+/* line 12, ../../compass/sass/admin.scss */
+.tabs li li.active {
+  background: #ccb;
+}
+
+/* line 13, ../../compass/sass/admin.scss */
+.tabs :link, .tabs :visited {
+  border: none;
+  display: block;
+}
+
+/* line 14, ../../compass/sass/admin.scss */
+.tabs :link:hover, .tabs :visited:hover {
+  background: transparent;
+}
+
+/* line 16, ../../compass/sass/admin.scss */
 #content-main .tabcontents {
- padding: 0.4em 2em;
- margin-left: 12em;
- min-height: 300px;
- clear: right;
+  padding: 0.4em 2em;
+  margin-left: 12em;
+  min-height: 300px;
+  clear: right;
 }
-p.help { color: #666; font-size: 90%; margin: 1em .5em .5em }
 
-form.addnew { clear: right; float: right; margin: -2em 0 4em; width: 33% }
-form.mod { margin-top: 1em; }
-form.mod .field { margin: .5em 0; }
-form .field em { color: #888; font-size: smaller }
-form .field .disabled em { color: #d7d7d7 }
+/* line 22, ../../compass/sass/admin.scss */
+p.help {
+  color: #666;
+  font-size: 90%;
+  margin: 1em .5em .5em;
+}
 
-#content-main table.listing { clear: none; width: 64% margin-left: 12em; }
-#content-main table.listing .sel, table.listing .default { text-align: center; width: 1% }
+/* line 24, ../../compass/sass/admin.scss */
+form.addnew {
+  clear: right;
+  float: right;
+  margin: -2em 0 4em;
+  width: 33%;
+}
+
+/* line 25, ../../compass/sass/admin.scss */
+form.mod {
+  margin-top: 1em;
+}
+
+/* line 26, ../../compass/sass/admin.scss */
+form.mod .field {
+  margin: .5em 0;
+}
+
+/* line 27, ../../compass/sass/admin.scss */
+form .field em {
+  color: #888;
+  font-size: smaller;
+}
+
+/* line 28, ../../compass/sass/admin.scss */
+form .field .disabled em {
+  color: #d7d7d7;
+}
+
+/* line 30, ../../compass/sass/admin.scss */
+#content-main table.listing {
+  clear: none;
+  width: 64%;
+  margin-left: 12em;
+}
+
+/* line 31, ../../compass/sass/admin.scss */
+#content-main table.listing .sel, table.listing .default {
+  text-align: center;
+  width: 1%;
+}
 
 /* Plugins panel */
-form#addplug { width: 35% }
+/* line 34, ../../compass/sass/admin.scss */
+form#addplug {
+  width: 35%;
+}
+
+/* line 35, ../../compass/sass/admin.scss */
 .plugin {
- background: #f7f7f7;
- border: 1px solid #d7d7d7;
- margin: 0 0 2em;
- padding: 2px .5em;
- text-align: left;
- width: 60%;
+  background: #f7f7f7;
+  border: 1px solid #d7d7d7;
+  margin: 0 0 2em;
+  padding: 2px .5em;
+  text-align: left;
+  width: 60%;
 }
+
+/* line 43, ../../compass/sass/admin.scss */
 .plugin h3 {
- background: url(../img/expanded.png) 0 50% no-repeat;
- margin: .5em 0 0;
- padding-left: 16px;
+  background: url(../img/expanded.png) 0 50% no-repeat;
+  margin: .5em 0 0;
+  padding-left: 16px;
 }
-.collapsed h3 { background-image: url(../img/collapsed.png); }
-.plugin .buttons { margin-top: 0; text-align: right }
-.plugin .uninstall { margin-top: -2em; padding: 0 }
+
+/* line 48, ../../compass/sass/admin.scss */
+.collapsed h3 {
+  background-image: url(../img/collapsed.png);
+}
+
+/* line 49, ../../compass/sass/admin.scss */
+.plugin .buttons {
+  margin-top: 0;
+  text-align: right;
+}
+
+/* line 50, ../../compass/sass/admin.scss */
+.plugin .uninstall {
+  margin-top: -2em;
+  padding: 0;
+}
+
+/* line 51, ../../compass/sass/admin.scss */
 .plugin .summary, .plugin .info {
- color: #999;
- font-size: 80%;
- padding-left: 16px;
+  color: #999;
+  font-size: 80%;
+  padding-left: 16px;
 }
-.plugin .summary { margin: -.5em 0 .5em }
-.plugin .info { margin: 1em 0 .5em; }
-.plugin .info dt { float: left; width: 7em; }
-.plugin .info dd { padding: 0; margin: 0; }
-.plugin .listing { width: 100% }
-.collapsed .info, .collapsed .listing, .collapsed .update { display: none }
-.plugin .listing td { background: #fff }
-.plugin .listing .name p { color: #999; font-size: 80%; margin: 0 }
+
+/* line 56, ../../compass/sass/admin.scss */
+.plugin .summary {
+  margin: -0.5em 0 0.5em;
+}
+
+/* line 57, ../../compass/sass/admin.scss */
+.plugin .info {
+  margin: 1em 0 .5em;
+}
+
+/* line 58, ../../compass/sass/admin.scss */
+.plugin .info dt {
+  float: left;
+  width: 7em;
+}
+
+/* line 59, ../../compass/sass/admin.scss */
+.plugin .info dd {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 60, ../../compass/sass/admin.scss */
+.plugin .listing {
+  width: 100%;
+}
+
+/* line 61, ../../compass/sass/admin.scss */
+.collapsed .info, .collapsed .listing, .collapsed .update {
+  display: none;
+}
+
+/* line 62, ../../compass/sass/admin.scss */
+.plugin .listing td {
+  background: #fff;
+}
+
+/* line 63, ../../compass/sass/admin.scss */
+.plugin .listing .name p {
+  color: #999;
+  font-size: 80%;
+  margin: 0;
+}
 
 /* Generic styles */
-form p.hint { color: #666; font-size: 85%; font-style: italic; margin: .5em 0;
+/* line 66, ../../compass/sass/admin.scss */
+form p.hint {
+  color: #666;
+  font-size: 85%;
+  font-style: italic;
+  margin: .5em 0;
   padding-left: 1em;
 }
 
-fieldset.radio { border: none; margin: 0; padding: 0 }
-fieldset.radio legend { color: #000; float: left; font-size: 100%;
- font-weight: normal; padding: 0 1em 0 0;
+/* line 70, ../../compass/sass/admin.scss */
+fieldset.radio {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
-fieldset.radio label { padding-right: 1em; vertical-align: middle; }
-fieldset.radio input { vertical-align: middle; }
+
+/* line 71, ../../compass/sass/admin.scss */
+fieldset.radio legend {
+  color: #000;
+  float: left;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 0 1em 0 0;
+}
+
+/* line 74, ../../compass/sass/admin.scss */
+fieldset.radio label {
+  padding-right: 1em;
+  vertical-align: middle;
+}
+
+/* line 75, ../../compass/sass/admin.scss */
+fieldset.radio input {
+  vertical-align: middle;
+}
 
 /* Configuration panel */
+/* line 79, ../../compass/sass/admin.scss */
+fieldset#karmatuning {
+  margin-bottom: 1em;
+}
 
-fieldset#karmatuning { margin-bottom: 1em; }
+/* line 81, ../../compass/sass/admin.scss */
+table#karmapoints {
+  width: 100%;
+}
 
-table#karmapoints { width: 100%; }
-table#karmapoints p.hint { margin: 0; padding: 0; }
+/* line 82, ../../compass/sass/admin.scss */
+table#karmapoints p.hint {
+  margin: 0;
+  padding: 0;
+}
 
 /* Monitoring panel */
+/* line 86, ../../compass/sass/admin.scss */
+table#spammonitor {
+  margin-bottom: 1em;
+  width: 100%;
+}
 
-table#spammonitor { margin-bottom: 1em; width: 100%; }
-table#spammonitor td { font-size: 90%; }
+/* line 87, ../../compass/sass/admin.scss */
+table#spammonitor td {
+  font-size: 90%;
+}
+
+/* line 88, ../../compass/sass/admin.scss */
 table#spammonitor td.path :link, table#spammonitor td.path :visited {
   color: #666;
 }
-table#spammonitor td.author { overflow: hidden; }
+
+/* line 91, ../../compass/sass/admin.scss */
+table#spammonitor td.author {
+  overflow: hidden;
+}
+
+/* line 93, ../../compass/sass/admin.scss */
 table#spammonitor td.path, table#spammonitor td.ipnr,
-table#spammonitor td.time { font-size: 80%; }
-table#spammonitor td.karma { padding-right: 1em; text-align: right;
+table#spammonitor td.time {
+  font-size: 80%;
+}
+
+/* line 94, ../../compass/sass/admin.scss */
+table#spammonitor td.karma {
+  padding-right: 1em;
+  text-align: right;
   white-space: nowrap;
 }
-table#spammonitor tr.rejected td { background: #f4d7d7 !important; }
-table#spammonitor tr.rejected td.author { font-weight: bold; }
-table#spammonitor tr.rejected td.karma { color: #b00; font-weight: bold; }
-table#spammonitor td.details { font-size: 85%; font-weight: normal; }
-table#spammonitor td.details ul { list-style: square; margin: 0 0 .5em;
+
+/* line 97, ../../compass/sass/admin.scss */
+table#spammonitor tr.rejected td {
+  background: #f4d7d7 !important;
+}
+
+/* line 98, ../../compass/sass/admin.scss */
+table#spammonitor tr.rejected td.author {
+  font-weight: bold;
+}
+
+/* line 99, ../../compass/sass/admin.scss */
+table#spammonitor tr.rejected td.karma {
+  color: #b00;
+  font-weight: bold;
+}
+
+/* line 100, ../../compass/sass/admin.scss */
+table#spammonitor td.details {
+  font-size: 85%;
+  font-weight: normal;
+}
+
+/* line 101, ../../compass/sass/admin.scss */
+table#spammonitor td.details ul {
+  list-style: square;
+  margin: 0 0 .5em;
   padding-left: 2em;
 }
-table#spammonitor td.details blockquote { color: #999; font-style: italic;
+
+/* line 104, ../../compass/sass/admin.scss */
+table#spammonitor td.details blockquote {
+  color: #999;
+  font-style: italic;
   margin: 0;
 }
 
 /* Log entry details */
-
-form#spamentry .meta { margin: 0; }
-form#spamentry .meta th { font-weight: bold; padding-right: .5em;
-  text-align: right; vertical-align: top;
-}
-form#spamentry .meta th, form#spamentry .meta td { font-size: 90%; }
-form#spamentry pre { background: #e6e6e6; border: 1px solid #666;
-  font-size: 90%; padding: .25em; width: 90%; overflow: auto;
+/* line 110, ../../compass/sass/admin.scss */
+form#spamentry .meta {
+  margin: 0;
 }
 
-#content-main .tabcontents div.nav { clear: right; }
+/* line 111, ../../compass/sass/admin.scss */
+form#spamentry .meta th {
+  font-weight: bold;
+  padding-right: .5em;
+  text-align: right;
+  vertical-align: top;
+}
+
+/* line 114, ../../compass/sass/admin.scss */
+form#spamentry .meta th, form#spamentry .meta td {
+  font-size: 90%;
+}
+
+/* line 115, ../../compass/sass/admin.scss */
+form#spamentry pre {
+  background: #e6e6e6;
+  border: 1px solid #666;
+  font-size: 90%;
+  padding: .25em;
+  width: 90%;
+  overflow: auto;
+}
+
+/* line 119, ../../compass/sass/admin.scss */
+#content-main .tabcontents div.nav {
+  clear: right;
+}

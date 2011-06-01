@@ -2,3 +2,4 @@
 *.db
 media/uploads/*
 local_settings.py
+compass/.sass-cache/*
