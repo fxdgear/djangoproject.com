@@ -1,1 +1,36 @@
 @import "base";
+@import "main.css";
+
+body#community {
+    h5 {
+        margin-top: 5px;
+    }
+
+    #content-main {
+        .module-container {
+            overflow: hidden;
+        }
+        .module {
+            width: 340px;
+            float: left;
+            display: inline;
+        }
+        .first {
+            margin-right: 30px;
+            clear: left;
+        }
+        .last {
+            margin-right: 5px;
+            clear: right;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    div.pagination {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
