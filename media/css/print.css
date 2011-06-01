@@ -12,7 +12,7 @@ body {
 
 /* Hide unneccessary content */
 /* line 11, ../../compass/sass/print.scss */
-#header, #billboard, #content-extra, #documentation #content-secondary, #documentation #content-related, h2.deck {
+#header, #content-extra, #documentation #content-secondary, #documentation #content-related, h2.deck {
   display: none;
 }
 
