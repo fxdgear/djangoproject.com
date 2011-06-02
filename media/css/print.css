@@ -1,9 +1,94 @@
+/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 10pt;
+}
+
+/* line 45, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+.container {
+  background: none;
+}
+
+/* line 47, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+hr {
+  background: #cccccc;
+  color: #cccccc;
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+  padding: 0;
+  border: none;
+}
+/* line 55, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+hr.space {
+  background: white;
+  color: white;
+}
+
+/* line 58, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 60, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+code {
+  font-size: 0.9em;
+  font-family: "andale mono", "lucida console", monospace;
+}
+
+/* line 65, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+a img {
+  border: none;
+}
+/* line 68, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+a:link, a:visited {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* line 72, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+p img.top {
+  margin-top: 0;
+}
+
+/* line 74, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+blockquote {
+  margin: 1.5em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* line 79, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+.small {
+  font-size: 0.9em;
+}
+
+/* line 81, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+.large {
+  font-size: 1.1em;
+}
+
+/* line 83, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+.quiet {
+  color: #999999;
+}
+
+/* line 85, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+.hide {
+  display: none;
+}
+
 @page {
   size: US-Letter;
   margin: .75in .5in .75in 1in;
 }
 
-/* line 8, ../../compass/sass/print.scss */
+/* line 12, ../../compass/sass/print.scss */
 body {
   font-size: 10pt;
   background: white;
@@ -11,21 +96,9 @@ body {
 }
 
 /* Hide unneccessary content */
-/* line 11, ../../compass/sass/print.scss */
+/* line 15, ../../compass/sass/print.scss */
 #header, #content-extra, #documentation #content-secondary, #documentation #content-related, h2.deck {
   display: none;
-}
-
-/* Fix widths */
-/* line 14, ../../compass/sass/print.scss */
-#container {
-  width: 7in;
-}
-
-/* line 15, ../../compass/sass/print.scss */
-#subwrap, #content-main {
-  width: 7in;
-  float: none;
 }
 
 /* Formatting and display fixes */

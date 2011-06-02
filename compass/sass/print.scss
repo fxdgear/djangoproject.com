@@ -1,4 +1,8 @@
-@import "base";
+@import "partials/base";
+@import "blueprint";
+
+// Generate the blueprint print styles:
+@include blueprint-print;
 
 @page {
     size: US-Letter;
@@ -9,10 +13,6 @@ body { font-size:10pt; background: white; color: black; }
 
 /* Hide unneccessary content */
 #header, #content-extra, #documentation #content-secondary, #documentation #content-related, h2.deck { display:none; }
-
-/* Fix widths */
-#container { width:7in; }
-#subwrap, #content-main { width:7in; float:none; }
 
 /* Formatting and display fixes */
 #content { border-top:none; }

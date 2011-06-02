@@ -7,9 +7,21 @@ Redesign by Julien Phalip. 2011.
 Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 */
 
-@import "base";
-@import "compass/utilities";
-@import "blueprint";
+@import "partials/base";
+
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+// Generate the blueprint framework according to your configuration:
+@include blueprint;
+
+@include blueprint-scaffolding;
+
+
+
 
 
 /* SETUP */
@@ -17,15 +29,11 @@ Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 body {
     margin:0;
     padding:0;
-    background-color: $page-background-color;
+    background-color: white;
 }
 body, th, td {
     font: 12px/1.4em $main-font-family;
-}
-#container {
-    margin:  0 auto;
-    min-width:55em;
-    max-width:100em;
+    line-height: 1.5em;
 }
 
 /* LINKS */
@@ -43,6 +51,11 @@ a:hover {
     color:$yellow;
 }
 
+#content {
+    @include wrapper;
+    overflow: hidden;
+}
+
 #content-main {
     a:link, a:visited {
         color:$dark-orange;
@@ -53,39 +66,42 @@ a:hover {
         color:$dark-green;
         text-decoration:none;
     }
+    h1:first-child, h2:first-child {
+        margin-top: 0;
+    }
     h2 a, h3 a {
         text-decoration:none !important;
     }
 }
 
-
-#content-secondary a:hover {
-    background:none;
-}
-
 /* HEADER */
 
 #header {
-    position:relative;
-    height:6.5em;
+    background-color: #EFEFEF;
+    border-bottom: 10px solid $dark-green;
+    margin-bottom: 3em;
     h1#logo {
         margin:0;
         width:111px;
         height:41px;
         position:absolute;
         bottom:10px;
-        left:25px;
+    }
+    .inner {
+        @include wrapper;
+        position:relative;
+        height:6.5em;
     }
 }
 
 /* NAV */
 
 #nav-global {
-    font-family:$special-font-family;
+    font-family: $special-font-family;
     position:absolute;
     margin:0;
     bottom:0;
-    right:10px;
+    right:0px;
     white-space:nowrap;
     li {
         display:block;
@@ -126,52 +142,18 @@ a:hover {
 
 /* COLUMNS */
 
-#columnwrap {
-    background-color: white;
-    margin:  0 auto;
-}
-#subwrap {
-    width:73%;
-    float:left;
-    padding-bottom:10px;
-}
 #content-main {
-    float:left;
-    width:70%;
-
-    .wrapper {
-        background:white;
-        color:black;
-        @include border-radius;
-        padding:0.1em 24px 0.8em 24px;
-        margin-right: 6px;
-    }
+    @include column(24);
+    overflow: hidden;
 }
-
 #generic #content-main, #code #content-main {
-    width:100%;
-}
-.sidebar .wrapper {
-    padding: 0 14px 14px 14px;
-
-    * * {
-        margin-left:0;
-        margin-right:0;
-    }
-}
-#content-extra {
-    float:right;
-    width:27%;
+    @include column(34, true);
 }
 #content-related {
-    float:right;
-    clear:right;
-    color:white;
-    width:30%;
-    background-color: $light-green;
+    @include column(10, true);
     @include border-radius;
-}
-#content-related {
+    color:white;
+    background-color: $light-green;
     p, ul, form {
         margin-top:1em;
         margin-bottom:1.2em;
@@ -179,33 +161,50 @@ a:hover {
     ul li {
         margin-bottom:0.6em;
     }
-}
-#content-secondary {
-    clear:both;
-    background-color:$highlight-green;
-    border-top: 1px solid $light-green;
-    margin: 25px -24px -0.8em;
-    padding: 5px 24px;
-    @include border-bottom-left-radius;
-    @include border-bottom-right-radius;
-    .wrapper {
-        margin-top:6px;
+    p.date {
+        color:$quiet-green;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .entry .summary p {
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+    h2 {
+        color:white;
+        border-bottom:#888 1px solid;
+        margin: 1.3em -14px 3px -14px;
+        padding: 0 14px 3px 14px;
+        font-size:150%;
+    }
+    h2:first-child {
+        margin-top:.8em;
+    }
+    h3 {
+        color:$lighter-green;
+        font-weight: normal;
+    }
+    .inner {
+        padding: 14px;
     }
 }
-.subcol-primary, .subcol-secondary {
-    width:40%;
-    float:left;
-    padding-bottom:1.2em;
-}
-.subcol-primary {
-    margin-right:1%;
+#content-secondary {
+    background-color: $highlight-green;
+    border: 1px solid $light-green;
+    padding: 1em;
+    margin-top:3.5em;
+    @include border-radius;
+    
+    h2:first-child {
+        margin-top: 0;
+    }
 }
 
 /* CONTENT */
 
 h1,h2,h3,h4 {
     margin-top:.8em;
-    font-family:$special-font-family;
+    font-family: $special-font-family;
     font-weight:normal;
 }
 h1 {
@@ -224,13 +223,11 @@ h2 {
 }
 h3 {
     font-size:125%;
-    font-weight:bold;
     margin-bottom:.2em;
     color:$darker-green;
 }
 h4 {
     font-size:110%;
-    font-weight:bold;
     margin-bottom:-2px;
     margin-top:1.2em;
     color:$darker-green;
@@ -262,29 +259,6 @@ p.date {
 }
 p.more {
     margin-top:-.4em;
-}
-.sidebar {
-    p.date {
-        color:$quiet-green;
-    }
-    h2 {
-        padding: 0 14px 3px 14px;
-        color:white;
-        border-bottom: 1px solid #999;
-        font-size:150%;
-        margin-right:-14px;
-        margin-left:-14px;
-        margin-top:1.3em;
-    }
-    h2:first-child {
-        margin-top:.8em;
-    }
-    h3 {
-        color:$lighter-green;
-    }
-}
-#content-secondary h2:first-child {
-    margin-top:.8em;
 }
 #content-main {
     h2, h3 {
@@ -410,26 +384,28 @@ a.rss:hover, a.rss:link, a.rss:visited {
     color:$dark-green;
     border-left:2px solid $lighter-green;
 }
-.sidebar blockquote {
-    margin-top:1.5em;
-    margin-bottom:1.5em;
-}
-.sidebar blockquote p {
-    font-style: italic;
-    font-size: 175%;
-    font-family: $special-font-family;
-    color:$lighter-green;
-}
-.sidebar blockquote cite {
-    display:block;
-    font-style:normal;
-    line-height:1.2em;
-    margin-top:-.8em;
-    color:$lighter-green;
-}
-.sidebar cite strong {
-    font-weight:normal;
-    color:white;
+#content-related {
+    blockquote {
+        margin-top:1.5em;
+        margin-bottom:1.5em;
+    }
+    blockquote p {
+        font-style: italic;
+        font-size: 175%;
+        font-family: $special-font-family;
+        color:$lighter-green;
+    }
+    blockquote cite {
+        display:block;
+        font-style:normal;
+        line-height:1.2em;
+        margin-top:-.8em;
+        color:$lighter-green;
+    }
+    cite strong {
+        font-weight:normal;
+        color:white;
+    }
 }
 
 /* CODE BLOCKS */
@@ -440,7 +416,7 @@ a.rss:hover, a.rss:link, a.rss:visited {
 .literal, .literal-block {
     color:$dark-green;
 }
-.sidebar .literal {
+#content-related .literal {
     color:white;
     background:transparent;
     font-size:11px;
@@ -570,47 +546,38 @@ div.versionchanged span.title {
 #footer {
     clear:both;
     color:white;
-    padding:15px 0 10px 0;
+    padding:2em 0;
     background-color:$darker-green;
     margin-top:4em;
-    border-top:solid 6px $dark-orange;
-    border-bottom:solid 6px $dark-orange;
-    .wrapper {
-        margin:0 auto;
-        max-width: 100em;
-    }
+    border-top:solid 6px $light-green;
+    border-bottom:solid 6px $light-green;
     ul#footer-sitemap {
-        overflow: hidden;
-    }
-    ul#footer-sitemap li {
-        list-style-type: none;
-    }
-    ul#footer-sitemap li {
-        list-style-type: none;
-    }
-    ul#footer-sitemap li.section {
-        float:left;
-        margin-right:3em;
-    }
-    ul#footer-sitemap li.section ul {
-        padding-left: 0;
-    }
-    ul#footer-sitemap a.title {
-        font-family: $special-font-family;
-        font-size: 150%;
-        color: white;
-    }
-    a.title:hover {
-        color: $yellow;
+        @include wrapper;
+        padding-left:0;
+        li {
+            list-style-type: none;
+        } 
+        li.section {
+            @include column(6);
+            ul {
+                margin-top: 1em;
+                padding-left: 0;
+            }
+        }
+        a.title {
+            font-family: $special-font-family;
+            font-size: 125%;
+            color: white;
+         }
+        a.title:hover {
+            color: $yellow;
+        }
     }
 }
 #copyright-notice {
+    @include wrapper;
     font-size:90%;
     margin-top:2em;
-}
-#copyright-notice .wrapper {
-    margin:0 auto;
-    max-width: 100em;
 }
 #copyright-notice a {
     color:$dark-orange;
@@ -692,45 +659,3 @@ h3 .small {
 
 .button-download { display:block; background:url(https://www.djangoproject.com/m/img/site/download_bg-left.gif) no-repeat; max-width: 350px; }
 .button-download a { height:18px; color:white; display:block; white-space:nowrap; background:url(https://www.djangoproject.com/m/img/site/download_bg-right.gif) top right no-repeat; padding:6px 12px; }
-
-/*  CLEARFIX KLUDGE */
-
-#columnwrap:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-/* Hides from IE-mac \*/
-* html #columnwrap {
-    height: 1%;
-}
-#columnwrap {
-    display: block;
-    padding: 6px;
-    background-color: $dark-green;
-    @include border-radius;
-}
-/* End hide from IE-mac */
-
-#subwrap:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-#subwrap {
-    display: inline-block;
-}
-
-/* Hides from IE-mac \*/
-* html #subwrap {
-    height: 1%;
-}
-#subwrap {
-    display: block;
-}
-/* End hide from IE-mac */

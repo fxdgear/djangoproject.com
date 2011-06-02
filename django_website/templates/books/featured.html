@@ -1,5 +1,5 @@
 {% for book in books %}
-<li class="book">
+<li class="book{% if forloop.counter|divisibleby:3 %} last{% endif %}">
     <div class="cover-image"><a href="{{ book.url }}"><img width="80" height="106" src="{{ book.cover_image.url }}"/></a></div>
     <h4 class="item-title"><a href="{{ book.url }}">{{ book.title }}</a></h4>
 </li>

@@ -1,18 +1,14 @@
 {% extends "base.html" %}
 
 {% block columnwrap %}
-		<div id="content-main">
-			<div class="wrapper">
-			{% block content %}
-			{% endblock %}
-			</div>
-		</div>
-		<!-- END #content-main -->
-		<div id="content-related" class="sidebar">
-			<div class="wrapper">
-			{% block content-related %}
-			{% endblock %}
-			</div>
-		</div>
-		<!-- END #content-related -->
+    <div id="content-main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="content-related">
+        <div class="inner">
+        {% block content-related %}
+        {% endblock %}
+        </div>
+    </div>
 {% endblock %}

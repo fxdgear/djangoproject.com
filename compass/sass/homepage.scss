@@ -1,4 +1,4 @@
-@import "base";
+@import "partials/base";
 @import "main.css";
 
 
@@ -8,6 +8,11 @@ body#homepage {
     p.more {
         clear:both;
         margin-top:2em;
+        font-family: $special-font-family;
+        font-size: 115%;
+        a {
+            text-decoration: none;
+        }
     }
     .tagline {
         margin-bottom: 4em;
@@ -22,13 +27,12 @@ body#homepage {
     }
     #content-main {
         .two-col {
-            overflow: hidden;
+            overflow:hidden;
             .module {
-                float:left;
-                width:47%;
+                @include column(12);
             }
-            .module:first-of-type {
-                margin-right: 6%;
+            .module.last {
+                margin-right: 0;
             }
         }
         .module {
@@ -56,7 +60,7 @@ body#homepage {
                 margin-top: 0;
             }
         }
-    }    
+    }
     h4.item-title {
         margin-top: 0;
         a {
@@ -69,43 +73,51 @@ body#homepage {
         }
     }
     ul.books {
-        overflow: hidden;
         padding-left: 0;
+        margin-right: 0;
+        overflow:hidden;
         li.book {
-            float: left;
+            @include column(4);
             list-style: none;
-            width: 30%;
-            margin-right: 3%;
             .cover-image {
                 margin-bottom: .3em;
             }
         }
+        li.book.last {
+            margin-right: 0;
+        }
     }
     ul.django-features {
         padding-left: 0;
+        margin-right: 0;
+        overflow:hidden;
         li.django-feature {
-            float: left;
+            @include column(6);
             list-style: none;
-            width: 20%;
-            margin-right: 5%;
-            height:150px;
+            height:110px;
             margin-bottom: 1.5em;
+        }
+        li.django-feature.last {
+            margin-right: 0;
         }
     }
     ul.websites {
         padding-left: 0;
+        margin-right: 0;
+        overflow:hidden;
         li.website {
-            float: left;
             list-style: none;
-            width: 20%;
-            margin-right: 5%;
-            height:200px;
+            @include column(6);
+            height:180px;
             margin-bottom: 1.5em;
             .image img {
                 border: 1px solid #ccc;
                 @include border-radius;
                 margin-bottom: .3em;
             }
+        }
+        li.website.last {
+            margin-right: 0;
         }
     }
     ul.community-sites {

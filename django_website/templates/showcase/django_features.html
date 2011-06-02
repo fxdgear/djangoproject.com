@@ -1,5 +1,5 @@
 {% for feature in features %}
-<li class="django-feature">
+<li class="django-feature{% if forloop.counter|divisibleby:4 %} last{% endif %}">
     <h4 class="item-title"><a href="{{ feature.url }}">{{ feature.name }}</a></h4>
     <p>{{ feature.description }}</p>
 </li>
