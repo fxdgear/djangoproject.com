@@ -46,9 +46,7 @@ body#homepage {
             color: $light-green;
             padding: 1em;
             font-size: 120%;
-            border-radius: 6px;
-            -webkit-border-radius: 6px;
-            -moz-border-radius: 6px;
+            @include border-radius;
         }
     }
     .sidebar {
@@ -105,9 +103,7 @@ body#homepage {
             margin-bottom: 1.5em;
             .image img {
                 border: 1px solid #ccc;
-                border-radius: 6px;
-                -webkit-border-radius: 6px;
-                -moz-border-radius: 6px;
+                @include border-radius;
                 margin-bottom: .3em;
             }
         }

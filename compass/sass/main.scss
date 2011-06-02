@@ -103,12 +103,8 @@ a:hover {
     a:hover {
         color: white;
         background-color: $dark-orange;
-        border-top-left-radius: 6px;
-        -webkit-border-top-left-radius: 6px;
-        -moz-border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        -webkit-border-top-right-radius: 6px;
-        -moz-border-top-right-radius: 6px;
+        @include border-top-left-radius;
+        @include border-top-right-radius;
     }
 }
 
@@ -124,12 +120,8 @@ a:hover {
     color:white;
     font-weight:bold;
     background-color: $dark-green;
-    border-top-left-radius: 6px;
-    -webkit-border-top-left-radius: 6px;
-    -moz-border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    -webkit-border-top-right-radius: 6px;
-    -moz-border-top-right-radius: 6px;
+    @include border-top-left-radius;
+    @include border-top-right-radius;
 }
 
 /* COLUMNS */
@@ -150,9 +142,7 @@ a:hover {
     .wrapper {
         background:white;
         color:black;
-        border-radius: 6px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
+        @include border-radius;
         padding:0.1em 24px 0.8em 24px;
         margin-right: 6px;
     }
@@ -179,9 +169,7 @@ a:hover {
     color:white;
     width:30%;
     background-color: $light-green;
-    border-bottom: 10px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
+    @include border-radius;
 }
 #content-related {
     p, ul, form {
@@ -198,13 +186,8 @@ a:hover {
     border-top: 1px solid $light-green;
     margin: 25px -24px -0.8em;
     padding: 5px 24px;
-    border-bottom-left-radius: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -moz-border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    -moz-border-bottom-right-radius: 6px;
-
+    @include border-bottom-left-radius;
+    @include border-bottom-right-radius;
     .wrapper {
         margin-top:6px;
     }
@@ -728,9 +711,7 @@ h3 .small {
     display: block;
     padding: 6px;
     background-color: $dark-green;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
+    @include border-radius;
 }
 /* End hide from IE-mac */
 
