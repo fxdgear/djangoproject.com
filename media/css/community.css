@@ -9,25 +9,24 @@ body#community #content-main .module-container {
 }
 /* line 13, ../../compass/sass/community.scss */
 body#community #content-main .module {
-  width: 340px;
-  float: left;
   display: inline;
+  float: left;
+  margin-right: 20px;
+  width: 460px;
 }
-/* line 18, ../../compass/sass/community.scss */
-body#community #content-main .first {
-  margin-right: 30px;
-  clear: left;
+/* line 147, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body#community #content-main .module {
+  overflow-x: hidden;
 }
-/* line 22, ../../compass/sass/community.scss */
-body#community #content-main .last {
-  margin-right: 5px;
-  clear: right;
+/* line 16, ../../compass/sass/community.scss */
+body#community #content-main .module.last {
+  margin-right: 0;
 }
-/* line 28, ../../compass/sass/community.scss */
+/* line 21, ../../compass/sass/community.scss */
 body#community .hidden {
   display: none;
 }
-/* line 32, ../../compass/sass/community.scss */
+/* line 25, ../../compass/sass/community.scss */
 body#community div.pagination {
   text-align: center;
   margin-top: 1em;

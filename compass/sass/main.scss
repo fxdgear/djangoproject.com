@@ -175,7 +175,7 @@ a:hover {
         border-bottom:#888 1px solid;
         margin: 1.3em -14px 3px -14px;
         padding: 0 14px 3px 14px;
-        font-size:150%;
+        font-size:125%;
     }
     h2:first-child {
         margin-top:.8em;
@@ -280,8 +280,9 @@ ins a {
 
 body#weblog {
     .entry {
-        border-top: 1px solid $light-green;
+        border-top: 1px solid #888;
         margin-top: 2em;
+        padding-top: 2em;
     }
     .entry:first-of-type {
         border-top: none;
@@ -429,6 +430,7 @@ pre, .literal-block {
     margin: 1em 0;
     padding: .3em .4em;
     overflow: auto;
+    font-size: 12px;
 }
 dt .literal, table .literal {
     background:none;

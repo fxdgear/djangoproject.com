@@ -11,17 +11,10 @@ body#community {
             overflow: hidden;
         }
         .module {
-            width: 340px;
-            float: left;
-            display: inline;
+            @include column(12);
         }
-        .first {
-            margin-right: 30px;
-            clear: left;
-        }
-        .last {
-            margin-right: 5px;
-            clear: right;
+        .module.last {
+            margin-right: 0;
         }
     }
 
