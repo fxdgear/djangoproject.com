@@ -35,7 +35,7 @@ body#homepage #content-main .two-col .module {
   margin-right: 20px;
   width: 460px;
 }
-/* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 147, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#homepage #content-main .two-col .module {
   overflow-x: hidden;
 }
@@ -54,49 +54,35 @@ body#homepage #content-main .module h3 {
   margin-bottom: 1em;
   clear: both;
 }
-/* line 47, ../../compass/sass/homepage.scss */
-body#homepage #content-main .description {
-  background-color: #e1ece2;
-  border: 1px solid #487858;
-  color: #487858;
-  padding: 1em;
-  font-size: 120%;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 57, ../../compass/sass/homepage.scss */
+/* line 49, ../../compass/sass/homepage.scss */
 body#homepage .sidebar .entry {
   margin-bottom: 2.2em;
 }
-/* line 59, ../../compass/sass/homepage.scss */
+/* line 51, ../../compass/sass/homepage.scss */
 body#homepage .sidebar .entry p.date {
   margin-top: 0;
 }
-/* line 64, ../../compass/sass/homepage.scss */
+/* line 56, ../../compass/sass/homepage.scss */
 body#homepage h4.item-title {
   margin-top: 0;
 }
-/* line 66, ../../compass/sass/homepage.scss */
+/* line 58, ../../compass/sass/homepage.scss */
 body#homepage h4.item-title a {
   color: #487858;
   text-decoration: none;
 }
-/* line 70, ../../compass/sass/homepage.scss */
+/* line 62, ../../compass/sass/homepage.scss */
 body#homepage h4.item-title a:hover {
   color: #ab5603;
   background: none;
 }
-/* line 75, ../../compass/sass/homepage.scss */
+/* line 67, ../../compass/sass/homepage.scss */
 body#homepage ul.books {
   padding-left: 0;
   margin-right: 0;
   overflow: hidden;
 }
-/* line 79, ../../compass/sass/homepage.scss */
+/* line 71, ../../compass/sass/homepage.scss */
 body#homepage ul.books li.book {
   display: inline;
   float: left;
@@ -104,49 +90,77 @@ body#homepage ul.books li.book {
   width: 140px;
   list-style: none;
 }
-/* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 147, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#homepage ul.books li.book {
   overflow-x: hidden;
 }
-/* line 82, ../../compass/sass/homepage.scss */
+/* line 74, ../../compass/sass/homepage.scss */
 body#homepage ul.books li.book .cover-image {
   margin-bottom: .3em;
 }
-/* line 86, ../../compass/sass/homepage.scss */
+/* line 78, ../../compass/sass/homepage.scss */
 body#homepage ul.books li.book.last {
   margin-right: 0;
 }
-/* line 90, ../../compass/sass/homepage.scss */
-body#homepage ul.django-features {
-  padding-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-}
-/* line 94, ../../compass/sass/homepage.scss */
-body#homepage ul.django-features li.django-feature {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-  width: 220px;
+/* line 83, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel {
   list-style: none;
-  height: 110px;
   margin-bottom: 1.5em;
+  width: 660px;
+  height: 390px;
 }
-/* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body#homepage ul.django-features li.django-feature {
-  overflow-x: hidden;
+/* line 89, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-shadow: 0 0 3px 3px #ccc;
+  -webkit-box-shadow: 0 0 3px 3px #ccc;
+  box-shadow: 0 0 3px 3px #ccc;
+  border: 10px solid white;
+  height: 350px;
+  margin: 10px 20px;
 }
-/* line 100, ../../compass/sass/homepage.scss */
-body#homepage ul.django-features li.django-feature.last {
-  margin-right: 0;
+/* line 97, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide .inner {
+  padding: 20px;
+  display: block;
+  border: 1px solid #ccc;
+  background-color: #e1ece2;
+  height: 308px;
 }
-/* line 104, ../../compass/sass/homepage.scss */
+/* line 103, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide .inner h4 {
+  font-size: 160%;
+}
+/* line 106, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide .inner .description {
+  overflow: hidden;
+  margin-top: 30px;
+}
+/* line 109, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide .inner .description .image {
+  float: left;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #aaa;
+}
+/* line 116, ../../compass/sass/homepage.scss */
+body#homepage ul#django-features li.panel .slide .inner .description p {
+  font-size: 120%;
+  margin: 5px 0 0 270px;
+}
+/* line 125, ../../compass/sass/homepage.scss */
 body#homepage ul.websites {
   padding-left: 0;
   margin-right: 0;
   overflow: hidden;
 }
-/* line 108, ../../compass/sass/homepage.scss */
+/* line 129, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website {
   list-style: none;
   display: inline;
@@ -156,11 +170,11 @@ body#homepage ul.websites li.website {
   height: 180px;
   margin-bottom: 1.5em;
 }
-/* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+/* line 147, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body#homepage ul.websites li.website {
   overflow-x: hidden;
 }
-/* line 113, ../../compass/sass/homepage.scss */
+/* line 134, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website .image img {
   border: 1px solid #ccc;
   -moz-border-radius: 6px;
@@ -171,15 +185,15 @@ body#homepage ul.websites li.website .image img {
   border-radius: 6px;
   margin-bottom: .3em;
 }
-/* line 119, ../../compass/sass/homepage.scss */
+/* line 140, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website.last {
   margin-right: 0;
 }
-/* line 123, ../../compass/sass/homepage.scss */
+/* line 144, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites {
   padding-left: 0;
 }
-/* line 125, ../../compass/sass/homepage.scss */
+/* line 146, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites li {
   list-style-type: none;
 }

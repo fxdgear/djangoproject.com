@@ -73,6 +73,18 @@ a:hover {
         text-decoration:none !important;
     }
 }
+#homepage #content-main, #community #content-main, #download #content-main, #generic #content-main {
+    @include column(24, true);
+    overflow: hidden;
+}
+#documentation #content, #code #content {
+    width: 100%;
+}
+#documentation #content-main {
+    margin-left: 9 * $blueprint-grid-outer-width;
+    display: block;
+    margin-right: $blueprint-grid-margin;
+}
 
 /* HEADER */
 
@@ -130,7 +142,6 @@ a:hover {
 #documentation #nav-documentation a,
 #weblog #nav-weblog a,
 #community #nav-community a,
-#blogroll #nav-blogroll a,
 #foundation #nav-foundation a,
 #code #nav-code a {
     color:white;
@@ -140,18 +151,13 @@ a:hover {
     @include border-top-right-radius;
 }
 
-/* COLUMNS */
+/* EXTRA CONTENT */
 
-#content-main {
-    @include column(24);
-    overflow: hidden;
-}
-#generic #content-main, #code #content-main {
-    @include column(34, true);
-}
 #content-related {
-    @include column(10, true);
-    @include border-radius;
+    @include column(9, true);
+    @include border-top-right-radius;
+    @include border-bottom-right-radius;
+    float: left;
     color:white;
     background-color: $light-green;
     p, ul, form {
@@ -280,7 +286,7 @@ ins a {
 
 body#weblog {
     .entry {
-        border-top: 1px solid #888;
+        border-top: 1px solid #ccc;
         margin-top: 2em;
         padding-top: 2em;
     }
@@ -566,6 +572,9 @@ div.versionchanged span.title {
                 padding-left: 0;
             }
         }
+        li.last {
+            margin-right: 0;
+        }
         a.title {
             font-family: $special-font-family;
             font-size: 125%;
@@ -580,6 +589,7 @@ div.versionchanged span.title {
     @include wrapper;
     font-size:90%;
     margin-top:2em;
+    text-align: center;
 }
 #copyright-notice a {
     color:$dark-orange;

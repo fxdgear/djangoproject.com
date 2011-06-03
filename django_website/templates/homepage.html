@@ -1,8 +1,29 @@
-{% extends "base_2col.html" %}
+{% extends "base.html" %}
 
 {% block cssid %}homepage{% endblock %}
 
 {% block sectionid %}homepage{% endblock %}
+
+{% block extrahead %}
+<script src="{{ MEDIA_URL }}js/jquery-1.6.1.min.js"></script>
+<script src="{{ MEDIA_URL }}js/slider/jquery.anythingslider.js"></script>
+<link rel="stylesheet" href="{{ MEDIA_URL }}js/slider/anythingslider.css">
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#django-features').anythingSlider({
+       width               : null,
+       height              : null,
+       startStopped        : true,
+       resizeContents      : false,
+       expand              : false,
+       startPanel          : 1
+    //   navigationFormatter : function(i, panel){
+    //    return ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2', 'Test'][i - 1];
+    //   }
+  });
+});
+</script>
+{% endblock %}
 
 {% block content %}
 <div class="tagline">
@@ -10,14 +31,21 @@
     <h2>Django makes it easier to build better websites and Web applications more quickly and with less code.</h2>
 </div>
 
-<p class="description">Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Developed four years ago by a fast-moving online-news operation, Django was designed to handle two challenges: the intensive deadlines of a newsroom and the stringent requirements of the experienced Web developers who wrote it. It lets you build high-performing, elegant Web applications quickly.</p>
-
 <div class="module">
-    <h3>What does Django have to offer?</h3>
-    <ul class="django-features">
+    <ul id="django-features">
+        <li class="panel1">
+            <div class="slide">
+                <div class="inner">
+                    <h4 class="item-title"><a href="">What is Django?</a></h4>
+                    <div class="description">
+                        <div class="image"></div>
+                        <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Developed four years ago by a fast-moving online-news operation, Django was designed to handle two challenges: the intensive deadlines of a newsroom and the stringent requirements of the experienced Web developers who wrote it. It lets you build high-performing, elegant Web applications quickly.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
         {% load showcase_tags %}{% render_django_features 8 %}
     </ul>
-    <p class="more"><a href="#">Learn more &rarr;</a></p>
 </div>
 
 <div class="module">
@@ -25,7 +53,6 @@
     <ul class="websites">
         {% render_websites 8 %}
     </ul>
-    <p class="more"><a href="#">Find more &rarr;</a></p>
 </div>
 
 <div class="two-col">
@@ -43,7 +70,7 @@
             <li>Find Django enthusiasts on <a href="http://djangopeople.com">djangopeople.com</a></li>
             <li>Find and post job ads on <a href="http://djangogigs.com">djangogigs.com</a></li>
             <li>Find the apps you need on <a href="http://djangopackages.com">djangopackages.com</a></li>
-            <li>Find more Django sites on <a href="http://djangosites.com">djangosites.com</a></li>
+            <li>Find more Django-powered sites on <a href="http://djangosites.com">djangosites.com</a></li>
         </ul>
         <p class="more"><a href="/community/">Discover more &rarr;</a></p>
     </div>
@@ -62,16 +89,4 @@
     <h3>You want to know about this?</h3>
     <p>Say some blurb about this and that here. Yadi yada, you get the point. <a href="#">Learn more &rarr;</a></p>
 </div>
-{% endblock %}
-
-{% block content-related %}
-<h2>Download</h2>
-<ul class="linklist">
-    <li class="button-download"><a href="/download/">Latest release: <strong>1.3</strong></a></li>
-</ul>
-<p>Open source, <a href="https://code.djangoproject.com/browser/django/trunk/LICENSE">BSD license</a></p>
-
-<h2>From the blog</h2>
-{% load weblog %}{% render_latest_blog_entries 4 %}
-        
 {% endblock %}

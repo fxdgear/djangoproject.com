@@ -44,14 +44,6 @@ body#homepage {
                 clear:both;
             }
         }
-        .description {
-            background-color: $highlight-green;
-            border: 1px solid $light-green;
-            color: $light-green;
-            padding: 1em;
-            font-size: 120%;
-            @include border-radius;
-        }
     }
     .sidebar {
         .entry {
@@ -87,18 +79,47 @@ body#homepage {
             margin-right: 0;
         }
     }
-    ul.django-features {
-        padding-left: 0;
-        margin-right: 0;
-        overflow:hidden;
-        li.django-feature {
-            @include column(6);
+    ul#django-features {
+        li.panel {
             list-style: none;
-            height:110px;
             margin-bottom: 1.5em;
-        }
-        li.django-feature.last {
-            margin-right: 0;
+            width: $blueprint-grid-outer-width * 17 - $blueprint-grid-margin;
+            height: 390px;
+            
+            .slide {
+                @include border-radius;
+                -moz-box-shadow: 0 0 3px 3px #ccc;
+                -webkit-box-shadow: 0 0 3px 3px #ccc;
+                box-shadow: 0 0 3px 3px #ccc;
+                border: 10px solid white;
+                height: 350px;
+                margin: 10px 20px;
+                .inner {
+                    padding: 20px;
+                    display: block;
+                    border: 1px solid #ccc;
+                    background-color: $highlight-green;
+                    height: 308px;
+                    h4 {
+                        font-size: 160%;
+                    }
+                    .description {
+                        overflow: hidden;
+                        margin-top: 30px;
+                        .image {
+                            float: left;
+                            width: 250px;
+                            height: 200px;
+                            background-color: white;
+                            border: 1px solid #aaa;
+                        }
+                        p {
+                            font-size: 120%;
+                            margin: 5px 0 0 270px;
+                        }
+                    }
+                }
+            }
         }
     }
     ul.websites {

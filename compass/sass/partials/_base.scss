@@ -23,6 +23,6 @@ $default-border-radius: 6px;
 
 @mixin wrapper {
     margin: 0 auto;
-    width: 34 * $blueprint-grid-outer-width - $blueprint-grid-margin;
+    width: 24 * $blueprint-grid-outer-width - $blueprint-grid-margin;
     overflow: hidden;
 }

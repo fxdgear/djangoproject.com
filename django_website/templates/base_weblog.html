@@ -1,4 +1,4 @@
-{% extends "base_2col.html" %}
+{% extends "base.html" %}
 
 {% block extrahead %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/weblog/" />
@@ -9,6 +9,7 @@
 {% block title %}Weblog{% endblock %}
 
 {% block content-related %}
+{# This section is currently not displayed. We need to find a good place for it in the new design. #}
 <h2>Archives</h2>
 {% load weblog %}{% render_month_links %}
 
