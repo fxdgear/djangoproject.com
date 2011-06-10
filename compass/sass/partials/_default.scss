@@ -1,0 +1,34 @@
+/* Default Layout: 992px.
+ * Gutters: 24px.
+ * Outer margins: 48px.
+ * Leftover space for scrollbars @1024px: 32px.  */
+
+.wrapper {
+    @include grid(10);
+}
+
+body#homepage {
+    ul.websites {
+        li.website {
+            @include columns(2);
+        }
+        li.website.position-5, li.website.position-10 {
+            @include omega;
+        }
+    }
+    .module.books {
+        @include columns(6);
+        ul.books {
+            li.book {
+                @include columns(2);
+            }
+            li.book.position-3 {
+                @include omega;
+            }
+        }
+    }
+    .module.community {
+        @include columns(4);
+        @include omega;
+    }
+}

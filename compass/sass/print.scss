@@ -1,8 +1,4 @@
 @import "partials/base";
-@import "blueprint";
-
-// Generate the blueprint print styles:
-@include blueprint-print;
 
 @page {
     size: US-Letter;

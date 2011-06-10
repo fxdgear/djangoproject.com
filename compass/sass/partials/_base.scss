@@ -1,9 +1,6 @@
 @import "compass/css3/border-radius";
 @import "compass/utilities";
-@import "blueprint";
-
-$blueprint-grid-width   : 20px;
-$blueprint-grid-margin  : 20px;
+@import "less";
 
 $dark-orange: #AB5603;
 $light-orange: #FFC757;
@@ -21,8 +18,3 @@ $special-font-family: 'Trebuchet MS', sans-serif;
 
 $default-border-radius: 6px;
 
-@mixin wrapper {
-    margin: 0 auto;
-    width: 24 * $blueprint-grid-outer-width - $blueprint-grid-margin;
-    overflow: hidden;
-}

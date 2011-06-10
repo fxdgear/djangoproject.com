@@ -2,15 +2,20 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
+    <title>Django | {% block title %}The Web framework for perfectionists with deadlines{% endblock %}</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="en-us" />
-    <title>Django | {% block title %}The Web framework for perfectionists with deadlines{% endblock %}</title>
     <meta name="ROBOTS" content="ALL" />
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="Copyright" content="Django Software Foundation" />
     <meta name="keywords" content="Python, Django, framework, open-source" />
     <meta name="description" content="Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <link href="{{ MEDIA_URL }}css/{% block cssid %}main{% endblock %}.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="{{ MEDIA_URL }}css/print.css" rel="stylesheet" type="text/css" media="print" />
     {% block extrahead %}{% endblock %}
@@ -18,7 +23,7 @@
   <body id="{% block sectionid %}generic{% endblock %}" class="{% block coltype %}default{% endblock %}">
   <div id="page">
     <div id="header">
-      <div class="inner">
+      <div class="inner wrapper">
       <h1 id="logo"><a href="http://www.djangoproject.dotcloud.com/"><img src="{{ MEDIA_URL }}img/site/hdr_logo.png" alt="Django" /></a></h1>
       <ul id="nav-global">
         <li id="nav-homepage"><a href="http://www.djangoproject.dotcloud.com/">Home</a></li>
@@ -33,7 +38,7 @@
       </div>
     </div>
     <!-- END Header -->
-    <div id="content">
+    <div id="content" class="wrapper">
       {% block columnwrap %}
         <div id="content-main">
             {% block content %}{% endblock %}
@@ -45,7 +50,7 @@
   </div>
   <!-- END #container -->
   <div id="footer">
-      <ul id="footer-sitemap">
+      <ul id="footer-sitemap" class="wrapper">
           <li class="section"><a class="title" href="#">About Django</a>
               <ul>
                   <li class="link"><a href="#">Overview</a></li>
@@ -77,13 +82,11 @@
       </ul>
     </div>
     <!-- END #footer -->
-    <div id="copyright-notice">
-        <div class="wrapper">
+    <div id="copyright-notice" class="wrapper">
         <p>&copy; 2005-{% now "Y" %} <a href="https://www.djangoproject.com/foundation/">Django Software Foundation</a> unless otherwise noted. Django is a registered trademark of the Django Software Foundation.<br/>
         Hosting graciously provided by <a href="http://mediatemple.net/">
         <img style="vertical-align: middle; position: relative; top: -1px;" src="{{ MEDIA_URL }}img/site/mt.png" alt="media temple" /></a>
         </p>
-        </div>
     </div>
   </body>
 </html>

@@ -1,3 +1,239 @@
+/* Less Framework 4
+ * http://lessframework.com
+ * by Joni Korpi
+ * License: http://creativecommons.org/licenses/MIT/ */
+/* line 7, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/_reset.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup,
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 14, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/_reset.scss */
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+  display: block;
+}
+
+/* line 18, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/_reset.scss */
+a img {
+  border: 0;
+}
+
+/* line 1, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.gigantic {
+  font-size: 110px;
+  line-height: 120px;
+  letter-spacing: -2px;
+}
+
+/* line 7, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.huge {
+  font-size: 68px;
+  line-height: 72px;
+  letter-spacing: -1px;
+}
+
+/* line 13, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.large {
+  font-size: 42px;
+  line-height: 48px;
+}
+
+/* line 18, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.bigger {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+/* line 23, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.big {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+/* line 28, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+body {
+  font: 16px/24px Georgia, serif;
+}
+
+/* line 32, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+.small {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* By Idan Gazit https://gist.github.com/1009952 */
+/* Default Layout: 992px.
+ * Gutters: 24px.
+ * Outer margins: 48px.
+ * Leftover space for scrollbars @1024px: 32px.  */
+/* line 6, ../../compass/sass/partials/_default.scss */
+.wrapper {
+  overflow: hidden;
+  *zoom: 1;
+  width: 896px;
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 12, ../../compass/sass/partials/_default.scss */
+body#homepage ul.websites li.website {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin-right: 24px;
+}
+/* line 15, ../../compass/sass/partials/_default.scss */
+body#homepage ul.websites li.website.position-5, body#homepage ul.websites li.website.position-10 {
+  margin-right: 0;
+}
+/* line 19, ../../compass/sass/partials/_default.scss */
+body#homepage .module.books {
+  display: inline;
+  float: left;
+  width: 528px;
+  margin-right: 24px;
+}
+/* line 22, ../../compass/sass/partials/_default.scss */
+body#homepage .module.books ul.books li.book {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin-right: 24px;
+}
+/* line 25, ../../compass/sass/partials/_default.scss */
+body#homepage .module.books ul.books li.book.position-3 {
+  margin-right: 0;
+}
+/* line 30, ../../compass/sass/partials/_default.scss */
+body#homepage .module.community {
+  display: inline;
+  float: left;
+  width: 344px;
+  margin-right: 24px;
+  margin-right: 0;
+}
+
+/* Tablet Layout: 768px.
+ * Gutters: 24px.
+ * Outer margins: 28px.
+ * Inherits styles from: Default Layout.  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 7, ../../compass/sass/partials/_tablet.scss */
+  .wrapper {
+    overflow: hidden;
+    *zoom: 1;
+    width: 712px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 13, ../../compass/sass/partials/_tablet.scss */
+  body#homepage ul.websites li.website {
+    margin-right: 24px !important;
+  }
+  /* line 20, ../../compass/sass/partials/_tablet.scss */
+  body#homepage .module.books {
+    display: inline;
+    float: left;
+    width: 344px;
+    margin-right: 24px;
+  }
+  /* line 23, ../../compass/sass/partials/_tablet.scss */
+  body#homepage .module.books ul.books li.book {
+    margin-right: 24px !important;
+  }
+  /* line 26, ../../compass/sass/partials/_tablet.scss */
+  body#homepage .module.books ul.books li.book.position-2 {
+    margin-right: 0 !important;
+  }
+}
+/* Mobile Layout: 320px.
+ * Gutters: 24px.
+ * Outer margins: 34px.
+ * Inherits styles from: Default Layout.  */
+@media only screen and (max-width: 767px) {
+  /* line 7, ../../compass/sass/partials/_mobile.scss */
+  .wrapper {
+    overflow: hidden;
+    *zoom: 1;
+    width: 252px;
+    padding-left: 34px;
+    padding-right: 34px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 11, ../../compass/sass/partials/_mobile.scss */
+  .module.books ul.books {
+    display: inline;
+    float: left;
+    width: 160px;
+    margin-right: 24px;
+  }
+}
+/* Wide Mobile Layout: 480px.
+ * Gutters: 24px.
+ * Outer margins: 22px.
+ * Inherits styles from: Default Layout, Mobile Layout.  */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 7, ../../compass/sass/partials/_wide-mobile.scss */
+  .wrapper {
+    overflow: hidden;
+    *zoom: 1;
+    width: 436px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 11, ../../compass/sass/partials/_wide-mobile.scss */
+  ul.websites li.website {
+    margin-right: 24px !important;
+  }
+
+  /* line 16, ../../compass/sass/partials/_wide-mobile.scss */
+  .module.books ul.books {
+    display: inline;
+    float: left;
+    width: 344px;
+    margin-right: 24px;
+  }
+  /* line 18, ../../compass/sass/partials/_wide-mobile.scss */
+  .module.books ul.books li.book {
+    margin-right: 24px !important;
+  }
+  /* line 21, ../../compass/sass/partials/_wide-mobile.scss */
+  .module.books ul.books li.book.position-2 {
+    margin-right: 0 !important;
+  }
+
+  /* line 26, ../../compass/sass/partials/_wide-mobile.scss */
+  .module.community {
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+}
+/* Retina media query.
+   Overrides styles for devices with a
+   device-pixel-ratio of 2+, such as iPhone 4.  */
 @import url(main.css);
 /* line 5, ../../compass/sass/community.scss */
 body#community h5 {
@@ -9,14 +245,8 @@ body#community #content-main .module-container {
 }
 /* line 13, ../../compass/sass/community.scss */
 body#community #content-main .module {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-  width: 460px;
-}
-/* line 147, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body#community #content-main .module {
-  overflow-x: hidden;
+  width: 1080px;
+  margin-right: 24px;
 }
 /* line 16, ../../compass/sass/community.scss */
 body#community #content-main .module.last {

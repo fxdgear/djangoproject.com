@@ -1,0 +1,15 @@
+/* Mobile Layout: 320px.
+ * Gutters: 24px.
+ * Outer margins: 34px.
+ * Inherits styles from: Default Layout.  */
+
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        @include grid(3);
+    }
+    .module.books {
+        ul.books {
+            @include columns(2);
+        }
+    }
+}

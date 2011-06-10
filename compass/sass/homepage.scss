@@ -1,10 +1,9 @@
-@import "partials/base";
-@import "main.css";
+@import "main";
 
 
 
-body#homepage { 
-    
+body#homepage {
+
     p.more {
         clear:both;
         margin-top:2em;
@@ -26,15 +25,6 @@ body#homepage {
         }
     }
     #content-main {
-        .two-col {
-            overflow:hidden;
-            .module {
-                @include column(12);
-            }
-            .module.last {
-                margin-right: 0;
-            }
-        }
         .module {
             margin-top: 4em;
             h3 {
@@ -69,33 +59,34 @@ body#homepage {
         margin-right: 0;
         overflow:hidden;
         li.book {
-            @include column(4);
             list-style: none;
             .cover-image {
                 margin-bottom: .3em;
             }
         }
-        li.book.last {
-            margin-right: 0;
-        }
     }
+
+    $slide-margin-width: 20px;
+    $slide-padding: 20px;
+    $slide-border-width: 10px;
+
     ul#django-features {
         li.panel {
             list-style: none;
             margin-bottom: 1.5em;
-            width: $blueprint-grid-outer-width * 17 - $blueprint-grid-margin;
+            width: column-width(6) + $slide-margin-width * 2;
             height: 390px;
-            
+
             .slide {
                 @include border-radius;
                 -moz-box-shadow: 0 0 3px 3px #ccc;
                 -webkit-box-shadow: 0 0 3px 3px #ccc;
                 box-shadow: 0 0 3px 3px #ccc;
-                border: 10px solid white;
+                border: $slide-border-width solid white;
                 height: 350px;
-                margin: 10px 20px;
+                margin: 10px $slide-margin-width;
                 .inner {
-                    padding: 20px;
+                    padding: $slide-padding;
                     display: block;
                     border: 1px solid #ccc;
                     background-color: $highlight-green;
@@ -128,17 +119,12 @@ body#homepage {
         overflow:hidden;
         li.website {
             list-style: none;
-            @include column(6);
             height:180px;
             margin-bottom: 1.5em;
             .image img {
-                border: 1px solid #ccc;
                 @include border-radius;
                 margin-bottom: .3em;
             }
-        }
-        li.website.last {
-            margin-right: 0;
         }
     }
     ul.community-sites {

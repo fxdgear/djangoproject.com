@@ -1,0 +1,33 @@
+/* Tablet Layout: 768px.
+ * Gutters: 24px.
+ * Outer margins: 28px.
+ * Inherits styles from: Default Layout.  */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .wrapper {
+        @include grid(8);
+    }
+
+    body#homepage {
+        ul.websites {
+            li.website {
+                margin-right: $less-gutter-width !important;
+            }
+            li.website.position-4, li.website.position-8 {
+
+            }
+        }
+        .module.books {
+            @include columns(4);
+            ul.books {
+                li.book {
+                    margin-right: $less-gutter-width !important;
+                }
+                li.book.position-2 {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+

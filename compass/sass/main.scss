@@ -9,17 +9,6 @@ Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 
 @import "partials/base";
 
-// This import applies a global reset to any page that imports this stylesheet.
-@import "blueprint/reset";
-
-// Import the non-default scaffolding module.
-@import "blueprint/scaffolding";
-
-// Generate the blueprint framework according to your configuration:
-@include blueprint;
-
-@include blueprint-scaffolding;
-
 
 
 
@@ -51,8 +40,7 @@ a:hover {
     color:$yellow;
 }
 
-#content {
-    @include wrapper;
+.wrapper {
     overflow: hidden;
 }
 
@@ -73,18 +61,6 @@ a:hover {
         text-decoration:none !important;
     }
 }
-#homepage #content-main, #community #content-main, #download #content-main, #generic #content-main {
-    @include column(24, true);
-    overflow: hidden;
-}
-#documentation #content, #code #content {
-    width: 100%;
-}
-#documentation #content-main {
-    margin-left: 9 * $blueprint-grid-outer-width;
-    display: block;
-    margin-right: $blueprint-grid-margin;
-}
 
 /* HEADER */
 
@@ -100,7 +76,6 @@ a:hover {
         bottom:10px;
     }
     .inner {
-        @include wrapper;
         position:relative;
         height:6.5em;
     }
@@ -195,12 +170,13 @@ a:hover {
     }
 }
 #content-secondary {
+    clear: both;
     background-color: $highlight-green;
     border: 1px solid $light-green;
     padding: 1em;
     margin-top:3.5em;
     @include border-radius;
-    
+
     h2:first-child {
         margin-top: 0;
     }
@@ -268,7 +244,7 @@ p.more {
 }
 #content-main {
     h2, h3 {
-        margin-top:1.2em;   
+        margin-top:1.2em;
     }
 }
 h2.deck {
@@ -319,7 +295,7 @@ ol {
     padding-left:30px;
 }
 ul {
-    padding-left:2em; 
+    padding-left:2em;
     li {
         list-style-type:disc;
         margin-bottom:.4em;
@@ -513,17 +489,17 @@ table.docutils {
 }
 div.versionadded,
 div.versionchanged {
-    font-size: 92%; 
+    font-size: 92%;
     color:#555;
 }
 div.versionadded span.title,
-div.versionchanged span.title { 
+div.versionchanged span.title {
     font-style: italic;
 }
 /* Verdana bold is too bold; lighten it to compensate */
 #documentation #content-main p > strong,
 #documentation #content-main p > b {
-    color: #555; 
+    color: #555;
 }
 
 /* Sphinx-specific fixes */
@@ -560,13 +536,11 @@ div.versionchanged span.title {
     border-top:solid 6px $light-green;
     border-bottom:solid 6px $light-green;
     ul#footer-sitemap {
-        @include wrapper;
-        padding-left:0;
         li {
             list-style-type: none;
-        } 
+        }
         li.section {
-            @include column(6);
+            @include columns(2);
             ul {
                 margin-top: 1em;
                 padding-left: 0;
@@ -586,7 +560,6 @@ div.versionchanged span.title {
     }
 }
 #copyright-notice {
-    @include wrapper;
     font-size:90%;
     margin-top:2em;
     text-align: center;
