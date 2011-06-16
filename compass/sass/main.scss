@@ -150,7 +150,7 @@ a:hover {
         margin-bottom: 2em;
     }
     h1.title {
-        padding: 1em;
+        padding: 14px;
         font-size: 150%;
         color:$light-orange;
         cursor: pointer;
@@ -163,7 +163,7 @@ a:hover {
         color:white;
         border-bottom:#888 1px solid;
         margin: 1.3em -14px 3px -14px;
-        padding: 0 1em 3px 1em;
+        padding: 0 14px 3px 14px;
         font-size:125%;
     }
     h2:first-child {
@@ -180,7 +180,7 @@ a:hover {
         @include border-radius;
 
         #content-related-body {
-            padding: 1em;
+            padding: 14px;
             display: none;
             z-index: 100;
         }
@@ -192,6 +192,7 @@ a:hover {
     border: 1px solid $light-green;
     margin-top:3.5em;
     @include border-radius;
+    @include full(10);
 
     h2:first-child {
         margin-top: 1em;

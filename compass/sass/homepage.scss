@@ -97,6 +97,7 @@ body#homepage {
         li.panel {
             list-style: none;
             margin-bottom: 1.5em;
+            width: column-width(6) + $slide-margin-width * 2;
             height: 390px;
 
             .slide {
