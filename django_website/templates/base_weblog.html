@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_with_related.html" %}
 
 {% block extrahead %}
+{{ block.super }}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/weblog/" />
 {% endblock %}
 

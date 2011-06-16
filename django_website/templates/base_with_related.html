@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var related = $('#content-related');
+            related.find('h1.closed').live('click', function() {
+                $(this).removeClass('closed');
+                $(this).addClass('open');
+                $('#content-related-body').show();
+            });
+            related.find('h1.open').live('click', function() {
+                $(this).removeClass('open');
+                $(this).addClass('closed');
+                $('#content-related-body').hide();
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block columnwrap %}
+    <div id="content-related">
+        <div class="inner">
+            <h1 class="title closed">{% block content-related-title %}{% endblock %}</h1>
+            <div id="content-related-body">
+                {% block content-related %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <div id="content-main">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}
