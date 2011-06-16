@@ -4,6 +4,29 @@
 
 body#homepage {
 
+    #download {
+        margin-bottom: 2em;
+        background-color: $light-green;
+        @include border-radius;
+        a {
+            text-decoration: none;
+            padding: 1em;
+            display:block;
+            color: white;
+        }
+        a:hover {
+            background: none;
+            color: $yellow;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+        .level1 {
+            font-size: 150%;
+        }
+    }
+
     p.more {
         clear:both;
         margin-top:2em;
@@ -14,7 +37,7 @@ body#homepage {
         }
     }
     .tagline {
-        margin-bottom: 4em;
+        margin-bottom: 6em;
         h1 {
             margin-bottom: 0;
         }
@@ -74,7 +97,6 @@ body#homepage {
         li.panel {
             list-style: none;
             margin-bottom: 1.5em;
-            width: column-width(6) + $slide-margin-width * 2;
             height: 390px;
 
             .slide {

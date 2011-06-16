@@ -7,23 +7,36 @@
     .wrapper {
         @include grid(5);
     }
-    ul.websites {
-        li.website {
-            margin-right: $less-gutter-width !important;
+
+
+    body#homepage {
+        #download {
+            @include columns(2);
+            @include omega;
+            float: right;
         }
-    }
-    .module.books {
-        ul.books {
-            @include columns(4);
-            li.book {
+        ul.websites {
+            li.website {
                 margin-right: $less-gutter-width !important;
             }
-            li.book.position-2 {
-                margin-right: 0 !important;
+        }
+        .module.books {
+            ul.books {
+                @include columns(4);
+                li.book {
+                    margin-right: $less-gutter-width !important;
+                }
+                li.book.position-2 {
+                    margin-right: 0 !important;
+                }
             }
         }
-    }
-    .module.community {
-        @include full(5);
+        .module.community {
+            @include full(5);
+        }
+
+        #content-secondary {
+            @include full(5);
+        }
     }
 }

@@ -28,6 +28,10 @@
                 }
             }
         }
+
+        #content-secondary {
+            @include full(8);
+        }
     }
 }
 

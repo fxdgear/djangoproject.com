@@ -85,41 +85,60 @@ body {
   margin-right: auto;
 }
 
-/* line 12, ../../compass/sass/partials/_default.scss */
+/* line 11, ../../compass/sass/partials/_default.scss */
+body#homepage #download {
+  display: inline;
+  float: left;
+  width: 252px;
+  margin-right: 24px;
+  margin-right: 0;
+  float: right;
+}
+/* line 17, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 15, ../../compass/sass/partials/_default.scss */
+/* line 20, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website.position-5, body#homepage ul.websites li.website.position-10 {
   margin-right: 0;
 }
-/* line 19, ../../compass/sass/partials/_default.scss */
+/* line 24, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books {
   display: inline;
   float: left;
   width: 528px;
   margin-right: 24px;
 }
-/* line 22, ../../compass/sass/partials/_default.scss */
+/* line 27, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 25, ../../compass/sass/partials/_default.scss */
+/* line 30, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book.position-3 {
   margin-right: 0;
 }
-/* line 30, ../../compass/sass/partials/_default.scss */
+/* line 35, ../../compass/sass/partials/_default.scss */
 body#homepage .module.community {
   display: inline;
   float: left;
   width: 344px;
   margin-right: 24px;
+  margin-right: 0;
+}
+/* line 40, ../../compass/sass/partials/_default.scss */
+body#homepage #content-secondary {
+  display: inline;
+  float: left;
+  width: 896px;
+  margin-right: 24px;
+  padding-left: 0px;
+  padding-right: -24px;
   margin-right: 0;
 }
 
@@ -158,6 +177,16 @@ body#homepage .module.community {
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0 !important;
   }
+  /* line 32, ../../compass/sass/partials/_tablet.scss */
+  body#homepage #content-secondary {
+    display: inline;
+    float: left;
+    width: 712px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
 }
 /* Mobile Layout: 320px.
  * Gutters: 24px.
@@ -175,12 +204,22 @@ body#homepage .module.community {
     margin-right: auto;
   }
 
-  /* line 11, ../../compass/sass/partials/_mobile.scss */
-  .module.books ul.books {
+  /* line 13, ../../compass/sass/partials/_mobile.scss */
+  body#homepage .module.books ul.books {
     display: inline;
     float: left;
     width: 160px;
     margin-right: 24px;
+  }
+  /* line 18, ../../compass/sass/partials/_mobile.scss */
+  body#homepage #content-secondary {
+    display: inline;
+    float: left;
+    width: 252px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
   }
 }
 /* Wide Mobile Layout: 480px.
@@ -199,29 +238,46 @@ body#homepage .module.community {
     margin-right: auto;
   }
 
-  /* line 11, ../../compass/sass/partials/_wide-mobile.scss */
-  ul.websites li.website {
+  /* line 13, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage #download {
+    display: inline;
+    float: left;
+    width: 160px;
+    margin-right: 24px;
+    margin-right: 0;
+    float: right;
+  }
+  /* line 19, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage ul.websites li.website {
     margin-right: 24px !important;
   }
-
-  /* line 16, ../../compass/sass/partials/_wide-mobile.scss */
-  .module.books ul.books {
+  /* line 24, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage .module.books ul.books {
     display: inline;
     float: left;
     width: 344px;
     margin-right: 24px;
   }
-  /* line 18, ../../compass/sass/partials/_wide-mobile.scss */
-  .module.books ul.books li.book {
+  /* line 26, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage .module.books ul.books li.book {
     margin-right: 24px !important;
   }
-  /* line 21, ../../compass/sass/partials/_wide-mobile.scss */
-  .module.books ul.books li.book.position-2 {
+  /* line 29, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0 !important;
   }
-
-  /* line 26, ../../compass/sass/partials/_wide-mobile.scss */
-  .module.community {
+  /* line 34, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage .module.community {
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+  /* line 38, ../../compass/sass/partials/_wide-mobile.scss */
+  body#homepage #content-secondary {
     display: inline;
     float: left;
     width: 436px;

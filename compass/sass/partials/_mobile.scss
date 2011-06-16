@@ -7,9 +7,16 @@
     .wrapper {
         @include grid(3);
     }
-    .module.books {
-        ul.books {
-            @include columns(2);
+
+    body#homepage {
+        .module.books {
+            ul.books {
+                @include columns(2);
+            }
+        }
+
+        #content-secondary {
+            @include full(3);
         }
     }
 }

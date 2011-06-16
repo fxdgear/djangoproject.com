@@ -8,6 +8,11 @@
 }
 
 body#homepage {
+    #download {
+        @include columns(3);
+        @include omega;
+        float: right;
+    }
     ul.websites {
         li.website {
             @include columns(2);
@@ -30,5 +35,9 @@ body#homepage {
     .module.community {
         @include columns(4);
         @include omega;
+    }
+
+    #content-secondary {
+        @include full(10);
     }
 }
