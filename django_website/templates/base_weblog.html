@@ -8,9 +8,9 @@
 
 {% block title %}Weblog{% endblock %}
 
+{% block content-related-title %}Archives{% endblock %}
+
 {% block content-related %}
-{# This section is currently not displayed. We need to find a good place for it in the new design. #}
-<h2>Archives</h2>
 {% load weblog %}{% render_month_links %}
 
 <h2>RSS feeds</h2>

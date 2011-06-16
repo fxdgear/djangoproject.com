@@ -129,12 +129,10 @@ a:hover {
 /* EXTRA CONTENT */
 
 #content-related {
-    @include column(9, true);
-    @include border-top-right-radius;
-    @include border-bottom-right-radius;
-    float: left;
+    @include column(3, true);
+    float:right;
+    margin:0 0 24px 24px;
     color:white;
-    background-color: $light-green;
     p, ul, form {
         margin-top:1em;
         margin-bottom:1.2em;
@@ -151,6 +149,15 @@ a:hover {
         margin-top: 0;
         margin-bottom: 2em;
     }
+    h1.title {
+        padding: 14px;
+        font-size: 150%;
+        color:$light-orange;
+        cursor: pointer;
+    }
+    h1.title:hover {
+        color:$yellow;
+    }
     h2 {
         color:white;
         border-bottom:#888 1px solid;
@@ -159,14 +166,23 @@ a:hover {
         font-size:125%;
     }
     h2:first-child {
-        margin-top:.8em;
+        margin-top:0;
     }
     h3 {
         color:$lighter-green;
         font-weight: normal;
     }
+
     .inner {
-        padding: 14px;
+        @include column(3, true);
+        background-color: $light-green;
+        @include border-radius;
+
+        #content-related-body {
+            padding: 14px;
+            display: none;
+            z-index: 100;
+        }
     }
 }
 #content-secondary {

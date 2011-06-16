@@ -3,15 +3,10 @@
 {% block content %}
 <h1>{{ flatpage.title }}</h1>
 
-{% ifequal version "trunk" %}
-  
-{% endifequal %}
-
 {{ flatpage.content }}
 {% endblock %}
 
 {% block content-related %}
-
 <h2>Search docs via Google</h2>
 <form action="http://www.google.com/search" method="get">
 <p><input type="text" name="as_q" /> <input type="submit" value="Go" /></p>
@@ -27,5 +22,4 @@
     <li><a href="https://code.djangoproject.com/newticket">Report a bug</a></li>
     {# <li><a href="/comments/">Recent comments posted to djangoproject.com</a></li> #}
 </ul>
-
 {% endblock %}
