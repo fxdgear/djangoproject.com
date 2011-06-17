@@ -51,7 +51,8 @@ body#homepage {
         .module {
             margin-top: 4em;
             h3 {
-                font-size: 150%;
+                font-size: 175%;
+                font-weight: bold;
                 margin-top: 0;
                 margin-bottom: 1em;
                 clear:both;
@@ -90,15 +91,11 @@ body#homepage {
         }
     }
 
-    $slide-margin-width: 20px;
-    $slide-padding: 20px;
-    $slide-border-width: 10px;
 
     ul#django-features {
         li.panel {
             list-style: none;
             margin-bottom: 1.5em;
-            width: column-width(6) + $slide-margin-width * 2;
             height: 390px;
 
             .slide {
@@ -148,6 +145,7 @@ body#homepage {
             .image img {
                 @include border-radius;
                 margin-bottom: .3em;
+                width: 100%;
             }
         }
     }

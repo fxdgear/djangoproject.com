@@ -3,6 +3,8 @@
  * Outer margins: 28px.
  * Inherits styles from: Default Layout.  */
 
+@import "partials/variables";
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .wrapper {
         @include grid(8);
@@ -26,15 +28,32 @@
         }
     }
 
-
+    #header {
+        h1#logo {
+            @include full(8);
+        }
+        ul#nav-global {
+            @include full(8);
+            li {
+                @include columns(2);
+            }
+            li.position-4, li.position-8 {
+                @include omega;
+            }
+        }
+    }
 
     body#homepage {
         .django-tagline {
             @include columns(5);
         }
         ul.websites {
+            @include full(8);
             li.website {
-                margin-right: $less-gutter-width !important;
+                @include columns(2);
+            }
+            li.website.position-4, li.website.position-8 {
+                @include omega;
             }
         }
         .module.books {
@@ -50,6 +69,16 @@
         }
         #content-secondary {
             @include full(8);
+        }
+    }
+    #footer {
+        ul#footer-sitemap {
+            li.section {
+                @include columns(2);
+            }
+            li.section.position-4 {
+                @include omega;
+            }
         }
     }
 }
