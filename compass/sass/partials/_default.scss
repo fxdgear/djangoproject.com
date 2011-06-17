@@ -3,6 +3,8 @@
  * Outer margins: 48px.
  * Leftover space for scrollbars @1024px: 32px.  */
 
+@import "partials/variables";
+
 .wrapper {
     @include grid(10);
 }
@@ -33,6 +35,22 @@
     }
 }
 
+#header {
+    h1#logo {
+        @include columns(2);
+    }
+    ul#nav-global {
+        @include columns(8);
+        @include omega;
+        li {
+            @include columns(2);
+        }
+        li.position-4, li.position-8 {
+            @include omega;
+        }
+    }
+}
+
 body#homepage {
     #content-main {
         @include full(10);
@@ -45,12 +63,15 @@ body#homepage {
         @include omega;
         display:block;
     }
+    ul#django-features {
+        /* FIXME */
+        li.panel {
+            width: column-width(6) + $slide-margin-width * 2;
+        }
+    }
     ul.websites {
         li.website {
             @include columns(2);
-        }
-        li.website.position-5, li.website.position-10 {
-            @include omega;
         }
     }
     .module.books {
@@ -58,9 +79,6 @@ body#homepage {
         ul.books {
             li.book {
                 @include columns(2);
-            }
-            li.book.position-3 {
-                @include omega;
             }
         }
     }
@@ -70,5 +88,15 @@ body#homepage {
     }
     #content-secondary {
         @include full(10);
+    }
+}
+#footer {
+    ul#footer-sitemap {
+        li.section {
+            @include columns(2);
+        }
+        li.section.item-4 {
+            @include omega;
+        }
     }
 }

@@ -39,6 +39,22 @@
     #s-getting-help { /* On the doc's landing page */
         display:none;
     }
+
+    #header {
+        h1#logo {
+            @include full(5);
+        }
+        ul#nav-global {
+            @include full(3);
+            li {
+                @include columns(1.5);
+            }
+            li.position-2, li.position-4, li.position-6, li.position-8 {
+                @include omega;
+            }
+        }
+    }
+
     body#homepage {
         #content-main {
             @include full(3);
@@ -52,18 +68,20 @@
         ul.websites {
             @include full(3);
             li.website {
-                @include columns(2);
-                margin-right: $less-gutter-width !important;
+                @include columns(1.5);
+            }
+            li.website.position-2, li.website.position-4, li.website.position-6, li.website.position-8, li.website.position-10 {
+                @include omega;
             }
         }
         .module.books {
             ul.books {
-                @include columns(3);
+                @include full(3);
                 li.book {
-                    margin-right: $less-gutter-width !important;
+                    @include columns(1.5);
                 }
                 li.book.position-2 {
-                    margin-right: 0 !important;
+                    @include omega;
                 }
             }
         }
@@ -72,6 +90,17 @@
         }
         #content-secondary {
             @include full(3);
+        }
+    }
+
+    #footer {
+        ul#footer-sitemap {
+            li.section {
+                @include columns(1.5);
+            }
+            li.section.position-2, li.section.position-4 {
+                @include omega;
+            }
         }
     }
 }

@@ -24,7 +24,7 @@
         {% endif %}
       {% endfor %}
     {% else %}
-      This document describes Django {{ version }}. For development docs, 
+      This document describes Django {{ version }}. For development docs,
       <a href="{% url document-detail lang=lang, version="dev", url=docurl %}">go here</a>.
     {% endif %}
   </h2>
@@ -32,11 +32,12 @@
 {% endblock %}
 
 <div id="content-secondary">
+  <div class="inner">
   <h2 id="comments">Questions/Feedback</h2>
   <p>Having trouble? We'd like to help!</p>
   <ul>
     <li>
-      Try the <a href="{% url document-detail lang=lang, version=version, url="faq" %}">FAQ</a> 
+      Try the <a href="{% url document-detail lang=lang, version=version, url="faq" %}">FAQ</a>
       — it's got answers to many common questions.
     </li>
     <li>
@@ -58,6 +59,7 @@
       resources above.
     </li>
   </ul>
+  </div>
 </div>
 {% endblock %}
 
@@ -91,7 +93,7 @@
       {% endblock %}
     </ul>
   {% endblock %}
-  
+
   {% block breadcrumbs-wrapper %}
     <h2>You are here:</h2>
     <ul>
@@ -107,7 +109,7 @@
       {% endblock %}
     </ul>
   {% endblock %}
-  
+
   {% block last-update-wrapper %}
     <h3>Last update:</h3>
     <div>{{ update_date|date:"F j, Y, P" }} (<a href="http://www.timeanddate.com/worldclock/city.html?n=64">{{ update_date|date:"T" }}</a>)</div>
