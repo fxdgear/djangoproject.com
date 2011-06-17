@@ -188,7 +188,6 @@ a:hover {
     border: 1px solid $light-green;
     margin-top:3.5em;
     @include border-radius;
-    @include full(10);
 
     h2:first-child {
         margin-top: 1em;

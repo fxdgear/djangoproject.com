@@ -13,6 +13,12 @@
     #content-main {
         @include full(5);
     }
+    #content-secondary {
+        @include full(5);
+        ul {
+            padding-left: 1em;
+        }
+    }
 
     #content-related {
         @include full(5);
@@ -34,12 +40,15 @@
 
     body#homepage {
         #download {
-            @include columns(2);
-            @include omega;
-            float: right;
+            display:none; /* Mobile users ain't gonna download Django */
+        }
+        .django-tagline {
+            @include full(5);
         }
         ul.websites {
+            @include full(5);
             li.website {
+                @include columns(2);
                 margin-right: $less-gutter-width !important;
             }
         }
@@ -57,7 +66,6 @@
         .module.community {
             @include full(5);
         }
-
         #content-secondary {
             @include full(5);
         }

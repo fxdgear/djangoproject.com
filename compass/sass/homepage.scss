@@ -36,7 +36,7 @@ body#homepage {
             text-decoration: none;
         }
     }
-    .tagline {
+    .django-tagline {
         margin-bottom: 6em;
         h1 {
             margin-bottom: 0;
@@ -44,7 +44,7 @@ body#homepage {
         h2 {
             color: #999999;
             margin-top:0;
-            max-width:450px;
+            max-width: 450px;
         }
     }
     #content-main {
@@ -83,6 +83,7 @@ body#homepage {
         overflow:hidden;
         li.book {
             list-style: none;
+            margin-bottom: 1.5em;
             .cover-image {
                 margin-bottom: .3em;
             }

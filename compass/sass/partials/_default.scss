@@ -10,6 +10,9 @@
 #content-main {
     @include columns(7);
 }
+#content-secondary {
+    @include full(7);
+}
 
 #content-related {
     @include columns(3);
@@ -34,11 +37,13 @@ body#homepage {
     #content-main {
         @include full(10);
     }
-
+    .django-tagline {
+        @include columns(7);
+    }
     #download {
         @include columns(3);
         @include omega;
-        float: right;
+        display:block;
     }
     ul.websites {
         li.website {
@@ -63,7 +68,6 @@ body#homepage {
         @include columns(4);
         @include omega;
     }
-
     #content-secondary {
         @include full(10);
     }

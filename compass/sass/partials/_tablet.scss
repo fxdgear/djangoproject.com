@@ -11,6 +11,9 @@
     #content-main {
         @include columns(6);
     }
+    #content-secondary {
+        @include full(8);
+    }
 
     #content-related {
         @include columns(2);
@@ -23,13 +26,15 @@
         }
     }
 
+
+
     body#homepage {
+        .django-tagline {
+            @include columns(5);
+        }
         ul.websites {
             li.website {
                 margin-right: $less-gutter-width !important;
-            }
-            li.website.position-4, li.website.position-8 {
-
             }
         }
         .module.books {
@@ -43,7 +48,6 @@
                 }
             }
         }
-
         #content-secondary {
             @include full(8);
         }
