@@ -40,7 +40,7 @@
 
     body#homepage {
         #download {
-            display:none; /* Mobile users ain't gonna download Django */
+            @include full(5);
         }
         .django-tagline {
             @include full(5);

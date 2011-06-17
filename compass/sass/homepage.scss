@@ -5,7 +5,7 @@
 body#homepage {
 
     #download {
-        margin-bottom: 2em;
+        margin-bottom: 8em;
         background-color: $light-green;
         @include border-radius;
         a {
@@ -37,7 +37,7 @@ body#homepage {
         }
     }
     .django-tagline {
-        margin-bottom: 6em;
+        margin-bottom: 2em;
         h1 {
             margin-bottom: 0;
         }

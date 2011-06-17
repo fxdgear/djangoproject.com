@@ -410,8 +410,13 @@ body#homepage #content-secondary {
   }
   /* line 49, ../../compass/sass/partials/_mobile.scss */
   body#homepage #download {
-    display: none;
-    /* Mobile users ain't gonna download Django */
+    display: inline;
+    float: left;
+    width: 252px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
   }
   /* line 52, ../../compass/sass/partials/_mobile.scss */
   body#homepage ul.websites {
@@ -546,8 +551,13 @@ body#homepage #content-secondary {
 
   /* line 42, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage #download {
-    display: none;
-    /* Mobile users ain't gonna download Django */
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
   }
   /* line 45, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .django-tagline {
@@ -1457,7 +1467,7 @@ h3 .small {
 
 /* line 7, ../../compass/sass/homepage.scss */
 body#homepage #download {
-  margin-bottom: 2em;
+  margin-bottom: 8em;
   background-color: #487858;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1500,7 +1510,7 @@ body#homepage p.more a {
 }
 /* line 39, ../../compass/sass/homepage.scss */
 body#homepage .django-tagline {
-  margin-bottom: 6em;
+  margin-bottom: 2em;
 }
 /* line 41, ../../compass/sass/homepage.scss */
 body#homepage .django-tagline h1 {

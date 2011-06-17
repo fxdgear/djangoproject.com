@@ -47,7 +47,7 @@
             @include full(3);
         }
         #download {
-            display:none; /* Mobile users ain't gonna download Django */
+            @include full(3);
         }
         ul.websites {
             @include full(3);
