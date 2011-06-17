@@ -129,9 +129,7 @@ a:hover {
 /* EXTRA CONTENT */
 
 #content-related {
-    @include column(3, true);
     float:right;
-    margin:0 0 24px 24px;
     color:white;
     p, ul, form {
         margin-top:1em;
@@ -150,14 +148,11 @@ a:hover {
         margin-bottom: 2em;
     }
     h1.title {
-        padding: 14px;
+        margin: 0;
         font-size: 150%;
-        color:$light-orange;
-        cursor: pointer;
         color: white;
-    }
-    h1.title:hover {
-        color:$yellow;
+        background-repeat: no-repeat;
+        background-position: 4px 16px;
     }
     h2 {
         color:white;
@@ -175,16 +170,17 @@ a:hover {
     }
 
     .inner {
-        @include column(3, true);
         background-color: $light-green;
         @include border-radius;
 
         #content-related-body {
             padding: 14px;
-            display: none;
             z-index: 100;
         }
     }
+}
+#content-related:hover {
+
 }
 #content-secondary {
     clear: both;

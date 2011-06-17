@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var related = $('#content-related');
+            var relatedBody = $('#content-related-body');
+            related.find('h1').live('click', function() {
+                if ($(this).css('background-image') != 'none') {
+                    if (relatedBody.is(':visible')) {
+                        relatedBody.hide();
+                        $(this).css('background-image', 'url({{ MEDIA_URL }}img/site/arrowhead-right.gif)');
+                    }
+                    else {
+                        relatedBody.show();
+                        $(this).css('background-image', 'url({{ MEDIA_URL }}img/site/arrowhead-down.gif)');
+                    }
+                    $(this).css('padding-left', '24px'); //FIXME
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block columnwrap %}
+    <div id="content-related">
+        <div class="inner">
+            <h1 class="title">{% block content-related-title %}{% endblock %}</h1>
+            <div id="content-related-body">
+                {% block content-related %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <div id="content-main">
+        {% block content %}{% endblock %}
+    </div>
+{% endblock %}

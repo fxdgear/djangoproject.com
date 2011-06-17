@@ -8,6 +8,21 @@
         @include grid(8);
     }
 
+    #content-main {
+        @include columns(6);
+    }
+
+    #content-related {
+        @include columns(2);
+        @include omega;
+        #content-related-body {
+            display: block;
+        }
+        .inner {
+            @include full(2);
+        }
+    }
+
     body#homepage {
         ul.websites {
             li.website {

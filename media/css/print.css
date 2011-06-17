@@ -85,7 +85,58 @@ body {
   margin-right: auto;
 }
 
-/* line 11, ../../compass/sass/partials/_default.scss */
+/* line 10, ../../compass/sass/partials/_default.scss */
+#content-main {
+  display: inline;
+  float: left;
+  width: 620px;
+  margin-right: 24px;
+}
+
+/* line 14, ../../compass/sass/partials/_default.scss */
+#content-related {
+  display: inline;
+  float: left;
+  width: 252px;
+  margin-right: 24px;
+  margin-right: 0;
+}
+/* line 17, ../../compass/sass/partials/_default.scss */
+#content-related h1.title {
+  background-image: none;
+  cursor: auto;
+  padding: 14px;
+}
+/* line 22, ../../compass/sass/partials/_default.scss */
+#content-related h1.title:hover {
+  color: white;
+}
+/* line 25, ../../compass/sass/partials/_default.scss */
+#content-related #content-related-body {
+  display: block;
+}
+/* line 28, ../../compass/sass/partials/_default.scss */
+#content-related .inner {
+  display: inline;
+  float: left;
+  width: 252px;
+  margin-right: 24px;
+  padding-left: 0px;
+  padding-right: -24px;
+  margin-right: 0;
+}
+
+/* line 34, ../../compass/sass/partials/_default.scss */
+body#homepage #content-main {
+  display: inline;
+  float: left;
+  width: 896px;
+  margin-right: 24px;
+  padding-left: 0px;
+  padding-right: -24px;
+  margin-right: 0;
+}
+/* line 38, ../../compass/sass/partials/_default.scss */
 body#homepage #download {
   display: inline;
   float: left;
@@ -94,36 +145,36 @@ body#homepage #download {
   margin-right: 0;
   float: right;
 }
-/* line 17, ../../compass/sass/partials/_default.scss */
+/* line 44, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 20, ../../compass/sass/partials/_default.scss */
+/* line 47, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website.position-5, body#homepage ul.websites li.website.position-10 {
   margin-right: 0;
 }
-/* line 24, ../../compass/sass/partials/_default.scss */
+/* line 51, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books {
   display: inline;
   float: left;
   width: 528px;
   margin-right: 24px;
 }
-/* line 27, ../../compass/sass/partials/_default.scss */
+/* line 54, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 30, ../../compass/sass/partials/_default.scss */
+/* line 57, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book.position-3 {
   margin-right: 0;
 }
-/* line 35, ../../compass/sass/partials/_default.scss */
+/* line 62, ../../compass/sass/partials/_default.scss */
 body#homepage .module.community {
   display: inline;
   float: left;
@@ -131,7 +182,7 @@ body#homepage .module.community {
   margin-right: 24px;
   margin-right: 0;
 }
-/* line 40, ../../compass/sass/partials/_default.scss */
+/* line 67, ../../compass/sass/partials/_default.scss */
 body#homepage #content-secondary {
   display: inline;
   float: left;
@@ -158,26 +209,57 @@ body#homepage #content-secondary {
     margin-right: auto;
   }
 
-  /* line 13, ../../compass/sass/partials/_tablet.scss */
+  /* line 11, ../../compass/sass/partials/_tablet.scss */
+  #content-main {
+    display: inline;
+    float: left;
+    width: 528px;
+    margin-right: 24px;
+  }
+
+  /* line 15, ../../compass/sass/partials/_tablet.scss */
+  #content-related {
+    display: inline;
+    float: left;
+    width: 160px;
+    margin-right: 24px;
+    margin-right: 0;
+  }
+  /* line 18, ../../compass/sass/partials/_tablet.scss */
+  #content-related #content-related-body {
+    display: block;
+  }
+  /* line 21, ../../compass/sass/partials/_tablet.scss */
+  #content-related .inner {
+    display: inline;
+    float: left;
+    width: 160px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+
+  /* line 28, ../../compass/sass/partials/_tablet.scss */
   body#homepage ul.websites li.website {
     margin-right: 24px !important;
   }
-  /* line 20, ../../compass/sass/partials/_tablet.scss */
+  /* line 35, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books {
     display: inline;
     float: left;
     width: 344px;
     margin-right: 24px;
   }
-  /* line 23, ../../compass/sass/partials/_tablet.scss */
+  /* line 38, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books ul.books li.book {
     margin-right: 24px !important;
   }
-  /* line 26, ../../compass/sass/partials/_tablet.scss */
+  /* line 41, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0 !important;
   }
-  /* line 32, ../../compass/sass/partials/_tablet.scss */
+  /* line 47, ../../compass/sass/partials/_tablet.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;
@@ -193,7 +275,7 @@ body#homepage #content-secondary {
  * Outer margins: 34px.
  * Inherits styles from: Default Layout.  */
 @media only screen and (max-width: 767px) {
-  /* line 7, ../../compass/sass/partials/_mobile.scss */
+  /* line 9, ../../compass/sass/partials/_mobile.scss */
   .wrapper {
     overflow: hidden;
     *zoom: 1;
@@ -205,13 +287,50 @@ body#homepage #content-secondary {
   }
 
   /* line 13, ../../compass/sass/partials/_mobile.scss */
+  #content-main {
+    display: inline;
+    float: left;
+    width: 252px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+
+  /* line 17, ../../compass/sass/partials/_mobile.scss */
+  #content-related {
+    display: inline;
+    float: left;
+    width: 252px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  /* line 20, ../../compass/sass/partials/_mobile.scss */
+  #content-related h1.title {
+    background-image: url(../img/site/arrowhead-right.gif);
+    padding-left: 24px;
+    cursor: pointer;
+  }
+  /* line 25, ../../compass/sass/partials/_mobile.scss */
+  #content-related h1.title:hover {
+    color: #ffe761;
+  }
+  /* line 28, ../../compass/sass/partials/_mobile.scss */
+  #content-related #content-related-body {
+    display: none;
+  }
+
+  /* line 35, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.books ul.books {
     display: inline;
     float: left;
     width: 160px;
     margin-right: 24px;
   }
-  /* line 18, ../../compass/sass/partials/_mobile.scss */
+  /* line 40, ../../compass/sass/partials/_mobile.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;
@@ -227,7 +346,7 @@ body#homepage #content-secondary {
  * Outer margins: 22px.
  * Inherits styles from: Default Layout, Mobile Layout.  */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 7, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 9, ../../compass/sass/partials/_wide-mobile.scss */
   .wrapper {
     overflow: hidden;
     *zoom: 1;
@@ -239,6 +358,52 @@ body#homepage #content-secondary {
   }
 
   /* line 13, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-main {
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+
+  /* line 17, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-related {
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+  /* line 19, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-related h1.title {
+    background-image: url(../img/site/arrowhead-right.gif);
+    padding-left: 24px;
+    cursor: pointer;
+  }
+  /* line 24, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-related h1.title:hover {
+    color: #ffe761;
+  }
+  /* line 27, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-related #content-related-body {
+    display: none;
+  }
+  /* line 30, ../../compass/sass/partials/_wide-mobile.scss */
+  #content-related .inner {
+    display: inline;
+    float: left;
+    width: 436px;
+    margin-right: 24px;
+    padding-left: 0px;
+    padding-right: -24px;
+    margin-right: 0;
+  }
+
+  /* line 36, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage #download {
     display: inline;
     float: left;
@@ -247,26 +412,26 @@ body#homepage #content-secondary {
     margin-right: 0;
     float: right;
   }
-  /* line 19, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 42, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage ul.websites li.website {
     margin-right: 24px !important;
   }
-  /* line 24, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 47, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books {
     display: inline;
     float: left;
     width: 344px;
     margin-right: 24px;
   }
-  /* line 26, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 49, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books li.book {
     margin-right: 24px !important;
   }
-  /* line 29, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 52, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0 !important;
   }
-  /* line 34, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 57, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.community {
     display: inline;
     float: left;
@@ -276,7 +441,7 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 38, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 61, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;

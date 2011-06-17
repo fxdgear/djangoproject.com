@@ -7,7 +7,34 @@
     @include grid(10);
 }
 
+#content-main {
+    @include columns(7);
+}
+
+#content-related {
+    @include columns(3);
+    @include omega;
+    h1.title {
+        background-image: none;
+        cursor: auto;
+        padding: 14px;
+    }
+    h1.title:hover {
+        color: white;
+    }
+    #content-related-body {
+        display: block;
+    }
+    .inner {
+        @include full(3);
+    }
+}
+
 body#homepage {
+    #content-main {
+        @include full(10);
+    }
+
     #download {
         @include columns(3);
         @include omega;

@@ -3,11 +3,34 @@
  * Outer margins: 22px.
  * Inherits styles from: Default Layout, Mobile Layout.  */
 
+@import "partials/variables";
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .wrapper {
         @include grid(5);
     }
 
+    #content-main {
+        @include full(5);
+    }
+
+    #content-related {
+        @include full(5);
+        h1.title {
+            background-image: url(../img/site/arrowhead-right.gif);
+            padding-left: 24px;
+            cursor: pointer;
+        }
+        h1.title:hover {
+            color: $yellow;
+        }
+        #content-related-body {
+            display: none;
+        }
+        .inner {
+            @include full(5);
+        }
+    }
 
     body#homepage {
         #download {
