@@ -47,6 +47,9 @@
         .django-tagline {
             @include columns(5);
         }
+        .carousel {
+            @include full(8);
+        }
         ul.websites {
             @include full(8);
             li.website {

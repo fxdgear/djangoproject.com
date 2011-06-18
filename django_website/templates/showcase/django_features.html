@@ -1,12 +1,10 @@
 {% for feature in features %}
-<li class="panel{{ forloop.counter|add:1 }}">
-    <div class="slide">
-        <div class="inner">
-            <h4 class="item-title"><a href="{{ feature.url }}">{{ feature.name }}</a></h4>
-            <div class="description">
-                <div class="image"></div>
-                <p>{{ feature.description }}</p>
-            </div>
+<li class="django-feature">
+    <div class="inner">
+        <h4 class="title"><a href="{{ feature.url }}">{{ feature.name }}</a></h4>
+        <div class="description">
+            <div class="image"></div>
+            <p>{{ feature.description }}</p>
         </div>
     </div>
 </li>

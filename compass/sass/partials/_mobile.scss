@@ -65,6 +65,24 @@
         #download {
             @include full(3);
         }
+        .carousel {
+            @include full(3);
+            li.django-feature {
+                .inner {
+                    .description {
+                        .image {
+                            width: 150px;
+                            height: 120px;
+                        }
+                        p {
+                            float: left;
+                            font-size: 100%;
+                            margin: 10px 0 0 0px;
+                        }
+                    }
+                }
+            }
+        }
         ul.websites {
             @include full(3);
             li.website {

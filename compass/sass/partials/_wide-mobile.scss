@@ -63,6 +63,10 @@
         .django-tagline {
             @include full(5);
         }
+        .carousel {
+            @include full(5);
+
+        }
         ul.websites {
             @include full(5);
             li.website {

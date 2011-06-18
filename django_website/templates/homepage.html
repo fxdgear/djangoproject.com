@@ -5,21 +5,16 @@
 {% block sectionid %}homepage{% endblock %}
 
 {% block extrahead %}
-<script src="{{ MEDIA_URL }}js/slider/jquery.anythingslider.js"></script>
-<link rel="stylesheet" href="{{ MEDIA_URL }}js/slider/anythingslider.css">
+<script src="{{ MEDIA_URL }}js/carousel/plugin.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
- $('#django-features').anythingSlider({
-       width               : null,
-       height              : null,
-       startStopped        : true,
-       resizeContents      : false,
-       expand              : false,
-       startPanel          : 1
-    //   navigationFormatter : function(i, panel){
-    //    return ['Recipe', 'Quote', 'Image', 'Quote #2', 'Image #2', 'Test'][i - 1];
-    //   }
-  });
+    $('.slidewrap').carousel({
+        slider: '.slider',
+        slide: 'li',
+        nextSlide: '.next',
+        prevSlide: '.prev',
+        speed: 300 // ms.
+    });
 });
 </script>
 {% endblock %}
@@ -37,20 +32,26 @@ $(document).ready(function(){
 </div>
 
 <div class="module">
-    <ul id="django-features">
-        <li class="panel1">
-            <div class="slide">
-                <div class="inner">
-                    <h4 class="item-title"><a href="">What is Django?</a></h4>
-                    <div class="description">
-                        <div class="image"></div>
-                        <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performing, elegant Web applications quickly.</p>
+    <div class="carousel">
+        <div class="slidewrap">
+            <ol class="slider" id="theSlider">
+                <li class="django-feature">
+                    <div class="inner">
+                        <h4 class="title"><a href="#">What is Django?</a></h4>
+                        <div class="description">
+                            <div class="image"></div>
+                            <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performing, elegant Web applications quickly.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </li>
-        {% load showcase_tags %}{% render_django_features 8 %}
-    </ul>
+                </li>
+                {% load showcase_tags %}{% render_django_features 8 %}
+            </ol>
+        </div>
+        <ul class="nextprev">
+            <li><a href="#theSlider" class="next">Next</a></li>
+            <li><a href="#theSlider" class="prev">Prev</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="module">

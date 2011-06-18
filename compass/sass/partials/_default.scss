@@ -63,10 +63,22 @@ body#homepage {
         @include omega;
         display:block;
     }
-    ul#django-features {
-        /* FIXME */
-        li.panel {
-            width: column-width(6) + $slide-margin-width * 2;
+    .carousel {
+        @include full(10);
+        li.django-feature {
+            .inner {
+                .description {
+                    .image {
+                        float: left;
+                        width: 250px;
+                        height: 200px;
+                    }
+                    p {
+                        font-size: 120%;
+                        margin: 5px 0 0 270px;
+                    }
+                }
+            }
         }
     }
     ul.websites {
