@@ -64,6 +64,16 @@ $less-gutter-width: 24px;
     padding-right: column-width($columns);
 }
 
+@mixin shift($columns) {
+    @if ($columns) {
+        margin-left: column-width($columns) + $less-gutter-width;
+    }
+    @else {
+        margin-left: 0;
+    }
+}
+
+
 @mixin pad($columns) {
     @include prefix($columns);
     @include suffix($columns);

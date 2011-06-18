@@ -66,8 +66,6 @@ a:hover {
 
 #header {
     background-color: #EFEFEF;
-    border-bottom: 10px solid $dark-green;
-    margin-bottom: 3em;
     .inner {
         padding: 1em 0 0.3em 0;
         h1#logo {
@@ -94,7 +92,6 @@ a:hover {
     a {
         text-align: center;
         display:block;
-        padding:0.6em;
         background-color: #dedede;
         color: $darker-green;
         @include border-radius;
@@ -650,6 +647,3 @@ h3 .small {
 #content-secondary .quiet {
     color:$quiet-green;
 }
-
-.button-download { display:block; background:url(https://www.djangoproject.com/m/img/site/download_bg-left.gif) no-repeat; max-width: 350px; }
-.button-download a { height:18px; color:white; display:block; white-space:nowrap; background:url(https://www.djangoproject.com/m/img/site/download_bg-right.gif) top right no-repeat; padding:6px 12px; }

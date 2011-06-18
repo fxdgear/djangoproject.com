@@ -65,7 +65,16 @@
         }
         .carousel {
             @include full(5);
-
+            li.django-feature {
+                .inner {
+                    .description {
+                        p {
+                            float: none;
+                            margin: 5px 0 0 170px;
+                        }
+                    }
+                }
+            }
         }
         ul.websites {
             @include full(5);

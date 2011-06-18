@@ -48,7 +48,7 @@
             @include columns(5);
         }
         .carousel {
-            @include full(8);
+            @include shift(1);
         }
         ul.websites {
             @include full(8);

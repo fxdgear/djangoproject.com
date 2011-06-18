@@ -36,6 +36,8 @@
 }
 
 #header {
+    margin-bottom: 3em;
+    border-bottom: 8px solid $dark-green;
     h1#logo {
         @include columns(2);
     }
@@ -47,6 +49,9 @@
         }
         li.position-4, li.position-8 {
             @include omega;
+        }
+        a {
+            padding:0.5em;
         }
     }
 }
@@ -62,11 +67,23 @@ body#homepage {
         @include columns(3);
         @include omega;
         display:block;
+        a {
+            padding: 1em;
+        }
+        .level1 {
+            font-size: 150%;
+        }
     }
     .carousel {
-        @include full(10);
+        @include full(6);
+        @include shift(2);
+        margin-bottom: 6em;
+        margin-top: 6em;
         li.django-feature {
             .inner {
+                h4 {
+                    font-size: 140%;
+                }
                 .description {
                     .image {
                         float: left;
