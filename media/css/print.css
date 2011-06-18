@@ -235,28 +235,36 @@ body#homepage .carousel li.django-feature .inner .description p {
   font-size: 120%;
   margin: 5px 0 0 270px;
 }
-/* line 102, ../../compass/sass/partials/_default.scss */
+/* line 101, ../../compass/sass/partials/_default.scss */
+body#homepage ul#django-features {
+  /* FIXME */
+}
+/* line 103, ../../compass/sass/partials/_default.scss */
+body#homepage ul#django-features li.panel {
+  width: 568px;
+}
+/* line 108, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 106, ../../compass/sass/partials/_default.scss */
+/* line 112, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books {
   display: inline;
   float: left;
   width: 528px;
   margin-right: 24px;
 }
-/* line 109, ../../compass/sass/partials/_default.scss */
+/* line 115, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 114, ../../compass/sass/partials/_default.scss */
+/* line 120, ../../compass/sass/partials/_default.scss */
 body#homepage .module.community {
   display: inline;
   float: left;
@@ -264,7 +272,7 @@ body#homepage .module.community {
   margin-right: 24px;
   margin-right: 0;
 }
-/* line 118, ../../compass/sass/partials/_default.scss */
+/* line 124, ../../compass/sass/partials/_default.scss */
 body#homepage #content-secondary {
   display: inline;
   float: left;
@@ -275,14 +283,14 @@ body#homepage #content-secondary {
   margin-right: 0;
 }
 
-/* line 124, ../../compass/sass/partials/_default.scss */
+/* line 130, ../../compass/sass/partials/_default.scss */
 #footer ul#footer-sitemap li.section {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 127, ../../compass/sass/partials/_default.scss */
+/* line 133, ../../compass/sass/partials/_default.scss */
 #footer ul#footer-sitemap li.section.item-4 {
   margin-right: 0;
 }

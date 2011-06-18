@@ -98,6 +98,12 @@ body#homepage {
             }
         }
     }
+    ul#django-features {
+        /* FIXME */
+        li.panel {
+            width: column-width(6) + $slide-margin-width * 2;
+        }
+    }
     ul.websites {
         li.website {
             @include columns(2);
