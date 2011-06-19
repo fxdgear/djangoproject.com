@@ -56,6 +56,17 @@
         }
     }
 
+    body#community {
+        #content-main {
+            .module {
+                @include columns(2.5);
+            }
+            .module.position-2, .module.position-4 {
+                @include omega;
+            }
+        }
+    }
+
     body#homepage {
         #download {
             @include full(5);

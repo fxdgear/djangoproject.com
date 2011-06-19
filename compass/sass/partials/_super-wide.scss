@@ -1,12 +1,4 @@
 @media only screen and (min-width: 992px) {
-    body#community {
-        #content-main {
-            .module.position-2, .module.position-4 {
-                @include omega;
-            }
-        }
-    }
-
     body#homepage {
         ul.websites {
             li.website.position-5, li.website.position-10 {

@@ -66,6 +66,14 @@
         }
     }
 
+    body#community {
+        #content-main {
+            .module {
+                @include omega;
+            }
+        }
+    }
+
     body#homepage {
         #content-main {
             @include full(3);

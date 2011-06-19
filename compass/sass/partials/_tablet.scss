@@ -43,6 +43,14 @@
         }
     }
 
+    body#community {
+        #content-main {
+            .module {
+                @include columns(3);
+            }
+        }
+    }
+
     body#homepage {
         .django-tagline {
             @include columns(5);

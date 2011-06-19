@@ -63,6 +63,9 @@ body#community {
         .module {
             @include columns(3.5);
         }
+        .module.position-2, .module.position-4 {
+            @include omega;
+        }
     }
 }
 
