@@ -66,8 +66,6 @@ a:hover {
 
 #header {
     background-color: #EFEFEF;
-    border-bottom: 10px solid $dark-green;
-    margin-bottom: 3em;
     .inner {
         padding: 1em 0 0.3em 0;
         h1#logo {
@@ -143,10 +141,8 @@ a:hover {
     }
     h1.title {
         margin: 0;
-        font-size: 150%;
         color: white;
         background-repeat: no-repeat;
-        background-position: 4px 16px;
     }
     h2 {
         color:white;

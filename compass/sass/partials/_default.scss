@@ -23,6 +23,8 @@
         background-image: none;
         cursor: auto;
         padding: 14px;
+        font-size: 150%;
+        background-position: 4px 16px;
     }
     h1.title:hover {
         color: white;
@@ -37,7 +39,7 @@
 
 #header {
     margin-bottom: 3em;
-    border-bottom: 8px solid $dark-green;
+    border-bottom: 6px solid $dark-green;
     h1#logo {
         @include columns(2);
     }
@@ -67,6 +69,12 @@ body#community {
 body#homepage {
     #content-main {
         @include full(10);
+        .module {
+            margin-top: 4em;
+            h3 {
+                font-size: 175%;
+            }
+        }
     }
     .django-tagline {
         @include columns(7);
