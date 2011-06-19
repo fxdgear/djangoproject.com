@@ -173,7 +173,15 @@ body {
   padding: 0.5em;
 }
 
-/* line 60, ../../compass/sass/partials/_default.scss */
+/* line 61, ../../compass/sass/partials/_default.scss */
+body#community #content-main .module {
+  display: inline;
+  float: left;
+  width: 298px;
+  margin-right: 24px;
+}
+
+/* line 68, ../../compass/sass/partials/_default.scss */
 body#homepage #content-main {
   display: inline;
   float: left;
@@ -183,14 +191,14 @@ body#homepage #content-main {
   padding-right: -24px;
   margin-right: 0;
 }
-/* line 63, ../../compass/sass/partials/_default.scss */
+/* line 71, ../../compass/sass/partials/_default.scss */
 body#homepage .django-tagline {
   display: inline;
   float: left;
   width: 620px;
   margin-right: 24px;
 }
-/* line 66, ../../compass/sass/partials/_default.scss */
+/* line 74, ../../compass/sass/partials/_default.scss */
 body#homepage #download {
   display: inline;
   float: left;
@@ -199,15 +207,15 @@ body#homepage #download {
   margin-right: 0;
   display: block;
 }
-/* line 70, ../../compass/sass/partials/_default.scss */
+/* line 78, ../../compass/sass/partials/_default.scss */
 body#homepage #download a {
   padding: 1em;
 }
-/* line 73, ../../compass/sass/partials/_default.scss */
+/* line 81, ../../compass/sass/partials/_default.scss */
 body#homepage #download .level1 {
   font-size: 150%;
 }
-/* line 77, ../../compass/sass/partials/_default.scss */
+/* line 85, ../../compass/sass/partials/_default.scss */
 body#homepage .carousel {
   display: inline;
   float: left;
@@ -220,51 +228,51 @@ body#homepage .carousel {
   margin-bottom: 6em;
   margin-top: 6em;
 }
-/* line 84, ../../compass/sass/partials/_default.scss */
+/* line 92, ../../compass/sass/partials/_default.scss */
 body#homepage .carousel li.django-feature .inner h4 {
   font-size: 140%;
 }
-/* line 88, ../../compass/sass/partials/_default.scss */
+/* line 96, ../../compass/sass/partials/_default.scss */
 body#homepage .carousel li.django-feature .inner .description .image {
   float: left;
   width: 250px;
   height: 200px;
 }
-/* line 93, ../../compass/sass/partials/_default.scss */
+/* line 101, ../../compass/sass/partials/_default.scss */
 body#homepage .carousel li.django-feature .inner .description p {
   font-size: 120%;
   margin: 5px 0 0 270px;
 }
-/* line 101, ../../compass/sass/partials/_default.scss */
+/* line 109, ../../compass/sass/partials/_default.scss */
 body#homepage ul#django-features {
   /* FIXME */
 }
-/* line 103, ../../compass/sass/partials/_default.scss */
+/* line 111, ../../compass/sass/partials/_default.scss */
 body#homepage ul#django-features li.panel {
   width: 568px;
 }
-/* line 108, ../../compass/sass/partials/_default.scss */
+/* line 116, ../../compass/sass/partials/_default.scss */
 body#homepage ul.websites li.website {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 112, ../../compass/sass/partials/_default.scss */
+/* line 120, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books {
   display: inline;
   float: left;
   width: 528px;
   margin-right: 24px;
 }
-/* line 115, ../../compass/sass/partials/_default.scss */
+/* line 123, ../../compass/sass/partials/_default.scss */
 body#homepage .module.books ul.books li.book {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 120, ../../compass/sass/partials/_default.scss */
+/* line 128, ../../compass/sass/partials/_default.scss */
 body#homepage .module.community {
   display: inline;
   float: left;
@@ -272,7 +280,7 @@ body#homepage .module.community {
   margin-right: 24px;
   margin-right: 0;
 }
-/* line 124, ../../compass/sass/partials/_default.scss */
+/* line 132, ../../compass/sass/partials/_default.scss */
 body#homepage #content-secondary {
   display: inline;
   float: left;
@@ -283,14 +291,14 @@ body#homepage #content-secondary {
   margin-right: 0;
 }
 
-/* line 130, ../../compass/sass/partials/_default.scss */
+/* line 138, ../../compass/sass/partials/_default.scss */
 #footer ul#footer-sitemap li.section {
   display: inline;
   float: left;
   width: 160px;
   margin-right: 24px;
 }
-/* line 133, ../../compass/sass/partials/_default.scss */
+/* line 141, ../../compass/sass/partials/_default.scss */
 #footer ul#footer-sitemap li.section.item-4 {
   margin-right: 0;
 }
@@ -954,10 +962,15 @@ body#homepage #content-secondary {
    device-pixel-ratio of 2+, such as iPhone 4.  */
 @media only screen and (min-width: 992px) {
   /* line 4, ../../compass/sass/partials/_super-wide.scss */
+  body#community #content-main .module.position-2, body#community #content-main .module.position-4 {
+    margin-right: 0;
+  }
+
+  /* line 12, ../../compass/sass/partials/_super-wide.scss */
   body#homepage ul.websites li.website.position-5, body#homepage ul.websites li.website.position-10 {
     margin-right: 0;
   }
-  /* line 10, ../../compass/sass/partials/_super-wide.scss */
+  /* line 18, ../../compass/sass/partials/_super-wide.scss */
   body#homepage .module.books ul.books li.book.position-3 {
     margin-right: 0;
   }

@@ -56,6 +56,14 @@
     }
 }
 
+body#community {
+    #content-main {
+        .module {
+            @include columns(3.5);
+        }
+    }
+}
+
 body#homepage {
     #content-main {
         @include full(10);
