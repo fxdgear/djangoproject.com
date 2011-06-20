@@ -1,6 +1,7 @@
 {% for book in books %}
 <li class="book position-{{ forloop.counter }}">
-    <div class="cover-image"><a href="{{ book.url }}"><img width="80" height="106" src="{{ book.cover_image.url }}"/></a></div>
-    <h4 class="item-title"><a href="{{ book.url }}">{{ book.title }}</a></h4>
+    <a href="{{ book.url }}">
+        <img width="80" height="106" src="{{ book.cover_image.url }}" alt=""/><br/>
+        <h4>{{ book.title }}</h4>
 </li>
 {% endfor %}

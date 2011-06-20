@@ -12,7 +12,7 @@ body#homepage {
             display:block;
             color: white;
         }
-        a:hover {
+        a:hover, a:focus {
             background: none;
             color: $yellow;
         }
@@ -58,15 +58,21 @@ body#homepage {
             }
         }
     }
-    h4.item-title {
-        margin-top: 0;
-        a {
+    .website, .book {
+        h4 {
+            margin-top: 0;
+            display: inline;
             color: $light-green;
+        }
+        a {
             text-decoration: none;
         }
-        a:hover {
-            color: $dark-orange;
+        a:hover, a:focus {
             background: none;
+            h4 {
+                margin-top: 0;
+                color: $dark-orange;
+            }
         }
     }
     ul.books {
@@ -76,7 +82,7 @@ body#homepage {
         li.book {
             list-style: none;
             margin-bottom: 1.5em;
-            .cover-image {
+            img {
                 margin-bottom: .3em;
             }
         }
@@ -133,7 +139,7 @@ body#homepage {
         .prev.disabled, .next.disabled {
             opacity: .25;
         }
-        .prev:hover, .next:hover {
+        .prev:hover, .prev:focus, .next:hover, .next:focus {
             background-color: transparent;
         }
         .prev {
@@ -180,7 +186,7 @@ body#homepage {
             list-style: none;
             height:180px;
             margin-bottom: 1.5em;
-            .image img {
+            img {
                 @include border-radius;
                 margin-bottom: .3em;
                 width: 100%;

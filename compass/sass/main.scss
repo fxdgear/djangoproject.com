@@ -36,7 +36,7 @@ a img {
 a:link, a:visited {
     color:$light-orange;
 }
-a:hover {
+a:hover, a:focus {
     color:$yellow;
 }
 
@@ -97,7 +97,7 @@ a:hover {
         color: $darker-green;
         @include border-radius;
     }
-    a:hover {
+    a:hover, a:focus {
         color: white;
         background-color: $dark-orange;
     }
@@ -168,9 +168,7 @@ a:hover {
         }
     }
 }
-#content-related:hover {
 
-}
 #content-secondary {
     clear: both;
     background-color: $highlight-green;
@@ -575,7 +573,7 @@ div.versionchanged span.title {
             font-size: 125%;
             color: white;
          }
-        a.title:hover {
+        a.title:hover, a.title:focus {
             color: $yellow;
         }
     }
@@ -584,13 +582,18 @@ div.versionchanged span.title {
     font-size:90%;
     margin-top:2em;
     text-align: center;
-}
-#copyright-notice a {
-    color:$dark-orange;
-}
-#copyright-notice a:hover {
-    background-color:$flashy-green;
-    color:$dark-green;
+    #mt-icon {
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+    }
+    a {
+        color:$dark-orange;
+    }
+    a:hover, a:focus {
+        background-color:$flashy-green;
+        color:$dark-green;
+    }
 }
 
 /* COMMENTS */
