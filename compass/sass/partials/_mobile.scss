@@ -135,6 +135,10 @@
             li.website.position-2, li.website.position-4, li.website.position-6, li.website.position-8, li.website.position-10 {
                 @include omega;
             }
+            li.website.position-5 {
+                /* To undo the _default.scss styles */
+                @include not-omega;
+            }
         }
         .module.books {
             ul.books {
@@ -144,6 +148,10 @@
                 }
                 li.book.position-2 {
                     @include omega;
+                }
+                li.book.position-3 {
+                    /* To undo the _default.scss styles */
+                    @include not-omega;
                 }
             }
         }

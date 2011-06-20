@@ -66,15 +66,20 @@
             li.website.position-4, li.website.position-8 {
                 @include omega;
             }
+            li.website.position-5, li.website.position-10 {
+                /* To undo the _default.scss styles */
+                @include not-omega;
+            }
         }
         .module.books {
             @include columns(4);
             ul.books {
-                li.book {
-                    margin-right: $less-gutter-width !important;
-                }
                 li.book.position-2 {
-                    margin-right: 0 !important;
+                    @include omega;
+                }
+                li.book.position-3 {
+                    /* To undo the _default.scss styles */
+                    @include not-omega;
                 }
             }
         }

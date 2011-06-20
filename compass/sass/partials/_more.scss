@@ -1,5 +1,7 @@
 /* By Idan Gazit https://gist.github.com/1009952 */
 
+@import "compass/utilities/general/clearfix";
+
 $less-column-width: 68px;
 $less-gutter-width: 24px;
 
@@ -81,6 +83,10 @@ $less-gutter-width: 24px;
 
 @mixin omega {
     margin-right: 0;
+}
+
+@mixin not-omega {
+    margin-right: $less-gutter-width;
 }
 
 @mixin accessible-selection-color($color) {

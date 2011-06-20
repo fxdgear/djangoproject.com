@@ -130,6 +130,12 @@ body#homepage {
             text-indent: -9999px;
             width: 15px;
         }
+        .prev.disabled, .next.disabled {
+            opacity: .25;
+        }
+        .prev:hover, .next:hover {
+            background-color: transparent;
+        }
         .prev {
             background-image: url(../js/carousel/icon_left.gif);
             background-position: center center;

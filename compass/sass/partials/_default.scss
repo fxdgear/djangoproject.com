@@ -100,6 +100,7 @@ body#homepage {
         margin-top: 6em;
         li.django-feature {
             .inner {
+                /*width:550px;*/
                 h4 {
                     font-size: 140%;
                 }
@@ -124,8 +125,12 @@ body#homepage {
         }
     }
     ul.websites {
+        @include full(10);
         li.website {
             @include columns(2);
+        }
+        li.website.position-5, li.website.position-10 {
+            @include omega;
         }
     }
     .module.books {
@@ -133,6 +138,9 @@ body#homepage {
         ul.books {
             li.book {
                 @include columns(2);
+            }
+            li.book.position-3 {
+                @include omega;
             }
         }
     }
