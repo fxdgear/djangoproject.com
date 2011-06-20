@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
-{% block cssid %}homepage{% endblock %}
-
 {% block sectionid %}homepage{% endblock %}
 
-{% block extrahead %}
+{% block extracss %}
+{{ block.super }}
+<link href="{{ MEDIA_URL }}css/homepage.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block extrajs %}
+{{ block.super }}
 <script src="{{ MEDIA_URL }}js/carousel/plugin.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){

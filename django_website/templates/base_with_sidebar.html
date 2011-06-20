@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block extrahead %}
+{% block extrajs %}
+    {{ block.super }}
     <script type="text/javascript">
         $(document).ready(function() {
             var related = $('#content-related');

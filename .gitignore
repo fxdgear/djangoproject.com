@@ -1,5 +1,6 @@
 *.pyc
 *.db
 media/uploads/*
+media/CACHE/*
 local_settings.py
 compass/.sass-cache/*

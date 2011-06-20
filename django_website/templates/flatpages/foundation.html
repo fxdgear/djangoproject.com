@@ -1,9 +1,10 @@
 {% extends "base_foundation.html" %}
 
-{% block extrahead %}
+{% block extracss %}
+{{ block.super }}
 <style type="text/css" media="screen">
-  form #submit { 
-      border: 0px none; 
+  form #submit {
+      border: 0px none;
       background-color: transparent;
       overflow:hidden;
       text-indent: -999px;
@@ -20,7 +21,7 @@
 {% block content %}
 <h1>{{ flatpage.title }}</h1>
 {{ flatpage.content }}
-    
+
 <h2>Support Django</h2>
 <p>
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post">

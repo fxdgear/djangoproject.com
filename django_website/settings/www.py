@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'django_website.showcase',
     'registration',
     'south',
+    'compressor',
 ]
 
 CACHE_MIDDLEWARE_SECONDS = 60 * 5 # 5 minutes
@@ -108,6 +109,11 @@ DJANGO_TESTS_PATH = "/home/html/djangoproject.com/tests/"
 
 # XXX What's this for?
 DJANGO_SVN_ROOT = "http://code.djangoproject.com/svn/django/"
+
+# django-compressor settings
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',
+                        'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
 
 # If django-debug-toolbar is installed enable it.
 if not PRODUCTION:

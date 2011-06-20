@@ -7,7 +7,10 @@ Redesign by Julien Phalip. 2011.
 Copyright (c) 2005 Lawrence Journal-World. Please don't steal.
 */
 
-@import "partials/base";
+@import "compass/css3/border-radius";
+@import "compass/utilities";
+@import "less";
+@import "partials/variables";
 
 
 
