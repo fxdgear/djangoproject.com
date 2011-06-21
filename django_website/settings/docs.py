@@ -10,6 +10,7 @@ _has_ddt = 'debug_toolbar' in INSTALLED_APPS
 INSTALLED_APPS = [
     'django_website.docs',
     'haystack',
+    'compressor',
 ]
 if _has_ddt:
     INSTALLED_APPS.append('debug_toolbar')
