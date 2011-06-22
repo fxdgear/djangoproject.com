@@ -70,14 +70,11 @@ a:hover, a:focus {
 #header {
     background-color: #EFEFEF;
     h1#logo {
+        margin-bottom: 0;
         a {
             margin: 0 !important;
             display:block;
             margin-bottom:0.3em;
-            text-indent: -999999px;
-            background: transparent url(../img/site/hdr_logo.gif) no-repeat;
-            width: 140px;
-            height: 49px;
         }
     }
 }

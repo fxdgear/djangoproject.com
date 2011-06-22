@@ -41,16 +41,27 @@
     margin-bottom: 3em;
     border-bottom: 6px solid $dark-green;
     .inner {
-        padding: 1em 0 0.3em 0;
+        position: relative;
+        height: 100px;
     }
     h1#logo {
         @include columns(2);
+        margin-top: 0;
         margin-bottom: 0;
-        margin-top: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 48px;
+        img {
+            width: 140px;
+            height: 49px;
+        }
     }
     ul#nav-global {
         @include columns(8);
         @include omega;
+        position: absolute;
+        bottom: 0;
+        right: 48px;
         li {
             @include columns(2);
         }
