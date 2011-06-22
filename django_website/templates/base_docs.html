@@ -5,3 +5,17 @@
 {% block title %}Documentation{% endblock %}
 
 {% block content-related-title %}Search & Contents{% endblock %}
+
+{% block extrajs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('body#documentation #content-main img').live('click', function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    /* View the image on its own */
+                    window.location = $(this).attr('src');
+                }
+            });
+        });
+    </script>
+{% endblock %}

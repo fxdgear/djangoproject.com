@@ -31,6 +31,8 @@
     #header {
         h1#logo {
             @include full(8);
+            margin-bottom: 0.2em;
+            margin-top: 0;
         }
         ul#nav-global {
             @include full(8);
@@ -39,6 +41,18 @@
             }
             li.position-4, li.position-8 {
                 @include omega;
+            }
+        }
+    }
+
+    body#documentation {
+        #content-main {
+            img {
+                border: 2px #dddddd dashed;
+                padding: 2px;
+                max-width: 97%; /* To leave some room for the border and padding */
+                height: auto !important; /* To override the size set on the element by Sphinx */
+                cursor: pointer;
             }
         }
     }

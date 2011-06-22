@@ -40,8 +40,13 @@
 #header {
     margin-bottom: 3em;
     border-bottom: 6px solid $dark-green;
+    .inner {
+        padding: 1em 0 0.3em 0;
+    }
     h1#logo {
         @include columns(2);
+        margin-bottom: 0;
+        margin-top: 30px;
     }
     ul#nav-global {
         @include columns(8);

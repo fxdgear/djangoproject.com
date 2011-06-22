@@ -69,14 +69,17 @@ a:hover, a:focus {
 
 #header {
     background-color: #EFEFEF;
-    .inner {
-        padding: 1em 0 0.3em 0;
-        h1#logo {
+    h1#logo {
+        a {
+            margin: 0 !important;
+            display:block;
             margin-bottom:0.3em;
-            margin-top: 0;
+            text-indent: -999999px;
+            background: transparent url(../img/site/hdr_logo.gif) no-repeat;
+            width: 140px;
+            height: 49px;
         }
     }
-
 }
 
 /* NAV */
@@ -389,7 +392,7 @@ a.rss:hover, a.rss:link, a.rss:visited {
 #weblog blockquote {
     padding-left:0.8em;
     padding-right:1em;
-    font:125% "Trebuchet MS", sans-serif;
+    font:125% $special-font-family;
     color:$dark-green;
     border-left:2px solid $lighter-green;
 }
@@ -491,10 +494,18 @@ div.admonition-behind-the-scenes {
     dd {
         margin-left:1em;
     }
+    #content-main {
+        table {
+            color:#000;
+        }
+    }
+    #content-related .literal {
+        background:transparent !important;
+    }
 }
-#content-main table {
-    color:#000;
-}
+
+
+
 table.docutils {
     border-collapse:collapse;
     thead th {
@@ -509,9 +520,6 @@ table.docutils {
         margin-top:0;
         margin-bottom:.5em;
     }
-}
-#documentation #content-related .literal {
-    background:transparent !important;
 }
 div.versionadded,
 div.versionchanged {
