@@ -97,6 +97,9 @@ body#homepage {
     }
     .django-tagline {
         @include columns(7);
+        h1 {
+            font-size: 200%;
+        }
     }
     #download {
         @include columns(3);
@@ -127,7 +130,7 @@ body#homepage {
                         height: 200px;
                     }
                     p {
-                        font-size: 120%;
+                        font-size: 110%;
                         margin: 5px 0 0 270px;
                     }
                 }

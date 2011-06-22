@@ -28,7 +28,7 @@ body#homepage #download span {
 body#homepage p.more {
   clear: both;
   margin-top: 2em;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Museo Sans", museosans-web, sans-serif;
   font-size: 115%;
 }
 /* line 29, ../../compass/sass/homepage.scss */
@@ -42,8 +42,8 @@ body#homepage .django-tagline h1 {
 /* line 37, ../../compass/sass/homepage.scss */
 body#homepage .django-tagline h2 {
   color: #999999;
-  margin-top: 0;
-  max-width: 450px;
+  margin-top: 0.2em;
+  max-width: 460px;
 }
 /* line 45, ../../compass/sass/homepage.scss */
 body#homepage #content-main .module h3 {
@@ -205,19 +205,24 @@ body#homepage .carousel li.django-feature .inner .description .image {
   background-color: white;
   border: 1px solid #aaa;
 }
-/* line 181, ../../compass/sass/homepage.scss */
+/* line 177, ../../compass/sass/homepage.scss */
+body#homepage .carousel li.django-feature .inner .description p {
+  color: #333;
+}
+/* line 184, ../../compass/sass/homepage.scss */
 body#homepage ul.websites {
   padding-left: 0;
   margin-right: 0;
   overflow: hidden;
 }
-/* line 185, ../../compass/sass/homepage.scss */
+/* line 188, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website {
   list-style: none;
-  height: 180px;
+  height: 220px;
+  line-height: 1.6em;
   margin-bottom: 1.5em;
 }
-/* line 189, ../../compass/sass/homepage.scss */
+/* line 193, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website img {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -228,11 +233,11 @@ body#homepage ul.websites li.website img {
   margin-bottom: .3em;
   width: 100%;
 }
-/* line 196, ../../compass/sass/homepage.scss */
+/* line 200, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites {
   padding-left: 0;
 }
-/* line 198, ../../compass/sass/homepage.scss */
+/* line 202, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites li {
   list-style-type: none;
 }

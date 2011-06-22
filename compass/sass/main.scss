@@ -24,8 +24,7 @@ body {
     background-color: white;
 }
 body, th, td {
-    font: 12px/1.4em $main-font-family;
-    line-height: 1.5em;
+    font: 13px/1.4em $main-font-family;
 }
 
 /* LINKS */
@@ -48,6 +47,7 @@ a:hover, a:focus {
 }
 
 #content-main {
+    line-height: 1.8em;
     a:link, a:visited {
         color:$dark-orange;
         text-decoration:underline;
@@ -124,6 +124,7 @@ a:hover, a:focus {
 
 #content-related {
     float:right;
+    line-height: 1.4em;
     color:white;
     p, ul, form {
         margin-top:1em;
@@ -193,10 +194,11 @@ a:hover, a:focus {
 
 /* CONTENT */
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4, h5 {
     margin-top:.8em;
     font-family: $special-font-family;
     font-weight:normal;
+    line-height: 1.3em;
 }
 h1 {
     font-size:218%;
@@ -208,7 +210,7 @@ h1 {
 h2 {
     font-size:150%;
     margin-top:1em;
-    margin-bottom:.2em;
+    margin-bottom:.4em;
     line-height:1.2em;
     color:$light-green;
 }
@@ -218,7 +220,7 @@ h3 {
     color:$darker-green;
 }
 h4 {
-    font-size:110%;
+    font-size:115%;
     margin-bottom:-2px;
     margin-top:1.2em;
     color:$darker-green;
@@ -233,9 +235,12 @@ h5 {
     margin-top:1.5em;
     margin-bottom:3px;
 }
-p, ul, dl {
-    margin-top:.6em;
-    margin-bottom:.8em;
+
+#content-main {
+    p, ul, dl {
+        margin-top:0.3em;
+        margin-bottom:1.4em;
+    }
 }
 
 hr {
@@ -272,7 +277,11 @@ ins a {
 body#community {
     #content-main {
         h5 {
-            margin-top: 5px;
+            margin: 0;
+        }
+        p.date {
+            margin-top: 0;
+            line-height: 1.3em;
         }
         .module-container {
             overflow: hidden;
@@ -428,7 +437,6 @@ a.rss:hover, a.rss:link, a.rss:visited {
 #content-related .literal {
     color:white;
     background:transparent;
-    font-size:11px;
 }
 pre, .literal-block {
     font-size:medium;
@@ -436,9 +444,10 @@ pre, .literal-block {
     border:1px solid $lighter-green;
     border-width:1px 0;
     margin: 1em 0;
-    padding: .3em .4em;
+    padding: .4em .8em;
     overflow: auto;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.4em;
 }
 dt .literal, table .literal {
     background:none;
@@ -486,7 +495,10 @@ div.admonition-behind-the-scenes {
 
 #documentation {
     h2, h3, h4 {
-        margin-top:1.4em;
+        margin-top:2em;
+    }
+    h2.deck {
+        font-size: 110%;
     }
     dd {
         margin-left:1em;
@@ -548,8 +560,15 @@ div.versionchanged span.title {
     a.reference {
         text-decoration: none;
     }
-    a.reference tt.literal {
-        border-bottom: 1px $dark-green dotted;
+    #content-main {
+        a.reference tt.literal {
+            border-bottom: 1px $dark-green dotted;
+        }
+    }
+    #content-related {
+        a.reference tt.literal:hover {
+            border-bottom: 1px white solid;
+        }
     }
     a.reference em {
         font-style: normal;
