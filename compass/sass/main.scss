@@ -22,6 +22,7 @@ body {
     margin:0;
     padding:0;
     background-color: white;
+    color: #333;
 }
 body, th, td {
     font: 13px/1.4em $main-font-family;
@@ -68,7 +69,10 @@ a:hover, a:focus {
 /* HEADER */
 
 #header {
-    background-color: #EFEFEF;
+    background: url(../img/site/texture.jpg) fixed #E6E6E6;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
     h1#logo {
         margin-bottom: 0;
         a {
@@ -96,13 +100,13 @@ a:hover, a:focus {
         text-align: center;
         display:block;
         padding:0.6em;
-        background-color: #dedede;
-        color: $darker-green;
+        background-color: transparent;
+        color: #333333;
         @include border-radius;
+        background-color: rgba(190,180,180,.4);
     }
     a:hover, a:focus {
-        color: white;
-        background-color: $dark-orange;
+        background-color: rgba(255,255,255,.4);
     }
 }
 
@@ -116,7 +120,7 @@ a:hover, a:focus {
 #code #nav-code a {
     color:white;
     font-weight:bold;
-    background-color: $dark-green;
+    background-color: $dark-orange;
     @include border-radius;
 }
 
@@ -125,7 +129,7 @@ a:hover, a:focus {
 #content-related {
     float:right;
     line-height: 1.4em;
-    color:white;
+    color: white;
     p, ul, form {
         margin-top:1em;
         margin-bottom:1.2em;
@@ -144,12 +148,12 @@ a:hover, a:focus {
     }
     h1.title {
         margin: 0;
-        color: white;
         background-repeat: no-repeat;
+        color: white;
     }
     h2 {
-        color:white;
-        border-bottom:#888 1px solid;
+        color: white;
+        border-bottom:#686 1px solid;
         margin: 1.3em -14px 3px -14px;
         padding: 0 14px 3px 14px;
         font-size:125%;
@@ -163,7 +167,10 @@ a:hover, a:focus {
     }
 
     .inner {
-        background-color: $light-green;
+        background: url(../img/site/texture-green.jpg) fixed #E6E6E6;
+        -webkit-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
         @include border-radius;
 
         #content-related-body {
@@ -578,13 +585,16 @@ div.versionchanged span.title {
 /* FOOTER */
 
 #footer {
+    background: url(../img/site/texture-green.jpg) fixed #E6E6E6;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
     clear:both;
     color:white;
     padding:2em 0;
-    background-color:$darker-green;
     margin-top:4em;
-    border-top:solid 6px $light-green;
-    border-bottom:solid 6px $light-green;
+    border-top:solid 6px $dark-green;
+    border-bottom:solid 6px $dark-green;
     ul#footer-sitemap {
         li {
             list-style-type: none;
