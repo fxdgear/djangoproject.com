@@ -57,7 +57,7 @@
         }
     }
     ul#nav-global {
-        @include columns(8);
+        @include columns(6);
         @include omega;
         position: absolute;
         bottom: 0;
@@ -65,7 +65,7 @@
         li {
             @include columns(2);
         }
-        li.position-4, li.position-8 {
+        li.position-3, li.position-6 {
             @include omega;
         }
         a {

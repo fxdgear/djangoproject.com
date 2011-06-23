@@ -29,26 +29,11 @@
     }
 
     #header {
-        .inner {
-            padding-top: 0.5em;
-            position: static;
-            height: auto;
-        }
         h1#logo {
-            @include full(8);
-            margin-bottom: 0.2em;
-            margin-top: 0;
-            position: static;
+            left: 28px;
         }
         ul#nav-global {
-            @include full(8);
-            position: static;
-            li {
-                @include columns(2);
-            }
-            li.position-4, li.position-8 {
-                @include omega;
-            }
+            right: 28px;
         }
     }
 

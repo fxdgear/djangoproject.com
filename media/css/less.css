@@ -171,7 +171,7 @@ body {
 #header ul#nav-global {
   display: inline;
   float: left;
-  width: 712px;
+  width: 528px;
   margin-right: 24px;
   margin-right: 0;
   position: absolute;
@@ -186,7 +186,7 @@ body {
   margin-right: 24px;
 }
 /* line 68, ../../compass/sass/partials/_default.scss */
-#header ul#nav-global li.position-4, #header ul#nav-global li.position-8 {
+#header ul#nav-global li.position-3, #header ul#nav-global li.position-6 {
   margin-right: 0;
 }
 /* line 71, ../../compass/sass/partials/_default.scss */
@@ -421,48 +421,15 @@ body#homepage #content-secondary {
   }
 
   /* line 32, ../../compass/sass/partials/_tablet.scss */
-  #header .inner {
-    padding-top: 0.5em;
-    position: static;
-    height: auto;
-  }
-  /* line 37, ../../compass/sass/partials/_tablet.scss */
   #header h1#logo {
-    display: inline;
-    float: left;
-    width: 712px;
-    margin-right: 24px;
-    padding-left: 0px;
-    padding-right: -24px;
-    margin-right: 0;
-    margin-bottom: 0.2em;
-    margin-top: 0;
-    position: static;
+    left: 28px;
   }
-  /* line 43, ../../compass/sass/partials/_tablet.scss */
+  /* line 35, ../../compass/sass/partials/_tablet.scss */
   #header ul#nav-global {
-    display: inline;
-    float: left;
-    width: 712px;
-    margin-right: 24px;
-    padding-left: 0px;
-    padding-right: -24px;
-    margin-right: 0;
-    position: static;
-  }
-  /* line 46, ../../compass/sass/partials/_tablet.scss */
-  #header ul#nav-global li {
-    display: inline;
-    float: left;
-    width: 160px;
-    margin-right: 24px;
-  }
-  /* line 49, ../../compass/sass/partials/_tablet.scss */
-  #header ul#nav-global li.position-4, #header ul#nav-global li.position-8 {
-    margin-right: 0;
+    right: 28px;
   }
 
-  /* line 57, ../../compass/sass/partials/_tablet.scss */
+  /* line 42, ../../compass/sass/partials/_tablet.scss */
   body#documentation #content-main img {
     border: 2px #dddddd dashed;
     padding: 2px;
@@ -473,7 +440,7 @@ body#homepage #content-secondary {
     cursor: pointer;
   }
 
-  /* line 69, ../../compass/sass/partials/_tablet.scss */
+  /* line 54, ../../compass/sass/partials/_tablet.scss */
   body#community #content-main .module {
     display: inline;
     float: left;
@@ -481,18 +448,18 @@ body#homepage #content-secondary {
     margin-right: 24px;
   }
 
-  /* line 76, ../../compass/sass/partials/_tablet.scss */
+  /* line 61, ../../compass/sass/partials/_tablet.scss */
   body#homepage .django-tagline {
     display: inline;
     float: left;
     width: 436px;
     margin-right: 24px;
   }
-  /* line 79, ../../compass/sass/partials/_tablet.scss */
+  /* line 64, ../../compass/sass/partials/_tablet.scss */
   body#homepage .carousel {
     margin-left: 92px;
   }
-  /* line 82, ../../compass/sass/partials/_tablet.scss */
+  /* line 67, ../../compass/sass/partials/_tablet.scss */
   body#homepage ul.websites {
     display: inline;
     float: left;
@@ -502,39 +469,39 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 84, ../../compass/sass/partials/_tablet.scss */
+  /* line 69, ../../compass/sass/partials/_tablet.scss */
   body#homepage ul.websites li.website {
     display: inline;
     float: left;
     width: 160px;
     margin-right: 24px;
   }
-  /* line 87, ../../compass/sass/partials/_tablet.scss */
+  /* line 72, ../../compass/sass/partials/_tablet.scss */
   body#homepage ul.websites li.website.position-4, body#homepage ul.websites li.website.position-8 {
     margin-right: 0;
   }
-  /* line 90, ../../compass/sass/partials/_tablet.scss */
+  /* line 75, ../../compass/sass/partials/_tablet.scss */
   body#homepage ul.websites li.website.position-5, body#homepage ul.websites li.website.position-10 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 95, ../../compass/sass/partials/_tablet.scss */
+  /* line 80, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books {
     display: inline;
     float: left;
     width: 344px;
     margin-right: 24px;
   }
-  /* line 98, ../../compass/sass/partials/_tablet.scss */
+  /* line 83, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0;
   }
-  /* line 101, ../../compass/sass/partials/_tablet.scss */
+  /* line 86, ../../compass/sass/partials/_tablet.scss */
   body#homepage .module.books ul.books li.book.position-3 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 107, ../../compass/sass/partials/_tablet.scss */
+  /* line 92, ../../compass/sass/partials/_tablet.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;
@@ -545,14 +512,14 @@ body#homepage #content-secondary {
     margin-right: 0;
   }
 
-  /* line 113, ../../compass/sass/partials/_tablet.scss */
+  /* line 98, ../../compass/sass/partials/_tablet.scss */
   #footer ul#footer-sitemap li.section {
     display: inline;
     float: left;
     width: 160px;
     margin-right: 24px;
   }
-  /* line 116, ../../compass/sass/partials/_tablet.scss */
+  /* line 101, ../../compass/sass/partials/_tablet.scss */
   #footer ul#footer-sitemap li.section.position-4 {
     margin-right: 0;
   }
@@ -690,15 +657,19 @@ body#homepage #content-secondary {
     margin-right: 24px;
   }
   /* line 76, ../../compass/sass/partials/_mobile.scss */
-  #header ul#nav-global li.position-2, #header ul#nav-global li.position-4, #header ul#nav-global li.position-6, #header ul#nav-global li.position-8 {
+  #header ul#nav-global li.position-2, #header ul#nav-global li.position-4, #header ul#nav-global li.position-6 {
     margin-right: 0;
   }
   /* line 79, ../../compass/sass/partials/_mobile.scss */
+  #header ul#nav-global li.position-3 {
+    margin-right: 24px;
+  }
+  /* line 82, ../../compass/sass/partials/_mobile.scss */
   #header ul#nav-global a {
     padding: 0.2em;
   }
 
-  /* line 87, ../../compass/sass/partials/_mobile.scss */
+  /* line 90, ../../compass/sass/partials/_mobile.scss */
   body#documentation #content-main img {
     border: 2px #dddddd dashed;
     padding: 2px;
@@ -709,12 +680,12 @@ body#homepage #content-secondary {
     cursor: pointer;
   }
 
-  /* line 99, ../../compass/sass/partials/_mobile.scss */
+  /* line 102, ../../compass/sass/partials/_mobile.scss */
   body#community #content-main .module {
     margin-right: 0;
   }
 
-  /* line 106, ../../compass/sass/partials/_mobile.scss */
+  /* line 109, ../../compass/sass/partials/_mobile.scss */
   body#homepage #content-main {
     display: inline;
     float: left;
@@ -724,15 +695,15 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 108, ../../compass/sass/partials/_mobile.scss */
+  /* line 111, ../../compass/sass/partials/_mobile.scss */
   body#homepage #content-main .module {
     margin-top: 2em;
   }
-  /* line 110, ../../compass/sass/partials/_mobile.scss */
+  /* line 113, ../../compass/sass/partials/_mobile.scss */
   body#homepage #content-main .module h3 {
     font-size: 150%;
   }
-  /* line 115, ../../compass/sass/partials/_mobile.scss */
+  /* line 118, ../../compass/sass/partials/_mobile.scss */
   body#homepage .django-tagline {
     display: inline;
     float: left;
@@ -743,16 +714,16 @@ body#homepage #content-secondary {
     margin-right: 0;
     margin-bottom: 2em;
   }
-  /* line 118, ../../compass/sass/partials/_mobile.scss */
+  /* line 121, ../../compass/sass/partials/_mobile.scss */
   body#homepage .django-tagline h1 {
     font-size: 160%;
     max-width: 380px;
   }
-  /* line 122, ../../compass/sass/partials/_mobile.scss */
+  /* line 125, ../../compass/sass/partials/_mobile.scss */
   body#homepage .django-tagline h2 {
     font-size: 115%;
   }
-  /* line 126, ../../compass/sass/partials/_mobile.scss */
+  /* line 129, ../../compass/sass/partials/_mobile.scss */
   body#homepage #download {
     display: inline;
     float: left;
@@ -762,15 +733,15 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 128, ../../compass/sass/partials/_mobile.scss */
+  /* line 131, ../../compass/sass/partials/_mobile.scss */
   body#homepage #download a {
     padding: 0.4em;
   }
-  /* line 131, ../../compass/sass/partials/_mobile.scss */
+  /* line 134, ../../compass/sass/partials/_mobile.scss */
   body#homepage #download .level1 {
     font-size: 110%;
   }
-  /* line 135, ../../compass/sass/partials/_mobile.scss */
+  /* line 138, ../../compass/sass/partials/_mobile.scss */
   body#homepage .carousel {
     display: inline;
     float: left;
@@ -783,22 +754,22 @@ body#homepage #content-secondary {
     margin-bottom: 3em;
     margin-top: 3em;
   }
-  /* line 142, ../../compass/sass/partials/_mobile.scss */
+  /* line 145, ../../compass/sass/partials/_mobile.scss */
   body#homepage .carousel li.django-feature .inner h4 {
     font-size: 130%;
   }
-  /* line 146, ../../compass/sass/partials/_mobile.scss */
+  /* line 149, ../../compass/sass/partials/_mobile.scss */
   body#homepage .carousel li.django-feature .inner .description .image {
     width: 150px;
     height: 120px;
   }
-  /* line 150, ../../compass/sass/partials/_mobile.scss */
+  /* line 153, ../../compass/sass/partials/_mobile.scss */
   body#homepage .carousel li.django-feature .inner .description p {
     float: left;
     font-size: 100%;
     margin: 10px 0 0 0px;
   }
-  /* line 159, ../../compass/sass/partials/_mobile.scss */
+  /* line 162, ../../compass/sass/partials/_mobile.scss */
   body#homepage ul.websites {
     display: inline;
     float: left;
@@ -808,23 +779,23 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 161, ../../compass/sass/partials/_mobile.scss */
+  /* line 164, ../../compass/sass/partials/_mobile.scss */
   body#homepage ul.websites li.website {
     display: inline;
     float: left;
     width: 114px;
     margin-right: 24px;
   }
-  /* line 164, ../../compass/sass/partials/_mobile.scss */
+  /* line 167, ../../compass/sass/partials/_mobile.scss */
   body#homepage ul.websites li.website.position-2, body#homepage ul.websites li.website.position-4, body#homepage ul.websites li.website.position-6, body#homepage ul.websites li.website.position-8, body#homepage ul.websites li.website.position-10 {
     margin-right: 0;
   }
-  /* line 167, ../../compass/sass/partials/_mobile.scss */
+  /* line 170, ../../compass/sass/partials/_mobile.scss */
   body#homepage ul.websites li.website.position-5 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 173, ../../compass/sass/partials/_mobile.scss */
+  /* line 176, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.books ul.books {
     display: inline;
     float: left;
@@ -834,23 +805,23 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 175, ../../compass/sass/partials/_mobile.scss */
+  /* line 178, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.books ul.books li.book {
     display: inline;
     float: left;
     width: 114px;
     margin-right: 24px;
   }
-  /* line 178, ../../compass/sass/partials/_mobile.scss */
+  /* line 181, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0;
   }
-  /* line 181, ../../compass/sass/partials/_mobile.scss */
+  /* line 184, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.books ul.books li.book.position-3 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 187, ../../compass/sass/partials/_mobile.scss */
+  /* line 190, ../../compass/sass/partials/_mobile.scss */
   body#homepage .module.community {
     display: inline;
     float: left;
@@ -860,7 +831,7 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 190, ../../compass/sass/partials/_mobile.scss */
+  /* line 193, ../../compass/sass/partials/_mobile.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;
@@ -871,14 +842,14 @@ body#homepage #content-secondary {
     margin-right: 0;
   }
 
-  /* line 197, ../../compass/sass/partials/_mobile.scss */
+  /* line 200, ../../compass/sass/partials/_mobile.scss */
   #footer ul#footer-sitemap li.section {
     display: inline;
     float: left;
     width: 114px;
     margin-right: 24px;
   }
-  /* line 200, ../../compass/sass/partials/_mobile.scss */
+  /* line 203, ../../compass/sass/partials/_mobile.scss */
   #footer ul#footer-sitemap li.section.position-2, #footer ul#footer-sitemap li.section.position-4 {
     margin-right: 0;
   }
@@ -984,32 +955,23 @@ body#homepage #content-secondary {
   #header ul#nav-global li {
     display: inline;
     float: left;
-    width: 91px;
+    width: 206px;
     margin-right: 24px;
-  }
-  /* line 50, ../../compass/sass/partials/_wide-mobile.scss */
-  #header ul#nav-global li.position-2, #header ul#nav-global li.position-6 {
-    margin-right: 24px;
-    /* FIXME */
-  }
-  /* line 53, ../../compass/sass/partials/_wide-mobile.scss */
-  #header ul#nav-global li.position-4, #header ul#nav-global li.position-8 {
-    margin-right: 0;
   }
 
-  /* line 61, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 55, ../../compass/sass/partials/_wide-mobile.scss */
   body#community #content-main .module {
     display: inline;
     float: left;
     width: 206px;
     margin-right: 24px;
   }
-  /* line 64, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 58, ../../compass/sass/partials/_wide-mobile.scss */
   body#community #content-main .module.position-2, body#community #content-main .module.position-4 {
     margin-right: 0;
   }
 
-  /* line 71, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 65, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage #download {
     display: inline;
     float: left;
@@ -1019,7 +981,7 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 74, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 68, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .django-tagline {
     display: inline;
     float: left;
@@ -1029,7 +991,7 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 77, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 71, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .carousel {
     display: inline;
     float: left;
@@ -1039,12 +1001,12 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 82, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 76, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .carousel li.django-feature .inner .description p {
     float: none;
     margin: 5px 0 0 170px;
   }
-  /* line 90, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 84, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage ul.websites {
     display: inline;
     float: left;
@@ -1054,23 +1016,23 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 92, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 86, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage ul.websites li.website {
     display: inline;
     float: left;
     width: 206px;
     margin-right: 24px;
   }
-  /* line 95, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 89, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage ul.websites li.website.position-2, body#homepage ul.websites li.website.position-4, body#homepage ul.websites li.website.position-6, body#homepage ul.websites li.website.position-8, body#homepage ul.websites li.website.position-10 {
     margin-right: 0;
   }
-  /* line 98, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 92, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage ul.websites li.website.position-5 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 104, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 98, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books {
     display: inline;
     float: left;
@@ -1080,23 +1042,23 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 106, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 100, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books li.book {
     display: inline;
     float: left;
     width: 206px;
     margin-right: 24px;
   }
-  /* line 109, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 103, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books li.book.position-2 {
     margin-right: 0;
   }
-  /* line 112, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 106, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.books ul.books li.book.position-3 {
     /* To undo the _default.scss styles */
     margin-right: 24px;
   }
-  /* line 118, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 112, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage .module.community {
     display: inline;
     float: left;
@@ -1106,7 +1068,7 @@ body#homepage #content-secondary {
     padding-right: -24px;
     margin-right: 0;
   }
-  /* line 121, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 115, ../../compass/sass/partials/_wide-mobile.scss */
   body#homepage #content-secondary {
     display: inline;
     float: left;
@@ -1117,14 +1079,14 @@ body#homepage #content-secondary {
     margin-right: 0;
   }
 
-  /* line 127, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 121, ../../compass/sass/partials/_wide-mobile.scss */
   #footer ul#footer-sitemap li.section {
     display: inline;
     float: left;
     width: 206px;
     margin-right: 24px;
   }
-  /* line 130, ../../compass/sass/partials/_wide-mobile.scss */
+  /* line 124, ../../compass/sass/partials/_wide-mobile.scss */
   #footer ul#footer-sitemap li.section.position-2, #footer ul#footer-sitemap li.section.position-4 {
     margin-right: 0;
   }

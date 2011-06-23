@@ -45,13 +45,7 @@
         ul#nav-global {
             @include full(5);
             li {
-                @include columns(2*5/8);
-            }
-            li.position-2, li.position-6 {
-                margin-right: 24px; /* FIXME */
-            }
-            li.position-4, li.position-8 {
-                @include omega;
+                @include columns(3*5/6);
             }
         }
     }

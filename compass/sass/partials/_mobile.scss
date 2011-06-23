@@ -73,8 +73,11 @@
             li {
                 @include columns(1.5);
             }
-            li.position-2, li.position-4, li.position-6, li.position-8 {
+            li.position-2, li.position-4, li.position-6 {
                 @include omega;
+            }
+            li.position-3 {
+                @include not-omega;
             }
             a {
                 padding:0.2em;
