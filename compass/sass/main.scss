@@ -69,10 +69,7 @@ a:hover, a:focus {
 /* HEADER */
 
 #header {
-    background: url(../img/site/texture.jpg) fixed #E6E6E6;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    background-color: #e9e9e9;
     h1#logo {
         margin-bottom: 0;
         a {
@@ -152,7 +149,7 @@ a:hover, a:focus {
     }
     h2 {
         color: white;
-        border-bottom:#464 1px solid;
+        border-bottom:#888 1px solid;
         margin: 1.3em -14px 3px -14px;
         padding: 0 14px 3px 14px;
         font-size:125%;
@@ -166,10 +163,7 @@ a:hover, a:focus {
     }
 
     .inner {
-        background: url(../img/site/texture-green.jpg) fixed #E6E6E6;
-        -webkit-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+        background-color: $light-green;
         @include border-radius;
 
         #content-related-body {
@@ -584,10 +578,9 @@ div.versionchanged span.title {
 /* FOOTER */
 
 #footer {
-    background: url(../img/site/texture-green.jpg) fixed #E6E6E6;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    background-color: $dark-green;
+    border-top: 4px solid $light-green;
+    border-bottom: 4px solid $light-green;
     clear:both;
     color:white;
     padding:2em 0;
