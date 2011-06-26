@@ -10,6 +10,11 @@
         @include grid(5);
     }
 
+    #content.wrapper {
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+
     #content-main {
         @include full(5);
     }

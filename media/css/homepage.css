@@ -28,7 +28,7 @@ body#homepage #download span {
 body#homepage p.more {
   clear: both;
   margin-top: 2em;
-  font-family: "Museo Sans", museosans-web, sans-serif;
+  font-family: "Lucida Grande", Arial, sans-serif;
   font-size: 115%;
 }
 /* line 29, ../../compass/sass/homepage.scss */
@@ -44,57 +44,58 @@ body#homepage .django-tagline h2 {
   color: #999999;
   margin-top: 0.2em;
   max-width: 460px;
+  font-weight: normal;
 }
-/* line 45, ../../compass/sass/homepage.scss */
+/* line 46, ../../compass/sass/homepage.scss */
 body#homepage #content-main .module h3 {
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 1em;
   clear: both;
 }
-/* line 54, ../../compass/sass/homepage.scss */
+/* line 55, ../../compass/sass/homepage.scss */
 body#homepage .sidebar .entry {
   margin-bottom: 2.2em;
 }
-/* line 56, ../../compass/sass/homepage.scss */
+/* line 57, ../../compass/sass/homepage.scss */
 body#homepage .sidebar .entry p.date {
   margin-top: 0;
 }
-/* line 62, ../../compass/sass/homepage.scss */
+/* line 63, ../../compass/sass/homepage.scss */
 body#homepage .website h4, body#homepage .book h4 {
   margin-top: 0;
   display: inline;
   color: #487858;
 }
-/* line 67, ../../compass/sass/homepage.scss */
+/* line 68, ../../compass/sass/homepage.scss */
 body#homepage .website a, body#homepage .book a {
   text-decoration: none;
 }
-/* line 70, ../../compass/sass/homepage.scss */
+/* line 71, ../../compass/sass/homepage.scss */
 body#homepage .website a:hover, body#homepage .website a:focus, body#homepage .book a:hover, body#homepage .book a:focus {
   background: none;
 }
-/* line 72, ../../compass/sass/homepage.scss */
+/* line 73, ../../compass/sass/homepage.scss */
 body#homepage .website a:hover h4, body#homepage .website a:focus h4, body#homepage .book a:hover h4, body#homepage .book a:focus h4 {
   margin-top: 0;
   color: #ab5603;
 }
-/* line 78, ../../compass/sass/homepage.scss */
+/* line 79, ../../compass/sass/homepage.scss */
 body#homepage ul.books {
   padding-left: 0;
   margin-right: 0;
   overflow: hidden;
 }
-/* line 82, ../../compass/sass/homepage.scss */
+/* line 83, ../../compass/sass/homepage.scss */
 body#homepage ul.books li.book {
   list-style: none;
   margin-bottom: 1.5em;
 }
-/* line 85, ../../compass/sass/homepage.scss */
+/* line 86, ../../compass/sass/homepage.scss */
 body#homepage ul.books li.book img {
   margin-bottom: .3em;
 }
-/* line 90, ../../compass/sass/homepage.scss */
+/* line 91, ../../compass/sass/homepage.scss */
 body#homepage .carousel {
   float: left;
   position: relative;
@@ -111,11 +112,11 @@ body#homepage .carousel {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-/* line 108, ../../compass/sass/homepage.scss */
+/* line 109, ../../compass/sass/homepage.scss */
 body#homepage .carousel .inner {
   padding: 0.3em;
 }
-/* line 111, ../../compass/sass/homepage.scss */
+/* line 112, ../../compass/sass/homepage.scss */
 body#homepage .carousel ol, body#homepage .carousel ul, body#homepage .carousel li {
   margin: 0;
   padding: 0;
@@ -125,104 +126,104 @@ body#homepage .carousel ol, body#homepage .carousel ul, body#homepage .carousel 
   vertical-align: baseline;
   background: transparent;
 }
-/* line 120, ../../compass/sass/homepage.scss */
+/* line 121, ../../compass/sass/homepage.scss */
 body#homepage .carousel ol {
   list-style: none;
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 125, ../../compass/sass/homepage.scss */
+/* line 126, ../../compass/sass/homepage.scss */
 body#homepage .carousel .slidewrap {
   border: 1px solid #deddde;
   overflow: hidden !important;
   position: relative;
 }
-/* line 129, ../../compass/sass/homepage.scss */
+/* line 130, ../../compass/sass/homepage.scss */
 body#homepage .carousel .slidewrap ol.slider {
   background-color: #e1ece2;
 }
-/* line 134, ../../compass/sass/homepage.scss */
+/* line 135, ../../compass/sass/homepage.scss */
 body#homepage .carousel .prev,
 body#homepage .carousel .next {
   display: block;
   text-indent: -9999px;
   width: 15px;
 }
-/* line 139, ../../compass/sass/homepage.scss */
+/* line 140, ../../compass/sass/homepage.scss */
 body#homepage .carousel .prev.disabled, body#homepage .carousel .next.disabled {
   opacity: .25;
 }
-/* line 142, ../../compass/sass/homepage.scss */
+/* line 143, ../../compass/sass/homepage.scss */
 body#homepage .carousel .prev:hover, body#homepage .carousel .prev:focus, body#homepage .carousel .next:hover, body#homepage .carousel .next:focus {
   background-color: transparent;
 }
-/* line 145, ../../compass/sass/homepage.scss */
+/* line 146, ../../compass/sass/homepage.scss */
 body#homepage .carousel .prev {
   background-image: url(../js/carousel/icon_left.gif);
   background-position: center center;
   background-repeat: no-repeat;
   float: left;
 }
-/* line 151, ../../compass/sass/homepage.scss */
+/* line 152, ../../compass/sass/homepage.scss */
 body#homepage .carousel .next {
   background-image: url(../js/carousel/icon_right.gif);
   background-position: center center;
   background-repeat: no-repeat;
   float: right;
 }
-/* line 157, ../../compass/sass/homepage.scss */
+/* line 158, ../../compass/sass/homepage.scss */
 body#homepage .carousel .nextprev {
   padding: 8px 0 4px 0;
   clear: both;
   float: left;
   width: 100%;
 }
-/* line 158, ../../compass/sass/homepage.scss */
+/* line 159, ../../compass/sass/homepage.scss */
 body#homepage .carousel .nextprev li {
   display: inline;
 }
-/* line 160, ../../compass/sass/homepage.scss */
+/* line 161, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature {
   list-style: none;
 }
-/* line 163, ../../compass/sass/homepage.scss */
+/* line 164, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature .inner {
   padding: 1em;
   display: block;
 }
-/* line 166, ../../compass/sass/homepage.scss */
+/* line 167, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature .inner h4 {
   margin-top: 0;
 }
-/* line 169, ../../compass/sass/homepage.scss */
+/* line 170, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature .inner .description {
   overflow: hidden;
   margin-top: 30px;
 }
-/* line 172, ../../compass/sass/homepage.scss */
+/* line 173, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature .inner .description .image {
   float: left;
   background-color: white;
   border: 1px solid #aaa;
 }
-/* line 177, ../../compass/sass/homepage.scss */
+/* line 178, ../../compass/sass/homepage.scss */
 body#homepage .carousel li.django-feature .inner .description p {
   color: #333;
 }
-/* line 184, ../../compass/sass/homepage.scss */
+/* line 185, ../../compass/sass/homepage.scss */
 body#homepage ul.websites {
   padding-left: 0;
   margin-right: 0;
   overflow: hidden;
 }
-/* line 188, ../../compass/sass/homepage.scss */
+/* line 189, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website {
   list-style: none;
   height: 220px;
   line-height: 1.6em;
   margin-bottom: 1.5em;
 }
-/* line 193, ../../compass/sass/homepage.scss */
+/* line 194, ../../compass/sass/homepage.scss */
 body#homepage ul.websites li.website img {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -233,11 +234,11 @@ body#homepage ul.websites li.website img {
   margin-bottom: .3em;
   width: 100%;
 }
-/* line 200, ../../compass/sass/homepage.scss */
+/* line 201, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites {
   padding-left: 0;
 }
-/* line 202, ../../compass/sass/homepage.scss */
+/* line 203, ../../compass/sass/homepage.scss */
 body#homepage ul.community-sites li {
   list-style-type: none;
 }

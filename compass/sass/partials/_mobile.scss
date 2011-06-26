@@ -10,6 +10,11 @@
         @include grid(3);
     }
 
+    #content.wrapper {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
     #content-main {
         @include full(3);
         h1 {
@@ -49,8 +54,6 @@
     }
 
     #header {
-        margin-bottom: 1.2em;
-        border-bottom: 4px solid $dark-green;
         .inner {
             padding-top: 0.5em;
             position: static;

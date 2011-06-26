@@ -10,6 +10,11 @@
         @include grid(8);
     }
 
+    #content.wrapper {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
     #content-main {
         @include columns(6);
     }

@@ -8,12 +8,16 @@
 // https://github.com/willhw/compass-less-plugin
 
 
+@import "compass/css3/border-radius";
+
 @import "less/reset";
 @import "less/framework";
 @import "less/typography/16px";
 
+@import "partials/variables";
 @import "partials/more";
 
+@import "partials/global";
 @import "partials/default";
 @import "partials/tablet";
 @import "partials/mobile";
