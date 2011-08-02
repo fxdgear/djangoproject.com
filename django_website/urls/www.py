@@ -44,6 +44,9 @@ urlpatterns = patterns('',
     # just use a flatpage for it.
     url(r'^foundation/donate/thanks/$', 'django_website.views.donate_thanks'),
 
+    # django-push
+    url(r'^subscriber/', include('django_push.subscriber.urls')),
+
     url(r'^sitemap\.xml$', cache_page(sitemap_views.sitemap, 60 * 60 * 6), {'sitemaps': sitemaps}),
     url(r'^weblog/', include('django_website.blog.urls')),
     url(r'^books/', include('django_website.books.urls')),
@@ -60,7 +63,7 @@ if not settings.PRODUCTION:
     )
 
 urlpatterns += patterns('',
-    # flatpages need to be last b/c they match anything
+# flatpages need to be last b/c they match anything
     (r'', include('django.contrib.flatpages.urls')),
 )
 

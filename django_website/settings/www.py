@@ -1,6 +1,7 @@
 # Settings for www.djangoproject.com
 
 import os
+import json
 import platform
 from unipath import FSPath as Path
 
@@ -9,6 +10,10 @@ BASE = Path(__file__).absolute().ancestor(2)
 
 # Far too clever trick to know if we're running on the deployment server.
 PRODUCTION = ('DJANGOPROJECT_DEBUG' not in os.environ) and ("djangoproject" in platform.node())
+
+# It's a secret to everybody
+SECRETS = json.load(open(BASE.ancestor(2).child('secrets.json')))
+SECRET_KEY = str(SECRETS['secret_key'])
 
 ADMINS = (('Adrian Holovaty','holovaty@gmail.com'),('Jacob Kaplan-Moss', 'jacob@jacobian.org'))
 MANAGERS = (('Jacob Kaplan-Moss','jacob@jacobian.org'),)
@@ -56,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sitemaps',
+    'django_push.subscriber',
     'django_website.blog',
     'django_website.aggregator',
     'django_website.docs',
@@ -83,8 +89,8 @@ if PRODUCTION:
     MIDDLEWARE_CLASSES.append('django.middleware.cache.FetchFromCacheMiddleware')
 
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
@@ -96,6 +102,49 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
 
 DEFAULT_FROM_EMAIL = "noreply@djangoproject.com"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": True,
+    "formatters": {
+        "simple": {"format": "[%(name)s] %(levelname)s: %(message)s"},
+        "full": {"format": "%(asctime)s [%(name)s] %(levelname)s: %(message)s"}
+    },
+    "handlers": {
+        "mail_admins": {
+            "level": "ERROR",
+            "class": "django.utils.log.AdminEmailHandler",
+        },
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+        },
+    },
+    "loggers": {
+        "django.request": {
+            "handlers": ["mail_admins"],
+            "level": "ERROR",
+            "propagate": False,
+        },
+        "django_website": {
+            "handlers": ["console"],
+            "level": "DEBUG",
+        }
+    }
+}
+if PRODUCTION:
+    LOGGING["handlers"]["logfile"] = {
+        "formatter": "full",
+        "level": "DEBUG",
+        "class": "logging.handlers.TimedRotatingFileHandler",
+        "filename": "/var/log/django_website/website.log",
+        "when": "D",
+        "interval": 7,
+        "backupCount": 5,
+    }
+    LOGGING["loggers"]["django.request"]["handlers"].append("logfile")
+    LOGGING["loggers"]["django_website"]["handlers"] = ["logfile"]
 
 # django-registration settings
 ACCOUNT_ACTIVATION_DAYS = 3
@@ -114,6 +163,11 @@ DJANGO_SVN_ROOT = "http://code.djangoproject.com/svn/django/"
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',
                         'compressor.filters.cssmin.CSSMinFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
+
+# PubSubHubbub settings
+PUSH_HUB = 'https://superfeedr.com/hubbub'
+PUSH_CREDENTIALS = 'django_website.aggregator.utils.push_credentials'
+PUSH_SSL_CALLBACK = PRODUCTION
 
 # If django-debug-toolbar is installed enable it.
 if not PRODUCTION:
