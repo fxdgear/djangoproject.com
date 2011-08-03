@@ -137,7 +137,7 @@ body#homepage {
             text-indent: -9999px;
             width: 15px;
         }
-        .prev.disabled, .next.disabled {
+        .prev.carousel-disabled, .next.carousel-disabled {
             opacity: .25;
         }
         .prev:hover, .prev:focus, .next:hover, .next:focus {
