@@ -159,7 +159,12 @@ DJANGO_TESTS_PATH = "/home/html/djangoproject.com/tests/"
 # XXX What's this for?
 DJANGO_SVN_ROOT = "http://code.djangoproject.com/svn/django/"
 
+
+
 # django-compressor settings
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'sass --scss --compass --require less --load-path %s/compass/sass {infile} {outfile}' % MEDIA_ROOT),
+)
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',
                         'compressor.filters.cssmin.CSSMinFilter']
 COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']

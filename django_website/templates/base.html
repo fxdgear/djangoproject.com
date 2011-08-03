@@ -16,8 +16,8 @@
     <![endif]-->
     {% load compress %}
     {% compress css %}
-        <link href="{{ MEDIA_URL }}css/less.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="{{ MEDIA_URL }}css/print.css" rel="stylesheet" type="text/css" media="print" />
+        <link href="{{ MEDIA_URL }}compass/sass/less.scss" rel="stylesheet" type="text/x-scss" media="screen" />
+        <link href="{{ MEDIA_URL }}compass/sass/print.scss" rel="stylesheet" type="text/x-scss" media="print" />
         {% block extracss %}{% endblock %}
     {% endcompress %}
     {% block extrahead %}{% endblock %}

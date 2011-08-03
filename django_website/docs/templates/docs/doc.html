@@ -2,9 +2,9 @@
 
 {% block title %}{{ doc.title|striptags|safe }} | Django documentation{% endblock %}
 
-{% block extrahead %}
+{% block extracss %}
   {{ block.super }}
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="{{ MEDIA_URL }}compass/sass/pygments.scss" type="text/x-scss" />
 {% endblock %}
 
 {% block content %}
