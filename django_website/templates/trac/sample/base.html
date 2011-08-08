@@ -1,0 +1,27 @@
+{% extends "base_code.html" %}
+
+{% block sectionid %}code{% endblock %}
+
+{% block title %}Code{% endblock %}
+
+{% block htmlparams %}{% if 0 %} py:strip=""{% endif %}{% endblock %}
+
+{% block bodyparams %}{% if 0 %} py:match="body" py:attrs="select('@*')"{% endif %}{% endblock %}
+
+{% block extrahead %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="search" href="{{ TRAC_URL }}search" />
+    <link rel="help" href="{{ TRAC_URL }}wiki/TracGuide" />
+    <link rel="alternate" href="{{ TRAC_URL }}timeline?ticket=on&amp;max=50&amp;authors=&amp;daysback=90&amp;format=rss" type="application/rss+xml" class="rss" title="RSS Feed" />
+    <link rel="start" href="{{ TRAC_URL }}wiki" />
+    <link rel="stylesheet" href="{{ TRAC_URL }}chrome/common/css/trac.css" type="text/css" />
+    <link rel="prev" href="{{ TRAC_URL }}timeline?from=2011-08-03&amp;daysback=1&amp;authors=" title="Previous Period" />
+    <link rel="shortcut icon" href="{{ TRAC_URL }}favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{{ TRAC_URL }}favicon.ico" type="image/x-icon" />
+    <link type="application/opensearchdescription+xml" rel="search" href="{{ TRAC_URL }}search/opensearch" title="Search Django" />
+    <script type="text/javascript" src="{{ TRAC_URL }}chrome/common/js/jquery.js"></script><script type="text/javascript" src="{{ TRAC_URL }}chrome/common/js/babel.js"></script><script type="text/javascript" src="{{ TRAC_URL }}chrome/common/js/trac.js"></script><script type="text/javascript" src="{{ TRAC_URL }}chrome/common/js/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    {{ block.super }}
+{% endblock %}

@@ -13,3 +13,7 @@ def recent_release(request):
             settings.CACHE_MIDDLEWARE_SECONDS,
         )
     return {'RECENT_RELEASE': recent_release}
+
+
+def trac(request):
+    return {'TRAC_URL': 'https://code.djangoproject.com/'}

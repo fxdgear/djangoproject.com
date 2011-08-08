@@ -10,7 +10,7 @@
         @include grid(8);
     }
 
-    #content.wrapper {
+    #page-content.wrapper {
         padding-top: 28px;
         padding-bottom: 28px;
     }
@@ -33,7 +33,7 @@
         }
     }
 
-    #header {
+    #page-header {
         h1#logo {
             left: 28px;
         }
@@ -98,7 +98,7 @@
             @include full(8);
         }
     }
-    #footer {
+    #page-footer {
         ul#footer-sitemap {
             li.section {
                 @include columns(2);

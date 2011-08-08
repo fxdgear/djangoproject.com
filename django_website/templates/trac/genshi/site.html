@@ -1,0 +1,15 @@
+{% extends "base_code.html" %}
+
+{% block htmlparams %} py:strip=""{% endblock %}
+
+{% block bodyparams %} py:match="body" py:attrs="select('@*')"{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="${href.chrome('site/style.css')}" />
+    ${select('*|comment()|text()')}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    ${select('*|text()')}
+{% endblock %}

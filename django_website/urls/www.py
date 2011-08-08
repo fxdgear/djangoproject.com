@@ -10,7 +10,6 @@ from django.contrib.sitemaps import views as sitemap_views
 from django.views.decorators.cache import cache_page
 from django.views.generic.simple import redirect_to
 from ..aggregator.feeds import CommunityAggregatorFeed, CommunityAggregatorFirehoseFeed
-from ..aggregator.models import FeedItem
 from ..blog.feeds import WeblogEntryFeed
 from ..sitemaps import FlatPageSitemap, WeblogSitemap
 
@@ -57,9 +56,15 @@ urlpatterns = patterns('',
 
 if not settings.PRODUCTION:
     urlpatterns += patterns("django.views",
+        # Static media serving
         url(r"^media/(?P<path>.*)", "static.serve", {
             "document_root": settings.MEDIA_ROOT,
         }),
+
+        # Test views for Trac content
+        url(r'^trac/genshi/site.html$', 'generic.simple.direct_to_template', {'template': 'trac/genshi/site.html'}),
+        url(r'^trac/sample/timeline/$', 'generic.simple.direct_to_template', {'template': 'trac/sample/timeline.html'}),
+        url(r'^trac/sample/ticket/$', 'generic.simple.direct_to_template', {'template': 'trac/sample/ticket.html'}),
     )
 
 urlpatterns += patterns('',

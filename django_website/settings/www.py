@@ -98,6 +98,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django_website.context_processors.recent_release",
+    "django_website.context_processors.trac",
 ]
 
 

@@ -3,3 +3,19 @@
 {% block sectionid %}code{% endblock %}
 
 {% block title %}Code{% endblock %}
+
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/custom-trac.css" />
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript">
+    // OMG, why??? (stops ticket modification section to auto-collapse)
+    $(document).ready(function() {
+     window.setTimeout(function() {
+        $("#modify").parent().removeClass('collapsed')
+     }, 0);
+    });
+</script>
+{% endblock %}
+

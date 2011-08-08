@@ -1,0 +1,203 @@
+{% extends "trac/sample/base.html" %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{{ TRAC_URL }}chrome/common/css/timeline.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div id="banner">
+      <div id="header">
+        <a id="logo" href="https://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/site/hdr_logo.gif" alt="Django" /></a>
+      </div>
+      <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first">logged in as johndoe</li><li><a href="/logout">Logout</a></li><li><a href="/about">About Trac</a></li><li><a href="/wiki/TracGuide">Help/Guide</a></li><li><a href="/rpc">RPC API</a></li><li class="last"><a href="/prefs">Preferences</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki">Wiki</a></li><li class="active"><a href="/timeline">Timeline</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/wiki/Reports">Reports</a></li><li><a href="/query">View Tickets</a></li><li><a href="/newticket">New Ticket</a></li><li><a href="/search">Search</a></li><li class="last"><a href="/admin" title="Administration">Admin</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span>&larr; <a class="prev" href="/timeline?from=2011-08-03&amp;daysback=1&amp;authors=" title="Previous Period">Previous Period</a></span></li><li class="last"><span class="missing">Next Period &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="timeline">
+      <h1>Timeline</h1>
+      <form id="prefs" method="get" action="">
+       <div><label>View changes from <input type="text" size="10" name="from" value="08/05/11" /></label> <br />
+        and <label><input type="text" size="3" name="daysback" value="1" /> days back</label><br />
+        <label>done by <input type="text" size="16" name="authors" value="" /></label></div>
+       <fieldset>
+        <label>
+          <input type="checkbox" name="ticket" checked="checked" /> Tickets opened and closed
+        </label><label>
+          <input type="checkbox" name="ticket_details" /> Ticket updates
+        </label><label>
+          <input type="checkbox" name="milestone" /> Milestones reached
+        </label><label>
+          <input type="checkbox" name="changeset" /> Repository changesets
+        </label><label>
+          <input type="checkbox" name="wiki" /> Wiki changes
+        </label>
+       </fieldset>
+       <div class="buttons">
+         <input type="submit" name="update" value="Update" />
+       </div>
+      </form>
+        <h2>08/05/11: Today</h2>
+        <dl>
+            <dt class="newticket">
+              <a href="/ticket/16574">
+                <span class="time">02:05</span> Ticket <em title="Bug: Test fails when setting MESSAGE_TAGS (new)">#16574</em> (Test fails when setting MESSAGE_TAGS) created
+                  by <span class="author">Boldewyn</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              in a fresh Django 1.3 project (directly after django_admin
+startproject) I &hellip;
+            </dd>
+            <dt class="closedticket">
+              <a href="/ticket/16571#comment:2">
+                <span class="time">01:12</span> Ticket <em title="Bug: Incorrect unicode template output (closed: invalid)">#16571</em> (Incorrect unicode template output) closed
+                  by <span class="author">aaugustin</span>
+              </a>
+            </dt>
+            <dd class="closedticket">
+              invalid: This isn't a bug in Django; it's just the fact that Python and Javascript &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16573">
+                <span class="time">00:44</span> Ticket <em title="Bug: admindocs &#34;views&#34; view returns no urls (new)">#16573</em> (admindocs "views" view returns no urls) created
+                  by <span class="author">lopopolo</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              The conditions in the if in extract_views_from_url patterns are in the &hellip;
+            </dd>
+        </dl>
+        <h2>08/04/11: Yesterday</h2>
+        <dl>
+            <dt class="newticket">
+              <a href="/ticket/16572">
+                <span class="time">22:20</span> Ticket <em title="Bug: select_related doesn't work (silent/masked TypeError) over multiple ... (new)">#16572</em> (select_related doesn't work (silent/masked TypeError) over multiple ...) created
+                  by <span class="author">rfrankel</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              Given this models.py:
+ [&hellip;]
+The following select_related call returns &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16571">
+                <span class="time">13:57</span> Ticket <em title="Bug: Incorrect unicode template output (new)">#16571</em> (Incorrect unicode template output) created
+                  by <span class="author">pma_</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              I have simple dictionary in py and I tried to output one using &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16570">
+                <span class="time">13:12</span> Ticket <em title="Bug: allow DecimalFields with max_digits == decimal_places (new)">#16570</em> (allow DecimalFields with max_digits == decimal_places) created
+                  by <span class="author">dcwatson</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              This was discussed on django-dev here:
+ &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16569">
+                <span class="time">08:12</span> Ticket <em title="Bug: NamedTemporaryFile is missing the delete argument (new)">#16569</em> (NamedTemporaryFile is missing the delete argument) created
+                  by <span class="author">LvanderRee</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              I am developing under Linux, while my test server is running Windows, &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16568">
+                <span class="time">06:19</span> Ticket <em title="Bug: require_debug_false does not work as intended (backward incompatible) (new)">#16568</em> (require_debug_false does not work as intended (backward incompatible)) created
+                  by <span class="author">andreas_pelme</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              Snip from django/conf/global_settings.py:
+ [&hellip;]
+This does not work as &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16567">
+                <span class="time">05:51</span> Ticket <em title="New feature: Feature Req:&#34;Soft Delete&#34; (new)">#16567</em> (Feature Req:"Soft Delete") created
+                  by <span class="author">yegle</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              It's very common that when we delete items from database, we just mark it &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16566">
+                <span class="time">04:44</span> Ticket <em title="Bug: Typo in docs/ref/files/storage.txt (new)">#16566</em> (Typo in docs/ref/files/storage.txt) created
+                  by <span class="author">thejaswi_puthraya</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              There is a typo ('referened') in the docs/ref/files/storage.txt as can be &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16565">
+                <span class="time">04:39</span> Ticket <em title="Bug: An issue in databrowse's template object_detail.html (new)">#16565</em> (An issue in databrowse's template object_detail.html) created
+                  by <span class="author">leopku</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              1, Steps to reproduce the bug.
+i, create a module with a foreignkey and &hellip;
+            </dd>
+            <dt class="newticket">
+              <a href="/ticket/16564">
+                <span class="time">04:34</span> Ticket <em title="Cleanup/optimization: 'How to use Django with Apache and mod_wsgi' code snipped (new)">#16564</em> ('How to use Django with Apache and mod_wsgi' code snipped) created
+                  by <span class="author">anonymous</span>
+              </a>
+            </dt>
+            <dd class="newticket">
+              this is the original:
+ [&hellip;]
+'/path/to/mysite' is maybe a little miss &hellip;
+            </dd>
+        </dl>
+      <div id="help"><strong>Note:</strong> See <a href="/wiki/TracTimeline">TracTimeline</a>
+        for information about the timeline view.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/timeline?ticket=on&amp;max=50&amp;authors=&amp;daysback=90&amp;format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/about"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right"></p>
+    </div>
+{% endblock %}

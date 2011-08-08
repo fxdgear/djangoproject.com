@@ -1,0 +1,526 @@
+{% extends "trac/sample/base.html" %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="{{ TRAC_URL }}chrome/common/css/ticket.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div id="banner">
+      <div id="header">
+        <a id="logo" href="https://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/site/hdr_logo.gif" alt="Django" /></a>
+      </div>
+      <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first">logged in as johndoe</li><li><a href="/logout">Logout</a></li><li><a href="/about">About Trac</a></li><li><a href="/wiki/TracGuide">Help/Guide</a></li><li><a href="/rpc">RPC API</a></li><li class="last"><a href="/prefs">Preferences</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki">Wiki</a></li><li><a href="/timeline">Timeline</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/wiki/Reports">Reports</a></li><li class="active"><a href="/query">View Tickets</a></li><li><a href="/newticket">New Ticket</a></li><li><a href="/search">Search</a></li><li class="last"><a href="/admin" title="Administration">Admin</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Ticket</span></li><li><a href="">Back to Query</a></li><li class="last"><span class="missing">Next Ticket &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="ticket">
+      <div class="trac-topnav">
+        <a href="#propertyform" title="Go to the ticket editor">Modify</a> ?
+      </div>
+      <h1 id="trac-ticket-title">
+          <a href="/ticket/16357">Ticket #16357</a>
+          <span class="status">(new Cleanup/optimization)</span>
+      </h1>
+      <div id="ticket">
+  <div class="date">
+    <p>Opened <a class="timeline" href="/timeline?from=2011-06-26T23%3A54%3A19-07%3A00&amp;precision=second" title="2011-06-26T23:54:19-07:00 in Timeline">6 weeks</a> ago</p>
+    <p>Last modified <a class="timeline" href="/timeline?from=2011-06-27T21%3A36%3A20-07%3A00&amp;precision=second" title="2011-06-27T21:36:20-07:00 in Timeline">6 weeks</a> ago</p>
+  </div>
+  <h2 class="summary searchable">Navigation buttons in Docs footer would be helpful</h2>
+  <table class="properties">
+    <tr>
+      <th id="h_reporter">Reported by:</th>
+      <td headers="h_reporter" class="searchable">
+        <a href="/query?status=!closed&amp;reporter=ncoghlan%40gmail.com">ncoghlan@gmail.com</a>
+      </td>
+      <th id="h_owner">Owned by:</th>
+      <td headers="h_owner">
+        <a href="/query?status=!closed&amp;owner=johndoe">johndoe</a>
+      </td>
+    </tr>
+    <tr>
+        <th id="h_milestone">
+          Milestone:
+        </th>
+        <td headers="h_milestone">
+              <a class="missing milestone" href="/milestone/" rel="nofollow"></a>
+        </td>
+        <th id="h_component">
+          Component:
+        </th>
+        <td headers="h_component">
+              <a href="/query?status=!closed&amp;component=Documentation">Documentation</a>
+        </td>
+    </tr><tr>
+        <th id="h_version">
+          Version:
+        </th>
+        <td headers="h_version">
+              <a href="/query?status=!closed&amp;version=1.3">1.3</a>
+        </td>
+        <th id="h_severity">
+          Severity:
+        </th>
+        <td headers="h_severity">
+              <a href="/query?status=!closed&amp;severity=Normal">Normal</a>
+        </td>
+    </tr><tr>
+        <th id="h_keywords">
+          Keywords:
+        </th>
+        <td headers="h_keywords" class="searchable">
+        </td>
+        <th id="h_cc">
+          Cc:
+        </th>
+        <td headers="h_cc" class="searchable">
+        </td>
+    </tr><tr>
+        <th id="h_stage">
+          Triage Stage:
+        </th>
+        <td headers="h_stage">
+              <a href="/query?status=!closed&amp;stage=Accepted">Accepted</a>
+        </td>
+        <th id="h_has_patch">
+          Has patch:
+        </th>
+        <td headers="h_has_patch">
+              <a href="/query?status=!closed&amp;has_patch=0">no</a>
+        </td>
+    </tr><tr>
+        <th id="h_needs_docs">
+          Needs documentation:
+        </th>
+        <td headers="h_needs_docs">
+              <a href="/query?status=!closed&amp;needs_docs=0">no</a>
+        </td>
+        <th id="h_needs_tests">
+          Needs tests:
+        </th>
+        <td headers="h_needs_tests">
+              <a href="/query?status=!closed&amp;needs_tests=0">no</a>
+        </td>
+    </tr><tr>
+        <th id="h_needs_better_patch">
+          Patch needs improvement:
+        </th>
+        <td headers="h_needs_better_patch">
+              <a href="/query?status=!closed&amp;needs_better_patch=0">no</a>
+        </td>
+        <th id="h_easy">
+          Easy pickings:
+        </th>
+        <td headers="h_easy">
+              <a href="/query?status=!closed&amp;easy=0">no</a>
+        </td>
+    </tr><tr>
+        <th id="h_ui_ux">
+          UI/UX:
+        </th>
+        <td headers="h_ui_ux">
+              <a href="/query?status=!closed&amp;ui_ux=1">yes</a>
+        </td>
+        <th>
+        </th>
+        <td>
+        </td>
+    </tr>
+  </table>
+  <div class="description">
+    <h3 id="comment:description">
+      Description
+    </h3><form action="#" method="get"><div class="inlinebuttons"><input type="hidden" name="action" value="delete" /><input type="submit" value="Delete" title="Delete ticket" /></div></form>
+    <form id="addreply" method="get" action="#comment">
+      <div class="inlinebuttons">
+        <input type="hidden" name="replyto" value="description" />
+        <input type="submit" name="reply" value="Reply" title="Reply, quoting this description" />
+      </div>
+    </form>
+    <div class="searchable">
+      <p>
+The Django documentation only provides next/previous buttons in the side bar and not in the page footer. That means after reading a page, you may need to scroll up an arbitrary distance to find the navigation options.
+</p>
+<p>
+It would be nice to follow the example of the Python docs here and also include the navigation links in the page footer.
+</p>
+
+    </div>
+  </div>
+</div>
+
+    <div id="attachments">
+        <h2 class="foldable">Attachments</h2>
+        <div>
+          <form method="get" action="/attachment/ticket/16357/" id="attachfile">
+  <div>
+    <input type="hidden" name="action" value="new" />
+    <input type="submit" name="attachfilebutton" value="Attach file" />
+  </div>
+</form>
+        </div>
+    </div>
+
+        <div>
+          <h2 class="foldable">Change History</h2>
+          <div id="changelog">
+              <div class="change" id="trac-change-1">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:1" class="cnum">
+      <a href="#comment:1">comment:1</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="/timeline?from=2011-06-27T06%3A26%3A04-07%3A00&amp;precision=second" title="2011-06-27T06:26:04-07:00 in Timeline">6 weeks</a> ago by julien
+                </h3><form action="#" method="get"><div class="inlinebuttons"><input type="hidden" name="action" value="delete-comment" /><input type="hidden" name="cnum" value="1" /><input type="submit" value="Delete" title="Delete comment 1" /></div></form>
+                  <form method="get" action="#comment:1">
+                    <div class="inlinebuttons">
+                      <input type="hidden" name="cnum_edit" value="1" />
+                      <input type="submit" value="Edit" title="Edit comment 1" />
+                    </div>
+                  </form>
+                  <form id="reply-to-comment-1" method="get" action="#comment">
+                    <div class="inlinebuttons">
+                      <input type="hidden" name="replyto" value="1" />
+                      <input type="submit" value="Reply" title="Reply to comment 1" />
+                    </div>
+                  </form>
+
+  <ul class="changes">
+    <li>
+      <strong>Patch needs improvement</strong>
+        unset
+    </li><li>
+      <strong>UI/UX</strong>
+        set
+    </li><li>
+      <strong>Needs tests</strong>
+        unset
+    </li><li>
+      <strong>Needs documentation</strong>
+        unset
+    </li><li>
+      <strong>Triage Stage</strong>
+        changed from <em>Unreviewed</em> to <em>Accepted</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+
+      <p>
+Good idea -- this would improve the doc's browsability in general.
+</p>
+
+    </div>
+
+              </div>
+              <div class="change" id="trac-change-2">
+                <h3 class="change">
+                  <span class="threading">
+                    <span id="comment:2" class="cnum">
+      <a href="#comment:2">comment:2</a>
+    </span>
+                  </span>
+                  Changed <a class="timeline" href="/timeline?from=2011-06-27T21%3A36%3A20-07%3A00&amp;precision=second" title="2011-06-27T21:36:20-07:00 in Timeline">6 weeks</a> ago by julien
+                </h3><form action="#" method="get"><div class="inlinebuttons"><input type="hidden" name="action" value="delete-comment" /><input type="hidden" name="cnum" value="2" /><input type="submit" value="Delete" title="Delete comment 2" /></div></form>
+                  <form method="get" action="#comment:2">
+                    <div class="inlinebuttons">
+                      <input type="hidden" name="cnum_edit" value="2" />
+                      <input type="submit" value="Edit" title="Edit comment 2" />
+                    </div>
+                  </form>
+                  <form id="reply-to-comment-2" method="get" action="#comment">
+                    <div class="inlinebuttons">
+                      <input type="hidden" name="replyto" value="2" />
+                      <input type="submit" value="Reply" title="Reply to comment 2" />
+                    </div>
+                  </form>
+
+  <ul class="changes">
+    <li>
+      <strong>Owner</strong>
+        changed from <em>nobody</em> to <em>julien</em>
+    </li>
+  </ul>
+    <div class="comment searchable">
+
+
+    </div>
+
+              </div>
+          </div>
+        </div>
+      <form method="post" id="propertyform" action="/ticket/16357#trac-add-comment"><div><input type="hidden" name="__FORM_TOKEN" value="e66927372b4fb4ea500dd8e0" /></div>
+        <div class="field">
+          <div class="trac-nav">
+            <a href="#content" title="View ticket fields and description">View</a> ?
+          </div>
+          <h2 id="trac-add-comment">
+            <a id="edit" onfocus="$('#comment').get(0).focus()">Add a comment</a>
+          </h2>
+          <fieldset class="iefix">
+            <label for="comment">You may use
+              <a tabindex="42" href="/wiki/WikiFormatting">WikiFormatting</a>
+              here.</label>
+            <textarea id="comment" name="comment" class="wikitext trac-resizable" rows="10" cols="78">
+</textarea>
+          </fieldset>
+          <div id="ticketchange" class="ticketdraft" style="display: none">
+            <h3 class="change">
+              Changed by julien
+            </h3>
+
+    <div class="comment searchable">
+
+
+    </div>
+
+          </div>
+        </div>
+        <div>
+          <h2 class="foldable">Modify Ticket</h2>
+          <div id="modify">
+            <fieldset id="properties">
+              <legend>
+                  Change Properties
+              </legend>
+              <table>
+                <tr>
+                  <th><label for="field-summary">Summary:</label></th>
+                  <td class="fullrow" colspan="3">
+                    <input type="text" id="field-summary" name="field_summary" value="Navigation buttons in Docs footer would be helpful" size="70" />
+                  </td>
+                </tr>
+                  <tr>
+                    <th><label for="field-reporter">Reporter:</label></th>
+                    <td class="fullrow" colspan="3">
+                      <input type="text" id="field-reporter" name="field_reporter" value="ncoghlan@gmail.com" size="70" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="field-description">Description:</label></th>
+                    <td class="fullrow" colspan="3">
+                      <fieldset class="iefix">
+                        <label for="field-description" id="field-description-help">You may use
+                          <a tabindex="42" href="/wiki/WikiFormatting">WikiFormatting</a> here.</label>
+                        <textarea id="field-description" name="field_description" class="wikitext trac-resizable" rows="10" cols="68">
+The Django documentation only provides next/previous buttons in the side bar and not in the page footer. That means after reading a page, you may need to scroll up an arbitrary distance to find the navigation options.
+
+It would be nice to follow the example of the Python docs here and also include the navigation links in the page footer.</textarea>
+                      </fieldset>
+                    </td>
+                  </tr>
+                <tr>
+                    <th class="col1">
+                      <label for="field-type">Type:</label>
+                    </th>
+                    <td class="col1">
+                        <select id="field-type" name="field_type">
+                          <option value="Uncategorized">Uncategorized</option><option value="Bug">Bug</option><option value="New feature">New feature</option><option selected="selected" value="Cleanup/optimization">Cleanup/optimization</option>
+                        </select>
+                    </td>
+                    <th class="col2">
+                      <label for="field-milestone">Milestone:</label>
+                    </th>
+                    <td class="col2">
+                        <select id="field-milestone" name="field_milestone">
+                          <option></option>
+                          <optgroup label="Open (no due date)">
+                            <option value="1.4">1.4</option><option value="2.0">2.0</option>
+                          </optgroup><optgroup label="Closed">
+                            <option value="1.0 alpha">1.0 alpha</option><option value="1.0 beta">1.0 beta</option><option value="1.0">1.0</option><option value="1.1 beta">1.1 beta</option><option value="1.1">1.1</option><option value="1.0.3">1.0.3</option><option value="1.2">1.2</option><option value="1.3">1.3</option>
+                          </optgroup>
+                        </select>
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-component">Component:</label>
+                    </th>
+                    <td class="col1">
+                        <select id="field-component" name="field_component">
+                          <option value="contrib.admin">contrib.admin</option><option value="contrib.admindocs">contrib.admindocs</option><option value="contrib.auth">contrib.auth</option><option value="contrib.comments">contrib.comments</option><option value="contrib.contenttypes">contrib.contenttypes</option><option value="contrib.csrf">contrib.csrf</option><option value="contrib.databrowse">contrib.databrowse</option><option value="contrib.flatpages">contrib.flatpages</option><option value="contrib.formtools">contrib.formtools</option><option value="contrib.humanize">contrib.humanize</option><option value="contrib.localflavor">contrib.localflavor</option><option value="contrib.markup">contrib.markup</option><option value="contrib.messages">contrib.messages</option><option value="contrib.redirects">contrib.redirects</option><option value="contrib.sessions">contrib.sessions</option><option value="contrib.sitemaps">contrib.sitemaps</option><option value="contrib.sites">contrib.sites</option><option value="contrib.staticfiles">contrib.staticfiles</option><option value="contrib.syndication">contrib.syndication</option><option value="contrib.webdesign">contrib.webdesign</option><option value="Core (Cache system)">Core (Cache system)</option><option value="Core (Mail)">Core (Mail)</option><option value="Core (Management commands)">Core (Management commands)</option><option value="Core (Other)">Core (Other)</option><option value="Core (Serialization)">Core (Serialization)</option><option value="Database layer (models, ORM)">Database layer (models, ORM)</option><option value="Djangoproject.com Web site">Djangoproject.com Web site</option><option selected="selected" value="Documentation">Documentation</option><option value="File uploads/storage">File uploads/storage</option><option value="Forms">Forms</option><option value="Generic views">Generic views</option><option value="GIS">GIS</option><option value="HTTP handling">HTTP handling</option><option value="Internationalization">Internationalization</option><option value="ORM aggregation">ORM aggregation</option><option value="Template system">Template system</option><option value="Testing framework">Testing framework</option><option value="Translations">Translations</option><option value="Uncategorized">Uncategorized</option>
+                        </select>
+                    </td>
+                    <th class="col2">
+                      <label for="field-version">Version:</label>
+                    </th>
+                    <td class="col2">
+                        <select id="field-version" name="field_version">
+                          <option></option>
+                          <option value="SVN">SVN</option><option value="1.3-beta">1.3-beta</option><option value="1.3-alpha">1.3-alpha</option><option value="1.2-beta">1.2-beta</option><option value="1.2-alpha">1.2-alpha</option><option value="1.2">1.2</option><option value="1.1-beta-1">1.1-beta-1</option><option value="1.1">1.1</option><option value="1.0-beta-1">1.0-beta-1</option><option value="1.0-alpha-2">1.0-alpha-2</option><option value="1.0-alpha">1.0-alpha</option><option value="1.0">1.0</option><option value="0.96">0.96</option><option value="0.95">0.95</option><option selected="selected" value="1.3">1.3</option><option value="1.3-rc1">1.3-rc1</option>
+                        </select>
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-severity">Severity:</label>
+                    </th>
+                    <td class="col1">
+                        <select id="field-severity" name="field_severity">
+                          <option selected="selected" value="Normal">Normal</option><option value="Release blocker">Release blocker</option>
+                        </select>
+                    </td>
+                    <th class="col2">
+                      <label for="field-keywords">Keywords:</label>
+                    </th>
+                    <td class="col2">
+                            <input type="text" id="field-keywords" name="field_keywords" value="" />
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-cc">Cc:</label>
+                    </th>
+                    <td class="col1">
+                            <span>
+                              <input type="text" id="field-cc" title="Space or comma delimited email addresses and usernames are accepted." name="field_cc" value="" />
+                            </span>
+                    </td>
+                    <th class="col2">
+                      <label for="field-stage">Triage Stage:</label>
+                    </th>
+                    <td class="col2">
+                        <select id="field-stage" name="field_stage">
+                          <option value="Unreviewed">Unreviewed</option><option value="Design decision needed">Design decision needed</option><option selected="selected" value="Accepted">Accepted</option><option value="Ready for checkin">Ready for checkin</option><option value="Someday/Maybe">Someday/Maybe</option><option value="Fixed on a branch">Fixed on a branch</option>
+                        </select>
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-has_patch">Has patch:</label>
+                    </th>
+                    <td class="col1">
+                        <span>
+                          <input type="checkbox" id="field-has_patch" name="field_has_patch" value="1" />
+                          <input type="hidden" name="field_checkbox_has_patch" value="1" />
+                        </span>
+                    </td>
+                    <th class="col2">
+                      <label for="field-needs_docs">Needs documentation:</label>
+                    </th>
+                    <td class="col2">
+                        <span>
+                          <input type="checkbox" id="field-needs_docs" name="field_needs_docs" value="1" />
+                          <input type="hidden" name="field_checkbox_needs_docs" value="1" />
+                        </span>
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-needs_tests">Needs tests:</label>
+                    </th>
+                    <td class="col1">
+                        <span>
+                          <input type="checkbox" id="field-needs_tests" name="field_needs_tests" value="1" />
+                          <input type="hidden" name="field_checkbox_needs_tests" value="1" />
+                        </span>
+                    </td>
+                    <th class="col2">
+                      <label for="field-needs_better_patch">Patch needs improvement:</label>
+                    </th>
+                    <td class="col2">
+                        <span>
+                          <input type="checkbox" id="field-needs_better_patch" name="field_needs_better_patch" value="1" />
+                          <input type="hidden" name="field_checkbox_needs_better_patch" value="1" />
+                        </span>
+                    </td>
+                </tr><tr>
+                    <th class="col1">
+                      <label for="field-easy">Easy pickings:</label>
+                    </th>
+                    <td class="col1">
+                        <span>
+                          <input type="checkbox" id="field-easy" name="field_easy" value="1" />
+                          <input type="hidden" name="field_checkbox_easy" value="1" />
+                        </span>
+                    </td>
+                    <th class="col2">
+                      <label for="field-ui_ux">UI/UX:</label>
+                    </th>
+                    <td class="col2">
+                        <span>
+                          <input type="checkbox" id="field-ui_ux" name="field_ui_ux" checked="checked" value="1" />
+                          <input type="hidden" name="field_checkbox_ui_ux" value="1" />
+                        </span>
+                    </td>
+                </tr>
+              </table>
+            </fieldset>
+                <fieldset id="action">
+                  <legend>Action</legend>
+                  <div>
+                      <input type="radio" id="action_leave" name="action" value="leave" checked="checked" />
+                      <label for="action_leave">leave</label>
+                      as new
+                      <span class="hint"></span>
+                  </div><div>
+                      <input type="radio" id="action_resolve" name="action" value="resolve" />
+                      <label for="action_resolve">resolve</label>
+                      as <select name="action_resolve_resolve_resolution" id="action_resolve_resolve_resolution"><option selected="selected" value="fixed">fixed</option><option value="invalid">invalid</option><option value="wontfix">wontfix</option><option value="duplicate">duplicate</option><option value="worksforme">worksforme</option><option value="needsinfo">needsinfo</option></select>
+                      <span class="hint">The resolution will be set. Next status will be 'closed'</span>
+                  </div><div>
+                      <input type="radio" id="action_reassign" name="action" value="reassign" />
+                      <label for="action_reassign">reassign</label>
+                      to <input type="text" name="action_reassign_reassign_owner" value="johndoe" id="action_reassign_reassign_owner" />
+                      <span class="hint">The owner will be changed from johndoe. Next status will be 'new'</span>
+                  </div><div>
+                      <input type="radio" id="action_accept" name="action" value="accept" />
+                      <label for="action_accept">accept</label>
+                      <span class="hint">Next status will be 'assigned'</span>
+                  </div>
+                </fieldset>
+          </div>
+        </div>
+        <div class="trac-nav">
+          <a href="#attachments" title="Go to the list of attachments">Attachments</a> ?
+        </div>
+        <div class="buttons">
+            <input type="hidden" name="ts" value="2011-06-28 04:36:20.276093+00:00" />
+            <input type="hidden" name="replyto" />
+            <input type="hidden" name="cnum" value="3" />
+          <input type="submit" name="preview" value="Preview" />
+          <input type="submit" name="submit" value="Submit changes" />
+        </div>
+      </form>
+      <div id="help"><strong>Note:</strong> See
+        <a href="/wiki/TracTickets">TracTickets</a> for help on using
+        tickets.</div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="first">
+          <a rel="nofollow" href="/ticket/16357?format=csv" class="csv">Comma-delimited Text</a>
+        </li><li>
+          <a rel="nofollow" href="/ticket/16357?format=tab" class="tab">Tab-delimited Text</a>
+        </li><li class="last">
+          <a rel="nofollow" href="/ticket/16357?format=rss" class="rss">RSS Feed</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/about"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right"></p>
+    </div>
+{% endblock %}

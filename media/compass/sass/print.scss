@@ -9,7 +9,7 @@ body { font-size:10pt; background: white; color: black; }
 #header, #content-extra, #documentation #content-secondary, #documentation #content-related, h2.deck { display:none; }
 
 /* Formatting and display fixes */
-#content { border-top:none; }
+#page-content { border-top:none; }
 .literal-block { overflow:visible; }
 
 /* Typographic adjustments */

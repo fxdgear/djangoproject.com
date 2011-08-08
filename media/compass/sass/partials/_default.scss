@@ -9,7 +9,7 @@
     @include grid(10);
 }
 
-#content.wrapper {
+#page-content.wrapper {
     padding-top: 48px;
     padding-bottom: 48px;
 }
@@ -42,7 +42,7 @@
     }
 }
 
-#header {
+#page-header {
     margin-bottom: 1em;
     .inner {
         position: relative;
@@ -179,7 +179,7 @@ body#homepage {
         @include full(10);
     }
 }
-#footer {
+#page-footer {
     ul#footer-sitemap {
         li.section {
             @include columns(2);
