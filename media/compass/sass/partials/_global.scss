@@ -57,6 +57,8 @@ a:hover, a:focus {
         background-color:$flashy-green;
         color:$dark-green;
         text-decoration:none;
+        @include border-radius(3px);
+        @include transition-duration(0.3s);
     }
     h1:first-child, h2:first-child {
         margin-top: 0;
@@ -100,11 +102,13 @@ a:hover, a:focus {
         color: white;
         @include border-radius(3px);
         background-color: rgba(200,200,200,.2);
+        @include text-shadow($darker-green, 2px, 2px, 1px);
     }
     a:hover, a:focus {
         background-color: $yellow;
         color: black;
         @include transition-duration(0.3s);
+        text-shadow: none;
     }
 }
 
@@ -118,6 +122,7 @@ a:hover, a:focus {
     background-color: $yellow;
     color: black;
     @include border-radius(3px);
+    text-shadow: none;
 }
 
 /* EXTRA CONTENT */
@@ -141,6 +146,9 @@ a:hover, a:focus {
     .entry .summary p {
         margin-top: 0;
         margin-bottom: 2em;
+    }
+    h1, h2, h3 {
+        @include text-shadow($darker-green, 1px, 1px, 1px);
     }
     h1.title {
         margin: 0;
@@ -616,6 +624,9 @@ div.versionchanged span.title {
                 padding-left: 0;
             }
         }
+        a {
+            @include text-shadow($darker-green, 2px, 2px, 1px);
+        }
         a.title {
             font-family: $special-font-family;
             font-size: 125%;
@@ -638,6 +649,7 @@ div.versionchanged span.title {
     }
     a {
         color:$light-orange;
+        @include text-shadow($darker-green, 2px, 2px, 1px);
     }
     a:hover, a:focus {
         color:$yellow;

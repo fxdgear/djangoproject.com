@@ -1,5 +1,7 @@
 @import "partials/variables";
 @import "compass/css3/border-radius";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transition";
 
 
 body#homepage {
@@ -11,6 +13,7 @@ body#homepage {
             text-decoration: none;
             display:block;
             color: white;
+            @include text-shadow($darker-green, 2px, 2px, 1px);
         }
         a:hover, a:focus {
             background: none;
@@ -70,6 +73,7 @@ body#homepage {
         }
         a:hover, a:focus {
             background: none;
+            @include transition-duration(0.3s);
             h4 {
                 margin-top: 0;
                 color: $dark-orange;
