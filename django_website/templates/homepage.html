@@ -35,28 +35,26 @@ $(document).ready(function(){
     </a>
 </div>
 
-<div class="module">
-    <div class="carousel">
-        <div class="inner">
-        <div class="slidewrap">
-            <ol class="slider" id="theSlider">
-                <li class="django-feature">
-                    <div class="inner">
-                        <h4 class="title"><a href="#">What is Django?</a></h4>
-                        <div class="description">
-                            <div class="image"></div>
-                            <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performing, elegant Web applications quickly.</p>
-                        </div>
+<div class="module carousel">
+    <div class="inner">
+    <div class="slidewrap">
+        <ol class="slider" id="theSlider">
+            <li class="django-feature">
+                <div class="inner">
+                    <h4 class="title"><a href="#">What is Django?</a></h4>
+                    <div class="description">
+                        <div class="image"></div>
+                        <p>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. It lets you build high-performing, elegant Web applications quickly.</p>
                     </div>
-                </li>
-                {% load showcase_tags %}{% render_django_features 8 %}
-            </ol>
-        </div>
-        <ul class="nextprev">
-            <li><a href="#theSlider" class="next">Next</a></li>
-            <li><a href="#theSlider" class="prev">Prev</a></li>
-        </ul>
-        </div>
+                </div>
+            </li>
+            {% load showcase_tags %}{% render_django_features 8 %}
+        </ol>
+    </div>
+    <ul class="nextprev">
+        <li><a href="#theSlider" class="prev" title="Previous slide">Previous slide</a></li>
+        <li><a href="#theSlider" class="next" title="Next slide">Next slide</a></li>
+    </ul>
     </div>
 </div>
 

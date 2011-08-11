@@ -74,9 +74,12 @@
             @include full(5);
         }
         .carousel {
-            @include full(5);
+            margin-left:-22px;
+            margin-right:-22px;
+            width: 480px;
             li.django-feature {
                 .inner {
+                    padding: 0 22px;
                     .description {
                         p {
                             float: none;

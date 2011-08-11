@@ -93,6 +93,7 @@ body#homepage {
     #content-main {
         @include full(10);
         .module {
+            float:left;
             margin-top: 4em;
             h3 {
                 font-size: 175%;
@@ -121,28 +122,38 @@ body#homepage {
         }
     }
     .carousel {
-        @include full(6);
-        @include shift(2);
-        margin-bottom: 6em;
-        margin-top: 6em;
+        margin-top: 4em;
+        margin-left:-48px;
+        margin-right:-48px;
+        padding: 2em 0;
+        .nextprev {
+            margin:2em auto 0 auto;
+        }
         li.django-feature {
             .inner {
-                /*width:550px;*/
-                h4 {
-                    font-size: 140%;
+                padding: 0 10em;
+                h4.title {
+                    font-size:1.6em;
                 }
                 .description {
+                    margin-top: 30px;
                     .image {
                         float: left;
                         width: 250px;
-                        height: 200px;
+                        height: 180px;
                     }
                     p {
-                        font-size: 110%;
+                        color: #ccc;
+                        font-size: 1.4em;
+                        line-height:1.5em;
                         margin: 5px 0 0 270px;
                     }
                 }
             }
+        }
+        .prev, .next {
+            width: 25px;
+            height: 25px;
         }
     }
     ul#django-features {

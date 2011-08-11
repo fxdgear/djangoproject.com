@@ -67,7 +67,14 @@
             @include columns(5);
         }
         .carousel {
-            @include shift(1);
+            margin-left:-28px;
+            margin-right:-28px;
+            width: 768px;
+            li.django-feature {
+                .inner {
+                   padding: 0 2em;
+                }
+            }
         }
         ul.websites {
             @include full(8);

@@ -2,6 +2,7 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/text-shadow";
 @import "compass/css3/transition";
+@import "compass/css3/box-shadow";
 
 
 body#homepage {
@@ -93,26 +94,9 @@ body#homepage {
         }
     }
     .carousel {
-        float: left;
-        position: relative;
-        background-color: #dddedf;
-        @include border-radius;
-        background-image: -webkit-gradient(
-            linear,
-            0 90%,
-            0 100%, from(rgba(255,255,255, .5)), to(#d1d1d1)
-        );
-        background-image: -moz-linear-gradient(
-            top,
-            rgba(250,250,250,.4),
-            rgba(255,255,255,.0)
-        );
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-        box-shadow: 0 1px 2px rgba(0,0,0,.15);
-        .inner {
-            padding: 0.3em;
-        }
+        background-color: $highlight-green;
+        border-top: 4px solid #487858;
+        border-bottom: 4px solid #487858;
         ol, ul, li {
             margin:0;
             padding:0;
@@ -124,28 +108,28 @@ body#homepage {
         }
         ol {
             list-style: none;
-            background: #fff;
-            background: rgba(255,255,255,.9);
         }
         .slidewrap {
-            border: 1px solid #deddde;
             overflow: hidden !important;
             position: relative;
-            ol.slider {
-                background-color: $highlight-green;
-            }
         }
-        .prev,
-        .next {
-            display: block;
+        .prev, .next {
+            display: inline-block;
             text-indent: -9999px;
-            width: 15px;
+            background-color: $light-green;
+            border: 2px solid transparent;
+            @include border-radius(2px);
         }
         .prev.carousel-disabled, .next.carousel-disabled {
             opacity: .25;
         }
+        .prev.carousel-disabled:hover, .prev.carousel-disabled:focus, .next.carousel-disabled:hover, .next.carousel-disabled:focus {
+            background-color: $light-green;
+            border: 2px solid transparent;
+        }
         .prev:hover, .prev:focus, .next:hover, .next:focus {
-            background-color: transparent;
+            background-color: white;
+            border: 2px solid $light-green;
         }
         .prev {
             background-image: url(../../js/carousel/icon_left.gif);
@@ -153,27 +137,43 @@ body#homepage {
             background-repeat: no-repeat;
             float: left;
         }
+        .prev:hover, .prev:focus {
+            background-image: url(../../js/carousel/icon_left_on.gif);
+        }
+        .prev.carousel-disabled:hover, .prev.carousel-disabled:focus {
+            background-image: url(../../js/carousel/icon_left.gif);
+        }
         .next {
             background-image: url(../../js/carousel/icon_right.gif);
             background-position: center center;
             background-repeat: no-repeat;
             float: right;
         }
-        .nextprev { padding: 8px 0 4px 0; clear: both; float: left; width: 100%; }
+        .next:hover, .next:focus {
+            background-image: url(../../js/carousel/icon_right_on.gif);
+        }
+        .next.carousel-disabled:hover, .next.carousel-disabled:focus {
+            background-image: url(../../js/carousel/icon_right.gif);
+        }
+        .nextprev { padding: 0; display:block; width: 120px; overflow:hidden; }
         .nextprev li { display: inline; }
 
         li.django-feature {
             list-style: none;
-
             .inner {
-                padding: 1em;
                 display: block;
-                h4 {
+                h4.title {
                     margin-top: 0;
+                    a {
+                        text-decoration: none;
+                        border-bottom: 1px dotted $dark-orange;
+                    }
+                    a:hover {
+                        border-bottom: 1px dotted $flashy-green;
+                    }
                 }
                 .description {
                     overflow: hidden;
-                    margin-top: 30px;
                     .image {
                         float: left;
                         background-color: white;
