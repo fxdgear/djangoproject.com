@@ -10,6 +10,9 @@
     {{ block.super }}
     <script type="text/javascript">
         $(document).ready(function() {
+            // Make all images clickable. Clicking an image opens that image
+            // on its own. This is especially useful when viewing the
+            // documentation on a mobile device as the image might be shrinked.
             $('body#documentation #content-main img').live('click', function() {
                 if ($(this).css('cursor') == 'pointer') {
                     /* View the image on its own */

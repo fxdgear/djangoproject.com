@@ -37,9 +37,6 @@
     #content-related-body {
         display: block;
     }
-    .inner {
-        @include full(3);
-    }
 }
 
 #page-header {

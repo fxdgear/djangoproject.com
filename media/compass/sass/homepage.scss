@@ -27,7 +27,7 @@ body#homepage {
     }
     p.more {
         clear:both;
-        margin-top:2em;
+        margin-top:1.5em;
         font-family: $special-font-family;
         font-size: 115%;
         a {
@@ -84,6 +84,7 @@ body#homepage {
     ul.books {
         padding-left: 0;
         margin-right: 0;
+        margin-bottom: 0;
         overflow:hidden;
         li.book {
             list-style: none;
@@ -189,6 +190,7 @@ body#homepage {
     ul.websites {
         padding-left: 0;
         margin-right: 0;
+        margin-bottom: 0;
         overflow:hidden;
         li.website {
             list-style: none;
@@ -204,6 +206,7 @@ body#homepage {
     }
     ul.community-sites {
         padding-left: 0;
+        margin-bottom: 0;
         li {
             list-style-type: none;
         }

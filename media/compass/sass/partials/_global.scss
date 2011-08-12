@@ -15,7 +15,7 @@ body {
     margin:0;
     padding:0;
     background-color: white;
-    color: #575757;
+    color: $text-color;
     background: url(../../img/site/bg-tile.gif) $darker-green repeat;
 }
 body, th, td {
@@ -157,10 +157,10 @@ a:hover, a:focus {
     }
     h2 {
         color: white;
-        border-bottom:#888 1px solid;
         margin: 1.3em -14px 3px -14px;
-        padding: 0 14px 3px 14px;
+        padding: 3px 14px 3px 14px;
         font-size:125%;
+        background-color: #234F32;
     }
     h2:first-child {
         margin-top:0;
@@ -168,11 +168,11 @@ a:hover, a:focus {
     h3 {
         color:$lighter-green;
         font-weight: normal;
+        font-size: 120%;
     }
-
     .inner {
         background-color: $light-green;
-        border: 1px solid $dark-green;
+        border: 4px solid $dark-green;
         @include border-radius(4px);
 
         #content-related-body {
@@ -475,6 +475,7 @@ textarea.codedump {
     padding:.8em 1em .8em;
     margin: 1em 0;
     border:1px solid $lighter-green;
+    @include border-radius(4px);
 }
 .admonition-title {
     font-weight:bold;
@@ -503,6 +504,7 @@ div.admonition-behind-the-scenes {
 #documentation {
     h2, h3, h4 {
         margin-top:2em;
+        margin-bottom: 0.4em;
     }
     h2.deck {
         font-size: 110%;
@@ -533,11 +535,27 @@ div.admonition-behind-the-scenes {
 
     #s-getting-help {
         float: right; width: 40%; background: #E1ECE2; padding: 1em; margin: 2em 0 2em 2em;
-        border-radius: 6px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
+        @include border-radius(4px);
         h2 {
             margin: 0;
+        }
+    }
+
+    ul.doc-nav {
+        list-style-type: none;
+        text-align: right;
+        margin: 3em 0 0 0;
+        padding-right: 3px;
+        border-top: 1px dotted #ccc;
+        li {
+            margin:0;
+            display: inline-block;
+            margin-left: 10px;
+            padding: 3px 0 0 10px;
+            border-left: 1px dotted #ccc;
+        }
+        li:first-child {
+            border:none;
         }
     }
 }

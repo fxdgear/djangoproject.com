@@ -38,9 +38,6 @@
         #content-related-body {
             display: none;
         }
-        .inner {
-            @include full(5);
-        }
     }
 
     #page-header {

@@ -23,13 +23,9 @@
     }
 
     #content-related {
-        @include columns(2);
-        @include omega;
+        @include full(2);
         #content-related-body {
             display: block;
-        }
-        .inner {
-            @include full(2);
         }
     }
 
