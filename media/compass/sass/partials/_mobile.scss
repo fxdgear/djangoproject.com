@@ -139,14 +139,17 @@
             }
         }
         .carousel {
-            margin-bottom: 3em;
-            margin-top: 3em;
+            margin-bottom: 1em;
+            margin-top: 3em !important;
             margin-left:-34px;
             margin-right:-34px;
             width: 320px;
             padding: 1em 0;
             .nextprev {
                 margin:1em auto 0 auto;
+            }
+            .slidewrap {
+                max-height: 259px;
             }
             li.django-feature {
                 .inner {

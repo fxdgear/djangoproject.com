@@ -74,7 +74,6 @@ body#homepage {
         }
         a:hover, a:focus {
             background: none;
-            @include transition-duration(0.3s);
             h4 {
                 margin-top: 0;
                 color: $dark-orange;
@@ -118,8 +117,13 @@ body#homepage {
             display: inline-block;
             text-indent: -9999px;
             background-color: $light-green;
+            background-image: url(../../js/carousel/icons.gif);
+            background-repeat: no-repeat;
             border: 2px solid transparent;
             @include border-radius(2px);
+            width: 25px;
+            height: 25px;
+            @include transition-duration(0);
         }
         .prev.carousel-disabled, .next.carousel-disabled {
             opacity: .25;
@@ -133,28 +137,24 @@ body#homepage {
             border: 2px solid $light-green;
         }
         .prev {
-            background-image: url(../../js/carousel/icon_left.gif);
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-position: -3px -32px;
             float: left;
         }
         .prev:hover, .prev:focus {
-            background-image: url(../../js/carousel/icon_left_on.gif);
+            background-position: -33px -32px;
         }
         .prev.carousel-disabled:hover, .prev.carousel-disabled:focus {
-            background-image: url(../../js/carousel/icon_left.gif);
+            background-position: -3px -32px;
         }
         .next {
-            background-image: url(../../js/carousel/icon_right.gif);
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-position: -2px -2px;
             float: right;
         }
         .next:hover, .next:focus {
-            background-image: url(../../js/carousel/icon_right_on.gif);
+            background-position: -32px -2px;
         }
         .next.carousel-disabled:hover, .next.carousel-disabled:focus {
-            background-image: url(../../js/carousel/icon_right.gif);
+            background-position: -2px -2px;
         }
         .nextprev { padding: 0; display:block; width: 120px; overflow:hidden; }
         .nextprev li { display: inline; }

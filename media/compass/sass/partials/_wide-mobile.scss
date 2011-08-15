@@ -74,6 +74,9 @@
             margin-left:-22px;
             margin-right:-22px;
             width: 480px;
+            .slidewrap {
+                max-height: 154px;
+            }
             li.django-feature {
                 .inner {
                     padding: 0 22px;
