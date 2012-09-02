@@ -1,5 +1,12 @@
 *.pyc
 *.db
-local_settings.py
 media/docs
 src/
+.vagrant
+local_settings.py
+local_settings_docs.py
+monitor.py
+site-docs.wsgi
+site-www.wsgi
+provisioning/databags/configuration/configuration.json
+

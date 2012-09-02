@@ -1,0 +1,7 @@
+{
+  "id": "configuration",
+  "developer": {
+    "name": "Your Name",
+    "email": "email@example.com"
+  }
+}

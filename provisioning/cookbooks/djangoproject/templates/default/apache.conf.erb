@@ -1,0 +1,28 @@
+<VirtualHost *:80>
+    Alias /admin_media/ /home/vagrant/.virtualenvs/djangoproject/lib/python2.6/site-packages/django/contrib/admin/media/
+    <Directory /home/vagrant/.virtualenvs/djangoproject/site-packages/django/contrib/admin/media>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    Alias /media/ <%= @params[:docroot] %>/media/
+    <Directory "<%= @params[:docroot] %>/media/">
+        AllowOverride all
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    WSGIScriptAlias / /djangoproject/site-www.wsgi
+</VirtualHost>
+
+Listen 8080
+<VirtualHost *:8080>
+    Alias /media/ <%= @params[:docroot] %>/media/
+    <Directory "<%= @params[:docroot] %>/media/">
+        AllowOverride all
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    WSGIScriptAlias / <%= @params[:docroot] %>/site-docs.wsgi
+</VirtualHost>

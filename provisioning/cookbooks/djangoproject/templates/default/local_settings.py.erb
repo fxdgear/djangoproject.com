@@ -1,0 +1,15 @@
+from <%= @base_settings %> import *
+
+DEBUG = True
+
+DATABASES['default']['PASSWORD'] = 'secret'
+DATABASES['default']['HOST'] = 'localhost'
+
+ADMINS = (
+    ('<%= @developer_name %>', '<%= @developer_email %>'),
+)
+MANAGERS = ADMINS
+
+DEFAULT_FROM_EMAIL = '<%= @developer_email %>'
+
+DOCS_BUILD_ROOT = '/djangodocs'
